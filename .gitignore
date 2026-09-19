@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+*.npz
+quantum/outputs/*
+!quantum/outputs/.gitkeep
+
