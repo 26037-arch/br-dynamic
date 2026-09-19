@@ -1,0 +1,425 @@
+{
+  "configuration": {
+    "status": "PHASE_2B_SOURCE_BOUNDED_SCREENING_NOT_FITTING",
+    "base_experiment": "experiments/baseline/dke_pooled_gate1.json",
+    "t_span_s": [
+      0.0,
+      6000.0
+    ],
+    "analysis_start_s": 500.0,
+    "output_points": 6001,
+    "rtol": 1e-09,
+    "atol_M": 1e-13,
+    "fixed_species": [
+      "IO3_minus",
+      "H2O2",
+      "H_plus",
+      "Mn2_plus",
+      "malonic_acid"
+    ],
+    "grids_M": {
+      "IO3_minus": [
+        0.004,
+        0.01,
+        0.015,
+        0.0225,
+        0.0255
+      ],
+      "I_minus": [
+        0.0,
+        1e-08,
+        1e-06,
+        0.0004
+      ]
+    },
+    "fixed_reported_pools_M": {
+      "H_plus": 0.056,
+      "H2O2": 0.33,
+      "malonic_acid": 0.0015,
+      "Mn2_plus": 0.004
+    },
+    "range_provenance": {
+      "IO3_minus": "Dimsey, Forbes, and Bassom 2025 report the chosen 0.0225 M and a model oscillatory interval 0.0040-0.0255 M. The interval is a screening envelope, not an experimental uncertainty distribution.",
+      "I_minus": "The reconstructed experiment is described with V0=0 while the 2025 numerical comparison selects 0.0004 M because the historical value is ambiguous. Intermediate log-spaced seed values test this documented ambiguity.",
+      "H_plus": "Reported as 0.056 M; no measurement uncertainty or alternative value is reported for the digitized historical trace.",
+      "H2O2": "Reported as 0.33 M; no measurement uncertainty or alternative value is reported for the digitized historical trace.",
+      "malonic_acid": "Reported as 0.0015 M; no measurement uncertainty or alternative value is reported for the digitized historical trace.",
+      "Mn2_plus": "Reported as 0.004 M; no measurement uncertainty or alternative value is reported for the digitized historical trace."
+    },
+    "experimental_targets_reserved_for_assessment_only": {
+      "mean_period_s": 714.13,
+      "iodine_peak_M": 0.0005811
+    },
+    "policy": "The target observables do not select grid values. No interpolation, optimization, posterior inference, or range expansion is permitted."
+  },
+  "case_count": 20,
+  "oscillatory_count": 15,
+  "observable_ranges_over_oscillatory_cases": {
+    "mean_period_s": {
+      "min": 449.9580587171238,
+      "max": 1726.8113511188114
+    },
+    "iodine_peak_M": {
+      "min": 2.12229815989209e-09,
+      "max": 0.00033689322803610525
+    },
+    "iodide_min_M": {
+      "min": 8.925093172431956e-11,
+      "max": 2.0546390977985378e-09
+    },
+    "iodide_max_M": {
+      "min": 2.0546395860957843e-09,
+      "max": 8.41545400346756e-06
+    }
+  },
+  "nonlinear_interactions": {
+    "status": "AVAILABLE",
+    "definition": "f(IO3,I)-f(IO3,I_anchor)-f(IO3_anchor,I)+f(anchor)",
+    "anchor": {
+      "IO3_minus_M": 0.0225,
+      "I_minus_M": 0.0004
+    },
+    "max_abs_period_interaction_s": 669.479135214469,
+    "max_abs_period_interaction_fraction_of_anchor": 1.2706763085094197,
+    "max_abs_iodine_peak_interaction_M": 1.2307807659324432e-11,
+    "max_abs_iodine_peak_interaction_fraction_of_anchor": 4.730860687288826e-08,
+    "cases": [
+      {
+        "IO3_minus_M": 0.004,
+        "I_minus_M": 1e-08,
+        "mean_period_s_interaction": 578.1851858235107,
+        "mean_period_s_interaction_fraction_of_anchor": 1.0973997230275043,
+        "iodine_peak_M_interaction": -6.29418148460556e-12,
+        "iodine_peak_M_interaction_fraction_of_anchor": -2.4193501042911243e-08
+      },
+      {
+        "IO3_minus_M": 0.004,
+        "I_minus_M": 1e-06,
+        "mean_period_s_interaction": -669.479135214469,
+        "mean_period_s_interaction_fraction_of_anchor": -1.2706763085094197,
+        "iodine_peak_M_interaction": -4.782030132120807e-12,
+        "iodine_peak_M_interaction_fraction_of_anchor": -1.8381111391793303e-08
+      },
+      {
+        "IO3_minus_M": 0.004,
+        "I_minus_M": 0.0004,
+        "mean_period_s_interaction": 0.0,
+        "mean_period_s_interaction_fraction_of_anchor": 0.0,
+        "iodine_peak_M_interaction": 0.0,
+        "iodine_peak_M_interaction_fraction_of_anchor": 0.0
+      },
+      {
+        "IO3_minus_M": 0.01,
+        "I_minus_M": 1e-08,
+        "mean_period_s_interaction": -0.0003514004806675075,
+        "mean_period_s_interaction_fraction_of_anchor": -6.669606894320638e-07,
+        "iodine_peak_M_interaction": -6.307844600383222e-12,
+        "iodine_peak_M_interaction_fraction_of_anchor": -2.4246019167249534e-08
+      },
+      {
+        "IO3_minus_M": 0.01,
+        "I_minus_M": 1e-06,
+        "mean_period_s_interaction": -0.0022052784813695325,
+        "mean_period_s_interaction_fraction_of_anchor": -4.185634730863132e-06,
+        "iodine_peak_M_interaction": -3.525936161964671e-12,
+        "iodine_peak_M_interaction_fraction_of_anchor": -1.3552952106698997e-08
+      },
+      {
+        "IO3_minus_M": 0.01,
+        "I_minus_M": 0.0004,
+        "mean_period_s_interaction": 0.0,
+        "mean_period_s_interaction_fraction_of_anchor": 0.0,
+        "iodine_peak_M_interaction": 0.0,
+        "iodine_peak_M_interaction_fraction_of_anchor": 0.0
+      },
+      {
+        "IO3_minus_M": 0.015,
+        "I_minus_M": 1e-08,
+        "mean_period_s_interaction": -0.0005108051474280728,
+        "mean_period_s_interaction_fraction_of_anchor": -9.695119159965801e-07,
+        "iodine_peak_M_interaction": -4.933344802549727e-12,
+        "iodine_peak_M_interaction_fraction_of_anchor": -1.8962732949065457e-08
+      },
+      {
+        "IO3_minus_M": 0.015,
+        "I_minus_M": 1e-06,
+        "mean_period_s_interaction": -5.0204888680127624e-05,
+        "mean_period_s_interaction_fraction_of_anchor": -9.528924691096508e-08,
+        "iodine_peak_M_interaction": -4.800182007522885e-12,
+        "iodine_peak_M_interaction_fraction_of_anchor": -1.845088335778206e-08
+      },
+      {
+        "IO3_minus_M": 0.015,
+        "I_minus_M": 0.0004,
+        "mean_period_s_interaction": 0.0,
+        "mean_period_s_interaction_fraction_of_anchor": 0.0,
+        "iodine_peak_M_interaction": 0.0,
+        "iodine_peak_M_interaction_fraction_of_anchor": 0.0
+      },
+      {
+        "IO3_minus_M": 0.0225,
+        "I_minus_M": 1e-08,
+        "mean_period_s_interaction": 0.0,
+        "mean_period_s_interaction_fraction_of_anchor": 0.0,
+        "iodine_peak_M_interaction": 0.0,
+        "iodine_peak_M_interaction_fraction_of_anchor": 0.0
+      },
+      {
+        "IO3_minus_M": 0.0225,
+        "I_minus_M": 1e-06,
+        "mean_period_s_interaction": 0.0,
+        "mean_period_s_interaction_fraction_of_anchor": 0.0,
+        "iodine_peak_M_interaction": 0.0,
+        "iodine_peak_M_interaction_fraction_of_anchor": 0.0
+      },
+      {
+        "IO3_minus_M": 0.0225,
+        "I_minus_M": 0.0004,
+        "mean_period_s_interaction": 0.0,
+        "mean_period_s_interaction_fraction_of_anchor": 0.0,
+        "iodine_peak_M_interaction": 0.0,
+        "iodine_peak_M_interaction_fraction_of_anchor": 0.0
+      },
+      {
+        "IO3_minus_M": 0.0255,
+        "I_minus_M": 1e-08,
+        "mean_period_s_interaction": -0.0003883763181420363,
+        "mean_period_s_interaction_fraction_of_anchor": -7.371411001346722e-07,
+        "iodine_peak_M_interaction": -1.2307807659324432e-11,
+        "iodine_peak_M_interaction_fraction_of_anchor": -4.730860687288826e-08
+      },
+      {
+        "IO3_minus_M": 0.0255,
+        "I_minus_M": 1e-06,
+        "mean_period_s_interaction": -0.00023441336827545456,
+        "mean_period_s_interaction_fraction_of_anchor": -4.449182921437761e-07,
+        "iodine_peak_M_interaction": -7.639502799892256e-12,
+        "iodine_peak_M_interaction_fraction_of_anchor": -2.9364631351760147e-08
+      },
+      {
+        "IO3_minus_M": 0.0255,
+        "I_minus_M": 0.0004,
+        "mean_period_s_interaction": 0.0,
+        "mean_period_s_interaction_fraction_of_anchor": 0.0,
+        "iodine_peak_M_interaction": 0.0,
+        "iodine_peak_M_interaction_fraction_of_anchor": 0.0
+      }
+    ]
+  },
+  "conclusions": {
+    "period_discrepancy": "PARTIALLY",
+    "iodine_peak_discrepancy": "NO"
+  },
+  "cases": [
+    {
+      "IO3_minus_M": 0.004,
+      "I_minus_M": 0.0,
+      "status": "NO_MEASURABLE_OSCILLATION",
+      "error": "ValueError: Fewer than two iodide minima; no complete period is measurable"
+    },
+    {
+      "IO3_minus_M": 0.004,
+      "I_minus_M": 1e-08,
+      "status": "OSCILLATORY",
+      "complete_period_count": 3,
+      "mean_period_s": 1726.8113511188114,
+      "iodine_peak_M": 2.12229815989209e-09,
+      "iodide_min_M": 2.0546390977985378e-09,
+      "iodide_max_M": 2.054639609874808e-09,
+      "iodide_pI_min": 8.687264343699614,
+      "iodide_pI_max": 8.68726445193851
+    },
+    {
+      "IO3_minus_M": 0.004,
+      "I_minus_M": 1e-06,
+      "status": "OSCILLATORY",
+      "complete_period_count": 6,
+      "mean_period_s": 479.14695196217133,
+      "iodine_peak_M": 2.122298165338696e-09,
+      "iodide_min_M": 2.054630688333579e-09,
+      "iodide_max_M": 2.0546395860957843e-09,
+      "iodide_pI_min": 8.687264348725847,
+      "iodide_pI_max": 8.687266229472923
+    },
+    {
+      "IO3_minus_M": 0.004,
+      "I_minus_M": 0.0004,
+      "status": "OSCILLATORY",
+      "complete_period_count": 6,
+      "mean_period_s": 1148.625871674664,
+      "iodine_peak_M": 2.122298159981723e-09,
+      "iodide_min_M": 2.054638586420706e-09,
+      "iodide_max_M": 2.0546397226956644e-09,
+      "iodide_pI_min": 8.687264319852378,
+      "iodide_pI_max": 8.687264560029805
+    },
+    {
+      "IO3_minus_M": 0.01,
+      "I_minus_M": 0.0,
+      "status": "NO_MEASURABLE_OSCILLATION",
+      "error": "ValueError: Fewer than two iodide minima; no complete period is measurable"
+    },
+    {
+      "IO3_minus_M": 0.01,
+      "I_minus_M": 1e-08,
+      "status": "OSCILLATORY",
+      "complete_period_count": 11,
+      "mean_period_s": 449.9599907137849,
+      "iodine_peak_M": 4.359817995443317e-05,
+      "iodide_min_M": 8.925098668454571e-11,
+      "iodide_max_M": 6.406006663300799e-06,
+      "iodide_pI_min": 5.193412613934254,
+      "iodide_pI_max": 10.049386973991288
+    },
+    {
+      "IO3_minus_M": 0.01,
+      "I_minus_M": 1e-06,
+      "status": "OSCILLATORY",
+      "complete_period_count": 11,
+      "mean_period_s": 449.9580587171238,
+      "iodine_peak_M": 4.359818122419577e-05,
+      "iodide_min_M": 8.925136064536864e-11,
+      "iodide_max_M": 6.4060068782099514e-06,
+      "iodide_pI_min": 5.193412599364513,
+      "iodide_pI_max": 10.049385154305169
+    },
+    {
+      "IO3_minus_M": 0.01,
+      "I_minus_M": 0.0004,
+      "status": "OSCILLATORY",
+      "complete_period_count": 12,
+      "mean_period_s": 449.96004849362885,
+      "iodine_peak_M": 4.359817996809642e-05,
+      "iodide_min_M": 8.925093172431956e-11,
+      "iodide_max_M": 6.40600666915807e-06,
+      "iodide_pI_min": 5.193412613537161,
+      "iodide_pI_max": 10.049387241427326
+    },
+    {
+      "IO3_minus_M": 0.015,
+      "I_minus_M": 0.0,
+      "status": "NO_MEASURABLE_OSCILLATION",
+      "error": "ValueError: Fewer than two iodide minima; no complete period is measurable"
+    },
+    {
+      "IO3_minus_M": 0.015,
+      "I_minus_M": 1e-08,
+      "status": "OSCILLATORY",
+      "complete_period_count": 10,
+      "mean_period_s": 461.3829368866476,
+      "iodine_peak_M": 0.00010826252950113002,
+      "iodide_min_M": 9.057930423035506e-11,
+      "iodide_max_M": 8.41545400346756e-06,
+      "iodide_pI_min": 5.074922449399143,
+      "iodide_pI_max": 10.042971019600047
+    },
+    {
+      "IO3_minus_M": 0.015,
+      "I_minus_M": 1e-06,
+      "status": "OSCILLATORY",
+      "complete_period_count": 11,
+      "mean_period_s": 461.3833193682459,
+      "iodine_peak_M": 0.00010826252812214689,
+      "iodide_min_M": 9.057928366695589e-11,
+      "iodide_max_M": 8.415453971221488e-06,
+      "iodide_pI_min": 5.074922451063259,
+      "iodide_pI_max": 10.042971118194002
+    },
+    {
+      "IO3_minus_M": 0.015,
+      "I_minus_M": 0.0004,
+      "status": "OSCILLATORY",
+      "complete_period_count": 10,
+      "mean_period_s": 461.3831540711583,
+      "iodine_peak_M": 0.00010826252814029342,
+      "iodide_min_M": 9.057930424744907e-11,
+      "iodide_max_M": 8.415453957001091e-06,
+      "iodide_pI_min": 5.074922451797128,
+      "iodide_pI_max": 10.042971019518088
+    },
+    {
+      "IO3_minus_M": 0.0225,
+      "I_minus_M": 0.0,
+      "status": "NO_MEASURABLE_OSCILLATION",
+      "error": "ValueError: Fewer than two iodide minima; no complete period is measurable"
+    },
+    {
+      "IO3_minus_M": 0.0225,
+      "I_minus_M": 1e-08,
+      "status": "OSCILLATORY",
+      "complete_period_count": 10,
+      "mean_period_s": 526.8686476862041,
+      "iodine_peak_M": 0.0002601600167631817,
+      "iodide_min_M": 9.322268549243353e-11,
+      "iodide_max_M": 8.371543308794169e-06,
+      "iodide_pI_min": 5.077194471671202,
+      "iodide_pI_max": 10.030478390378482
+    },
+    {
+      "IO3_minus_M": 0.0225,
+      "I_minus_M": 1e-06,
+      "status": "OSCILLATORY",
+      "complete_period_count": 10,
+      "mean_period_s": 526.8685695675437,
+      "iodine_peak_M": 0.00026016001525103584,
+      "iodide_min_M": 9.322269365265801e-11,
+      "iodide_max_M": 8.371543287132772e-06,
+      "iodide_pI_min": 5.0771944727949405,
+      "iodide_pI_max": 10.030478352362623
+    },
+    {
+      "IO3_minus_M": 0.0225,
+      "I_minus_M": 0.0004,
+      "status": "OSCILLATORY",
+      "complete_period_count": 9,
+      "mean_period_s": 526.8683540655674,
+      "iodine_peak_M": 0.00026016001046900034,
+      "iodide_min_M": 9.322284066636488e-11,
+      "iodide_max_M": 8.371543238384979e-06,
+      "iodide_pI_min": 5.077194475323853,
+      "iodide_pI_max": 10.03047766747369
+    },
+    {
+      "IO3_minus_M": 0.0255,
+      "I_minus_M": 0.0,
+      "status": "NO_MEASURABLE_OSCILLATION",
+      "error": "ValueError: Fewer than two iodide minima; no complete period is measurable"
+    },
+    {
+      "IO3_minus_M": 0.0255,
+      "I_minus_M": 1e-08,
+      "status": "OSCILLATORY",
+      "complete_period_count": 9,
+      "mean_period_s": 561.7753304566298,
+      "iodine_peak_M": 0.00033689322202247896,
+      "iodide_min_M": 9.432299002053615e-11,
+      "iodide_max_M": 7.967789805164475e-06,
+      "iodide_pI_min": 5.0986621313691565,
+      "iodide_pI_max": 10.025382440643698
+    },
+    {
+      "IO3_minus_M": 0.0255,
+      "I_minus_M": 1e-06,
+      "status": "OSCILLATORY",
+      "complete_period_count": 9,
+      "mean_period_s": 561.7754063009193,
+      "iodine_peak_M": 0.00033689322517863794,
+      "iodide_min_M": 9.432298915893332e-11,
+      "iodide_max_M": 7.967789859621265e-06,
+      "iodide_pI_min": 5.09866212840092,
+      "iodide_pI_max": 10.025382444610804
+    },
+    {
+      "IO3_minus_M": 0.0255,
+      "I_minus_M": 0.0004,
+      "status": "OSCILLATORY",
+      "complete_period_count": 8,
+      "mean_period_s": 561.7754252123112,
+      "iodine_peak_M": 0.00033689322803610525,
+      "iodide_min_M": 9.43229853136936e-11,
+      "iodide_max_M": 7.967789839688204e-06,
+      "iodide_pI_min": 5.098662129487397,
+      "iodide_pI_max": 10.02538246231557
+    }
+  ]
+}

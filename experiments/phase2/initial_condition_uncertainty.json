@@ -1,0 +1,33 @@
+{
+  "status": "PHASE_2B_SOURCE_BOUNDED_SCREENING_NOT_FITTING",
+  "base_experiment": "experiments/baseline/dke_pooled_gate1.json",
+  "t_span_s": [0.0, 6000.0],
+  "analysis_start_s": 500.0,
+  "output_points": 6001,
+  "rtol": 1e-9,
+  "atol_M": 1e-13,
+  "fixed_species": ["IO3_minus", "H2O2", "H_plus", "Mn2_plus", "malonic_acid"],
+  "grids_M": {
+    "IO3_minus": [0.004, 0.01, 0.015, 0.0225, 0.0255],
+    "I_minus": [0.0, 1e-8, 1e-6, 0.0004]
+  },
+  "fixed_reported_pools_M": {
+    "H_plus": 0.056,
+    "H2O2": 0.33,
+    "malonic_acid": 0.0015,
+    "Mn2_plus": 0.004
+  },
+  "range_provenance": {
+    "IO3_minus": "Dimsey, Forbes, and Bassom 2025 report the chosen 0.0225 M and a model oscillatory interval 0.0040-0.0255 M. The interval is a screening envelope, not an experimental uncertainty distribution.",
+    "I_minus": "The reconstructed experiment is described with V0=0 while the 2025 numerical comparison selects 0.0004 M because the historical value is ambiguous. Intermediate log-spaced seed values test this documented ambiguity.",
+    "H_plus": "Reported as 0.056 M; no measurement uncertainty or alternative value is reported for the digitized historical trace.",
+    "H2O2": "Reported as 0.33 M; no measurement uncertainty or alternative value is reported for the digitized historical trace.",
+    "malonic_acid": "Reported as 0.0015 M; no measurement uncertainty or alternative value is reported for the digitized historical trace.",
+    "Mn2_plus": "Reported as 0.004 M; no measurement uncertainty or alternative value is reported for the digitized historical trace."
+  },
+  "experimental_targets_reserved_for_assessment_only": {
+    "mean_period_s": 714.13,
+    "iodine_peak_M": 0.0005811
+  },
+  "policy": "The target observables do not select grid values. No interpolation, optimization, posterior inference, or range expansion is permitted."
+}

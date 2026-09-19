@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "purpose": "Forward propagation of the small subset of Level 0 parameters having defensible independent numeric bounds; not calibration",
+  "sample_design": "deterministic Latin hypercube with independent uniform screening coordinates",
+  "sample_count": 32,
+  "seed": 20260920,
+  "bounds": {
+    "k1_DKE": {
+      "low": 1050.0,
+      "high": 1430.0,
+      "units": "M^-3 s^-1",
+      "basis": "union of Schmitz 2000 low-iodide 1200 +/- 150 and the DKE historical value",
+      "doi": "10.1039/B003606O"
+    },
+    "k8_DKE": {
+      "low": 750000.0,
+      "high": 830000.0,
+      "units": "M^-1 s^-1",
+      "basis": "DKE historical value to the Bielski et al. evaluated value",
+      "doi": "10.1063/1.555739"
+    },
+    "k10_DKE": {
+      "low": 23.8,
+      "high": 37.0,
+      "units": "M^-1 s^-1",
+      "basis": "union of Shin et al. 29 +/- 5.2 and the DKE historical value; condition-transfer screen only",
+      "doi": "10.1016/j.watres.2020.115852"
+    }
+  },
+  "excluded_parameters": {
+    "k2_DKE": "analogy estimate with no iodine-specific interval",
+    "k3_DKE": "coupled speciation model mismatch",
+    "k_minus3_DKE": "coupled speciation model mismatch",
+    "k4_DKE": "global fit with no direct interval",
+    "k_minus4_DKE": "analogy estimate with no iodine-specific interval",
+    "k5_DKE": "modern subsystem values conflict by orders of magnitude and are a model-form alternative",
+    "k6_DKE": "global fit and unresolved manganese coordination",
+    "k7_DKE": "source-condition and topology mismatch",
+    "k9_DKE": "empirical lumped law",
+    "C9_DKE": "empirical lumped-law coefficient"
+  },
+  "t_span_s": [0.0, 3600.0],
+  "analysis_start_s": 800.0,
+  "output_points": 3601,
+  "rtol": 1e-9,
+  "atol_M": 1e-13,
+  "fixed_species": ["H_plus", "IO3_minus", "H2O2", "malonic_acid", "Mn2_plus"],
+  "experimental_targets_reserved_for_assessment_only": {"mean_period_s": 714.13, "iodine_peak_M": 0.0005811}
+}

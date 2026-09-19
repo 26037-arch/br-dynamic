@@ -1,0 +1,4547 @@
+{
+  "configuration": {
+    "status": "PREDECLARED_PHASE_2A_LOCAL_SENSITIVITY",
+    "method": "symmetric multiplicative finite difference",
+    "fractional_perturbations": [
+      0.005,
+      0.01,
+      0.02
+    ],
+    "t_span_s": [
+      0.0,
+      3600.0
+    ],
+    "analysis_start_s": 800.0,
+    "output_points": 3601,
+    "rtol": 1e-10,
+    "atol_M": 1e-14,
+    "fixed_species": [
+      "IO3_minus",
+      "H2O2",
+      "H_plus",
+      "Mn2_plus",
+      "malonic_acid"
+    ],
+    "initial_conditions_from": "experiments/baseline/dke_pooled_gate1.json",
+    "observables": [
+      "mean_period_s",
+      "iodine_peak_M",
+      "iodide_min_M",
+      "iodide_max_M"
+    ],
+    "derivative_definition": "(ln(Y_plus)-ln(Y_minus))/(ln(1+delta)-ln(1-delta))",
+    "policy": "No parameter optimization and no use of experimental targets. Failed oscillations remain failed derivatives."
+  },
+  "variants": [
+    {
+      "parameter": "k1_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.4147295390928,
+            "end_s": 1493.6147242375832,
+            "period_s": 527.1999946984904,
+            "iodide_pI_min": 5.075074572524942,
+            "iodide_pI_max": 10.03076529000972,
+            "iodine_peak_M": 0.0002601598144764359
+          },
+          {
+            "cycle": 2,
+            "start_s": 1493.6147242375832,
+            "end_s": 2020.8147623378925,
+            "period_s": 527.2000381003093,
+            "iodide_pI_min": 5.075074572552653,
+            "iodide_pI_max": 10.03076528576361,
+            "iodine_peak_M": 0.00026015981442337817
+          },
+          {
+            "cycle": 3,
+            "start_s": 2020.8147623378925,
+            "end_s": 2548.0147659769605,
+            "period_s": 527.200003639068,
+            "iodide_pI_min": 5.075074572739622,
+            "iodide_pI_max": 10.03076528576361,
+            "iodine_peak_M": 0.0002601598141129589
+          },
+          {
+            "cycle": 4,
+            "start_s": 2548.0147659769605,
+            "end_s": 3075.21478679597,
+            "period_s": 527.2000208190098,
+            "iodide_pI_min": 5.075074572552079,
+            "iodide_pI_max": 10.030765289994628,
+            "iodine_peak_M": 0.00026015981438758237
+          }
+        ],
+        "mean_period_s": 527.2000143142193,
+        "last_cycle_start_s": 2548.0147659769605,
+        "last_cycle_end_s": 3075.21478679597,
+        "iodide_pI_min": 5.075074572552079,
+        "iodide_pI_max": 10.030765289994628,
+        "iodide_min_M": 9.316112191853868e-11,
+        "iodide_max_M": 8.412506783858565e-06,
+        "iodine_peak_M": 0.00026015981438758237
+      }
+    },
+    {
+      "parameter": "k1_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 967.0849150424222,
+            "end_s": 1494.6177815956378,
+            "period_s": 527.5328665532156,
+            "iodide_pI_min": 5.0729442655719215,
+            "iodide_pI_max": 10.03105230925827,
+            "iodine_peak_M": 0.0002601595779224232
+          },
+          {
+            "cycle": 2,
+            "start_s": 1494.6177815956378,
+            "end_s": 2022.1506318279935,
+            "period_s": 527.5328502323557,
+            "iodide_pI_min": 5.07294426566849,
+            "iodide_pI_max": 10.03105230925827,
+            "iodine_peak_M": 0.00026015957778683616
+          },
+          {
+            "cycle": 3,
+            "start_s": 2022.1506318279935,
+            "end_s": 2549.6835127721024,
+            "period_s": 527.5328809441089,
+            "iodide_pI_min": 5.072944265850989,
+            "iodide_pI_max": 10.0310522971312,
+            "iodine_peak_M": 0.00026015957744198836
+          },
+          {
+            "cycle": 4,
+            "start_s": 2549.6835127721024,
+            "end_s": 3077.2163288873103,
+            "period_s": 527.5328161152079,
+            "iodide_pI_min": 5.072944265665307,
+            "iodide_pI_max": 10.031052294852806,
+            "iodine_peak_M": 0.0002601595777651877
+          }
+        ],
+        "mean_period_s": 527.532853461222,
+        "last_cycle_start_s": 2549.6835127721024,
+        "last_cycle_end_s": 3077.2163288873103,
+        "iodide_pI_min": 5.072944265665307,
+        "iodide_pI_max": 10.031052294852806,
+        "iodide_min_M": 9.309957644006882e-11,
+        "iodide_max_M": 8.453873293319983e-06,
+        "iodine_peak_M": 0.0002601595777651877
+      }
+    },
+    {
+      "parameter": "k1_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.0886265309416,
+            "end_s": 1491.63006031914,
+            "period_s": 526.5414337881984,
+            "iodide_pI_min": 5.079303935212001,
+            "iodide_pI_max": 10.030194197323311,
+            "iodine_peak_M": 0.0002601602875690208
+          },
+          {
+            "cycle": 2,
+            "start_s": 1491.63006031914,
+            "end_s": 2018.1715042267886,
+            "period_s": 526.5414439076485,
+            "iodide_pI_min": 5.079303935167385,
+            "iodide_pI_max": 10.030194223051527,
+            "iodine_peak_M": 0.00026016028748835604
+          },
+          {
+            "cycle": 3,
+            "start_s": 2018.1715042267886,
+            "end_s": 2544.712947386358,
+            "period_s": 526.5414431595693,
+            "iodide_pI_min": 5.079303935266085,
+            "iodide_pI_max": 10.030194223051527,
+            "iodine_peak_M": 0.0002601602874390683
+          },
+          {
+            "cycle": 4,
+            "start_s": 2544.712947386358,
+            "end_s": 3071.254379416408,
+            "period_s": 526.5414320300501,
+            "iodide_pI_min": 5.079303935170499,
+            "iodide_pI_max": 10.03019421734693,
+            "iodine_peak_M": 0.00026016028753353914
+          },
+          {
+            "cycle": 5,
+            "start_s": 3071.254379416408,
+            "end_s": 3597.795819870354,
+            "period_s": 526.541440453946,
+            "iodide_pI_min": 5.079303935351317,
+            "iodide_pI_max": 10.030194224083715,
+            "iodine_peak_M": 0.00026016028710331216
+          }
+        ],
+        "mean_period_s": 526.5414398878036,
+        "last_cycle_start_s": 3071.254379416408,
+        "last_cycle_end_s": 3597.795819870354,
+        "iodide_pI_min": 5.079303935351317,
+        "iodide_pI_max": 10.030194224083715,
+        "iodide_min_M": 9.328370264736582e-11,
+        "iodide_max_M": 8.330979477819505e-06,
+        "iodine_peak_M": 0.00026016028710331216
+      }
+    },
+    {
+      "parameter": "k1_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 968.4399750938571,
+            "end_s": 1496.6457598639963,
+            "period_s": 528.2057847701392,
+            "iodide_pI_min": 5.068651883425624,
+            "iodide_pI_max": 10.031629332531685,
+            "iodine_peak_M": 0.0002601591048131488
+          },
+          {
+            "cycle": 2,
+            "start_s": 1496.6457598639963,
+            "end_s": 2024.851519867811,
+            "period_s": 528.2057600038147,
+            "iodide_pI_min": 5.068651883486892,
+            "iodide_pI_max": 10.031629318921718,
+            "iodine_peak_M": 0.00026015910467887607
+          },
+          {
+            "cycle": 3,
+            "start_s": 2024.851519867811,
+            "end_s": 2553.057274461949,
+            "period_s": 528.2057545941379,
+            "iodide_pI_min": 5.068651883669952,
+            "iodide_pI_max": 10.031629293184,
+            "iodine_peak_M": 0.0002601591043343948
+          },
+          {
+            "cycle": 4,
+            "start_s": 2553.057274461949,
+            "end_s": 3081.2630536710467,
+            "period_s": 528.2057792090977,
+            "iodide_pI_min": 5.068651883621528,
+            "iodide_pI_max": 10.031629326765554,
+            "iodine_peak_M": 0.0002601591043281685
+          }
+        ],
+        "mean_period_s": 528.2057696442973,
+        "last_cycle_start_s": 2553.057274461949,
+        "last_cycle_end_s": 3081.2630536710467,
+        "iodide_pI_min": 5.068651883621528,
+        "iodide_pI_max": 10.031629326765554,
+        "iodide_min_M": 9.297596042417347e-11,
+        "iodide_max_M": 8.537842055508046e-06,
+        "iodine_peak_M": 0.0002601591043281685
+      }
+    },
+    {
+      "parameter": "k1_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.4326848382321,
+            "end_s": 1490.648312321437,
+            "period_s": 526.2156274832049,
+            "iodide_pI_min": 5.0814031932376515,
+            "iodide_pI_max": 10.029910139343928,
+            "iodine_peak_M": 0.0002601605241438104
+          },
+          {
+            "cycle": 2,
+            "start_s": 1490.648312321437,
+            "end_s": 2016.863945644934,
+            "period_s": 526.2156333234968,
+            "iodide_pI_min": 5.081403193097573,
+            "iodide_pI_max": 10.029910139343928,
+            "iodine_peak_M": 0.0002601605243610828
+          },
+          {
+            "cycle": 3,
+            "start_s": 2016.863945644934,
+            "end_s": 2543.079575225474,
+            "period_s": 526.21562958054,
+            "iodide_pI_min": 5.08140319317565,
+            "iodide_pI_max": 10.0299101429299,
+            "iodine_peak_M": 0.00026016052409616333
+          },
+          {
+            "cycle": 4,
+            "start_s": 2543.079575225474,
+            "end_s": 3069.295212138143,
+            "period_s": 526.2156369126692,
+            "iodide_pI_min": 5.081403193229526,
+            "iodide_pI_max": 10.029910143178741,
+            "iodine_peak_M": 0.00026016052398698727
+          },
+          {
+            "cycle": 5,
+            "start_s": 3069.295212138143,
+            "end_s": 3595.5108552429856,
+            "period_s": 526.2156431048425,
+            "iodide_pI_min": 5.0814031932049195,
+            "iodide_pI_max": 10.029910143178741,
+            "iodine_peak_M": 0.00026016052419223774
+          }
+        ],
+        "mean_period_s": 526.2156357303871,
+        "last_cycle_start_s": 3069.295212138143,
+        "last_cycle_end_s": 3595.5108552429856,
+        "iodide_pI_min": 5.0814031932049195,
+        "iodide_pI_max": 10.029910143178741,
+        "iodide_min_M": 9.33447413867397e-11,
+        "iodide_max_M": 8.290807026436672e-06,
+        "iodine_peak_M": 0.00026016052419223774
+      }
+    },
+    {
+      "parameter": "k1_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 963.1344990600262,
+            "end_s": 1488.7053345479933,
+            "period_s": 525.5708354879671,
+            "iodide_pI_min": 5.085571357519734,
+            "iodide_pI_max": 10.029344859321169,
+            "iodine_peak_M": 0.0002601609972678403
+          },
+          {
+            "cycle": 2,
+            "start_s": 1488.7053345479933,
+            "end_s": 2014.2761599224675,
+            "period_s": 525.5708253744742,
+            "iodide_pI_min": 5.085571357333947,
+            "iodide_pI_max": 10.029344858433406,
+            "iodine_peak_M": 0.0002601609974742261
+          },
+          {
+            "cycle": 3,
+            "start_s": 2014.2761599224675,
+            "end_s": 2539.846963711561,
+            "period_s": 525.5708037890934,
+            "iodide_pI_min": 5.085571357598945,
+            "iodide_pI_max": 10.029344858433406,
+            "iodine_peak_M": 0.0002601609971183063
+          },
+          {
+            "cycle": 4,
+            "start_s": 2539.846963711561,
+            "end_s": 3065.4178000693964,
+            "period_s": 525.5708363578356,
+            "iodide_pI_min": 5.085571357499591,
+            "iodide_pI_max": 10.029344847944525,
+            "iodine_peak_M": 0.00026016099731011237
+          },
+          {
+            "cycle": 5,
+            "start_s": 3065.4178000693964,
+            "end_s": 3590.9886340539215,
+            "period_s": 525.570833984525,
+            "iodide_pI_min": 5.0855713576999575,
+            "iodide_pI_max": 10.029344858703832,
+            "iodine_peak_M": 0.00026016099676906405
+          }
+        ],
+        "mean_period_s": 525.570824876482,
+        "last_cycle_start_s": 3065.4178000693964,
+        "last_cycle_end_s": 3590.9886340539215,
+        "iodide_pI_min": 5.0855713576999575,
+        "iodide_pI_max": 10.029344858703832,
+        "iodide_min_M": 9.346631946559185e-11,
+        "iodide_max_M": 8.211616190027435e-06,
+        "iodine_peak_M": 0.00026016099676906405
+      }
+    },
+    {
+      "parameter": "k2_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.207268855691,
+            "end_s": 1493.8523413631833,
+            "period_s": 527.6450725074923,
+            "iodide_pI_min": 5.076582325794867,
+            "iodide_pI_max": 10.029880461629233,
+            "iodine_peak_M": 0.0002613397112732316
+          },
+          {
+            "cycle": 2,
+            "start_s": 1493.8523413631833,
+            "end_s": 2021.497429235547,
+            "period_s": 527.6450878723638,
+            "iodide_pI_min": 5.076582326014446,
+            "iodide_pI_max": 10.029880461629233,
+            "iodine_peak_M": 0.0002613397108298736
+          },
+          {
+            "cycle": 3,
+            "start_s": 2021.497429235547,
+            "end_s": 2549.142496188824,
+            "period_s": 527.6450669532771,
+            "iodide_pI_min": 5.0765823256988885,
+            "iodide_pI_max": 10.029880454246294,
+            "iodine_peak_M": 0.0002613397115159572
+          },
+          {
+            "cycle": 4,
+            "start_s": 2549.142496188824,
+            "end_s": 3076.7875727849405,
+            "period_s": 527.6450765961163,
+            "iodide_pI_min": 5.076582326024247,
+            "iodide_pI_max": 10.02988043786831,
+            "iodine_peak_M": 0.00026133971081081193
+          }
+        ],
+        "mean_period_s": 527.6450759823124,
+        "last_cycle_start_s": 2549.142496188824,
+        "last_cycle_end_s": 3076.7875727849405,
+        "iodide_pI_min": 5.076582326024247,
+        "iodide_pI_max": 10.02988043786831,
+        "iodide_min_M": 9.335112629252839e-11,
+        "iodide_max_M": 8.383351465045636e-06,
+        "iodine_peak_M": 0.00026133971081081193
+      }
+    },
+    {
+      "parameter": "k2_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.2991766931486,
+            "end_s": 1491.4021688955468,
+            "period_s": 526.1029922023981,
+            "iodide_pI_min": 5.077805353734175,
+            "iodide_pI_max": 10.031076110030282,
+            "iodine_peak_M": 0.0002589918623219804
+          },
+          {
+            "cycle": 2,
+            "start_s": 1491.4021688955468,
+            "end_s": 2017.505168045369,
+            "period_s": 526.1029991498222,
+            "iodide_pI_min": 5.077805353710195,
+            "iodide_pI_max": 10.031076101997892,
+            "iodine_peak_M": 0.00025899186228631963
+          },
+          {
+            "cycle": 3,
+            "start_s": 2017.505168045369,
+            "end_s": 2543.6081253575985,
+            "period_s": 526.1029573122296,
+            "iodide_pI_min": 5.077805353915932,
+            "iodide_pI_max": 10.031076088948456,
+            "iodine_peak_M": 0.0002589918619332883
+          },
+          {
+            "cycle": 4,
+            "start_s": 2543.6081253575985,
+            "end_s": 3069.711137027697,
+            "period_s": 526.1030116700986,
+            "iodide_pI_min": 5.077805353740402,
+            "iodide_pI_max": 10.031076107226129,
+            "iodine_peak_M": 0.0002589918623142475
+          },
+          {
+            "cycle": 5,
+            "start_s": 3069.711137027697,
+            "end_s": 3595.8141254959687,
+            "period_s": 526.1029884682716,
+            "iodide_pI_min": 5.077805353777054,
+            "iodide_pI_max": 10.031076107226129,
+            "iodine_peak_M": 0.00025899186225462217
+          }
+        ],
+        "mean_period_s": 526.1029891501055,
+        "last_cycle_start_s": 3069.711137027697,
+        "last_cycle_end_s": 3595.8141254959687,
+        "iodide_pI_min": 5.077805353777054,
+        "iodide_pI_max": 10.031076107226129,
+        "iodide_min_M": 9.30944719287595e-11,
+        "iodide_max_M": 8.359776106608944e-06,
+        "iodine_peak_M": 0.00025899186225462217
+      }
+    },
+    {
+      "parameter": "k2_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.6732076358772,
+            "end_s": 1495.1029245706911,
+            "period_s": 528.4297169348139,
+            "iodide_pI_min": 5.075969041228769,
+            "iodide_pI_max": 10.02927965728556,
+            "iodine_peak_M": 0.000262531015581569
+          },
+          {
+            "cycle": 2,
+            "start_s": 1495.1029245706911,
+            "end_s": 2023.5326580272279,
+            "period_s": 528.4297334565367,
+            "iodide_pI_min": 5.075969041335545,
+            "iodide_pI_max": 10.029279659991447,
+            "iodine_peak_M": 0.00026253101537117936
+          },
+          {
+            "cycle": 3,
+            "start_s": 2023.5326580272279,
+            "end_s": 2551.9623445045713,
+            "period_s": 528.4296864773435,
+            "iodide_pI_min": 5.075969041435917,
+            "iodide_pI_max": 10.029279659991447,
+            "iodine_peak_M": 0.0002625310151865858
+          },
+          {
+            "cycle": 4,
+            "start_s": 2551.9623445045713,
+            "end_s": 3080.392061320419,
+            "period_s": 528.4297168158478,
+            "iodide_pI_min": 5.075969041438257,
+            "iodide_pI_max": 10.029279659841748,
+            "iodine_peak_M": 0.0002625310151747858
+          }
+        ],
+        "mean_period_s": 528.4297134211354,
+        "last_cycle_start_s": 2551.9623445045713,
+        "last_cycle_end_s": 3080.392061320419,
+        "iodide_pI_min": 5.075969041438257,
+        "iodide_pI_max": 10.029279659841748,
+        "iodide_min_M": 9.34803522368456e-11,
+        "iodide_max_M": 8.395198293247265e-06,
+        "iodine_peak_M": 0.0002625310151747858
+      }
+    },
+    {
+      "parameter": "k2_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.8567837608294,
+            "end_s": 1490.2020649666372,
+            "period_s": 525.3452812058077,
+            "iodide_pI_min": 5.078415106194175,
+            "iodide_pI_max": 10.031671015673052,
+            "iodine_peak_M": 0.00025783497634580653
+          },
+          {
+            "cycle": 2,
+            "start_s": 1490.2020649666372,
+            "end_s": 2015.5473275836828,
+            "period_s": 525.3452626170456,
+            "iodide_pI_min": 5.078415106388079,
+            "iodide_pI_max": 10.031671015673052,
+            "iodine_peak_M": 0.00025783497603186056
+          },
+          {
+            "cycle": 3,
+            "start_s": 2015.5473275836828,
+            "end_s": 2540.892598920995,
+            "period_s": 525.3452713373124,
+            "iodide_pI_min": 5.07841510627616,
+            "iodide_pI_max": 10.031671005720215,
+            "iodine_peak_M": 0.00025783497619105033
+          },
+          {
+            "cycle": 4,
+            "start_s": 2540.892598920995,
+            "end_s": 3066.2378811342955,
+            "period_s": 525.3452822133004,
+            "iodide_pI_min": 5.078415106452982,
+            "iodide_pI_max": 10.031671018406543,
+            "iodine_peak_M": 0.0002578349758444456
+          },
+          {
+            "cycle": 5,
+            "start_s": 3066.2378811342955,
+            "end_s": 3591.58316245309,
+            "period_s": 525.3452813187946,
+            "iodide_pI_min": 5.078415106451357,
+            "iodide_pI_max": 10.031671018406543,
+            "iodine_peak_M": 0.00025783497586793277
+          }
+        ],
+        "mean_period_s": 525.3452743716132,
+        "last_cycle_start_s": 3066.2378811342955,
+        "last_cycle_end_s": 3591.58316245309,
+        "iodide_pI_min": 5.078415106451357,
+        "iodide_pI_max": 10.031671018406543,
+        "iodide_min_M": 9.296703529509735e-11,
+        "iodide_max_M": 8.34804715463476e-06,
+        "iodine_peak_M": 0.00025783497586793277
+      }
+    },
+    {
+      "parameter": "k2_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 967.6294292601259,
+            "end_s": 1497.656291881383,
+            "period_s": 530.026862621257,
+            "iodide_pI_min": 5.074738907510446,
+            "iodide_pI_max": 10.028071956416218,
+            "iodine_peak_M": 0.0002649492641686619
+          },
+          {
+            "cycle": 2,
+            "start_s": 1497.656291881383,
+            "end_s": 2027.6831596995085,
+            "period_s": 530.0268678181255,
+            "iodide_pI_min": 5.0747389075756955,
+            "iodide_pI_max": 10.028071956416218,
+            "iodine_peak_M": 0.0002649492640776023
+          },
+          {
+            "cycle": 3,
+            "start_s": 2027.6831596995085,
+            "end_s": 2557.7100423448574,
+            "period_s": 530.0268826453489,
+            "iodide_pI_min": 5.0747389075513345,
+            "iodide_pI_max": 10.028071963410667,
+            "iodine_peak_M": 0.0002649492640664177
+          },
+          {
+            "cycle": 4,
+            "start_s": 2557.7100423448574,
+            "end_s": 3087.7369025897956,
+            "period_s": 530.0268602449382,
+            "iodide_pI_min": 5.0747389076447815,
+            "iodide_pI_max": 10.028071963410667,
+            "iodine_peak_M": 0.0002649492638663859
+          }
+        ],
+        "mean_period_s": 530.0268683324174,
+        "last_cycle_start_s": 2557.7100423448574,
+        "last_cycle_end_s": 3087.7369025897956,
+        "iodide_pI_min": 5.0747389076447815,
+        "iodide_pI_max": 10.028071963410667,
+        "iodide_min_M": 9.374066640125243e-11,
+        "iodide_max_M": 8.419011298549615e-06,
+        "iodine_peak_M": 0.0002649492638663859
+      }
+    },
+    {
+      "parameter": "k2_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 963.994573911569,
+            "end_s": 1487.8503618670595,
+            "period_s": 523.8557879554905,
+            "iodide_pI_min": 5.079631111192119,
+            "iodide_pI_max": 10.032855106818369,
+            "iodine_peak_M": 0.00025555445209997596
+          },
+          {
+            "cycle": 2,
+            "start_s": 1487.8503618670595,
+            "end_s": 2011.7061343928551,
+            "period_s": 523.8557725257956,
+            "iodide_pI_min": 5.079631111259498,
+            "iodide_pI_max": 10.032855100932084,
+            "iodine_peak_M": 0.00025555445196930813
+          },
+          {
+            "cycle": 3,
+            "start_s": 2011.7061343928551,
+            "end_s": 2535.5619252222796,
+            "period_s": 523.8557908294244,
+            "iodide_pI_min": 5.079631111330472,
+            "iodide_pI_max": 10.03285510938815,
+            "iodine_peak_M": 0.0002555544517963744
+          },
+          {
+            "cycle": 4,
+            "start_s": 2535.5619252222796,
+            "end_s": 3059.4177211983265,
+            "period_s": 523.8557959760469,
+            "iodide_pI_min": 5.0796311109464956,
+            "iodide_pI_max": 10.03285510938815,
+            "iodine_peak_M": 0.00025555445243832965
+          },
+          {
+            "cycle": 5,
+            "start_s": 3059.4177211983265,
+            "end_s": 3583.273517274499,
+            "period_s": 523.8557960761727,
+            "iodide_pI_min": 5.079631110949177,
+            "iodide_pI_max": 10.032855109391921,
+            "iodine_peak_M": 0.00025555445243316245
+          }
+        ],
+        "mean_period_s": 523.8557888518599,
+        "last_cycle_start_s": 3059.4177211983265,
+        "last_cycle_end_s": 3583.273517274499,
+        "iodide_pI_min": 5.079631110949177,
+        "iodide_pI_max": 10.032855109391921,
+        "iodide_min_M": 9.271390866689367e-11,
+        "iodide_max_M": 8.32470570077947e-06,
+        "iodine_peak_M": 0.00025555445243316245
+      }
+    },
+    {
+      "parameter": "k3_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.8481812951713,
+            "end_s": 1490.722754845397,
+            "period_s": 525.8745735502257,
+            "iodide_pI_min": 5.077804793092368,
+            "iodide_pI_max": 10.028616783312184,
+            "iodine_peak_M": 0.00025898625187175745
+          },
+          {
+            "cycle": 2,
+            "start_s": 1490.722754845397,
+            "end_s": 2016.597319939796,
+            "period_s": 525.874565094399,
+            "iodide_pI_min": 5.077804793140088,
+            "iodide_pI_max": 10.028616778924503,
+            "iodine_peak_M": 0.00025898625182506607
+          },
+          {
+            "cycle": 3,
+            "start_s": 2016.597319939796,
+            "end_s": 2542.4718792845697,
+            "period_s": 525.8745593447736,
+            "iodide_pI_min": 5.07780479329128,
+            "iodide_pI_max": 10.028616778407674,
+            "iodine_peak_M": 0.00025898625159690363
+          },
+          {
+            "cycle": 4,
+            "start_s": 2542.4718792845697,
+            "end_s": 3068.346435204639,
+            "period_s": 525.8745559200693,
+            "iodide_pI_min": 5.077804793135645,
+            "iodide_pI_max": 10.028616775634863,
+            "iodine_peak_M": 0.0002589862518699917
+          },
+          {
+            "cycle": 5,
+            "start_s": 3068.346435204639,
+            "end_s": 3594.2209891117873,
+            "period_s": 525.8745539071483,
+            "iodide_pI_min": 5.077804793180476,
+            "iodide_pI_max": 10.028616759227342,
+            "iodine_peak_M": 0.0002589862518040068
+          }
+        ],
+        "mean_period_s": 525.8745585665976,
+        "last_cycle_start_s": 3068.346435204639,
+        "last_cycle_end_s": 3594.2209891117873,
+        "iodide_pI_min": 5.077804793180476,
+        "iodide_pI_max": 10.028616759227342,
+        "iodide_min_M": 9.362314820419826e-11,
+        "iodide_max_M": 8.35978689759317e-06,
+        "iodine_peak_M": 0.0002589862518040068
+      }
+    },
+    {
+      "parameter": "k3_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.6515900347953,
+            "end_s": 1494.5162453911553,
+            "period_s": 527.86465535636,
+            "iodide_pI_min": 5.076588972453243,
+            "iodide_pI_max": 10.032333692124508,
+            "iodine_peak_M": 0.00026133357997709455
+          },
+          {
+            "cycle": 2,
+            "start_s": 1494.5162453911553,
+            "end_s": 2022.3809282599377,
+            "period_s": 527.8646828687824,
+            "iodide_pI_min": 5.076588972436266,
+            "iodide_pI_max": 10.032333693565581,
+            "iodine_peak_M": 0.0002613335799253042
+          },
+          {
+            "cycle": 3,
+            "start_s": 2022.3809282599377,
+            "end_s": 2550.2456208798976,
+            "period_s": 527.8646926199599,
+            "iodide_pI_min": 5.076588972664425,
+            "iodide_pI_max": 10.032333693565581,
+            "iodine_peak_M": 0.00026133357957796834
+          },
+          {
+            "cycle": 4,
+            "start_s": 2550.2456208798976,
+            "end_s": 3078.1102940625856,
+            "period_s": 527.864673182688,
+            "iodide_pI_min": 5.076588972518145,
+            "iodide_pI_max": 10.03233368910912,
+            "iodine_peak_M": 0.00026133357992336274
+          }
+        ],
+        "mean_period_s": 527.8646760069475,
+        "last_cycle_start_s": 2550.2456208798976,
+        "last_cycle_end_s": 3078.1102940625856,
+        "iodide_pI_min": 5.076588972518145,
+        "iodide_pI_max": 10.03233368910912,
+        "iodide_min_M": 9.282528918567181e-11,
+        "iodide_max_M": 8.383223166229251e-06,
+        "iodine_peak_M": 0.00026133357992336274
+      }
+    },
+    {
+      "parameter": "k3_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 963.9480103577216,
+            "end_s": 1488.8277331294817,
+            "period_s": 524.87972277176,
+            "iodide_pI_min": 5.078420127418164,
+            "iodide_pI_max": 10.026746149814416,
+            "iodine_peak_M": 0.0002578121801093536
+          },
+          {
+            "cycle": 2,
+            "start_s": 1488.8277331294817,
+            "end_s": 2013.7074396190442,
+            "period_s": 524.8797064895625,
+            "iodide_pI_min": 5.078420127524821,
+            "iodide_pI_max": 10.026746148607629,
+            "iodine_peak_M": 0.0002578121800633638
+          },
+          {
+            "cycle": 3,
+            "start_s": 2013.7074396190442,
+            "end_s": 2538.587165548662,
+            "period_s": 524.879725929618,
+            "iodide_pI_min": 5.07842012760644,
+            "iodide_pI_max": 10.02674614644222,
+            "iodine_peak_M": 0.00025781217980393466
+          },
+          {
+            "cycle": 4,
+            "start_s": 2538.587165548662,
+            "end_s": 3063.4668875844627,
+            "period_s": 524.8797220358006,
+            "iodide_pI_min": 5.0784201275210785,
+            "iodide_pI_max": 10.026746148886868,
+            "iodine_peak_M": 0.00025781218003871273
+          },
+          {
+            "cycle": 5,
+            "start_s": 3063.4668875844627,
+            "end_s": 3588.3465982491825,
+            "period_s": 524.8797106647198,
+            "iodide_pI_min": 5.078420127660799,
+            "iodide_pI_max": 10.026746148886868,
+            "iodine_peak_M": 0.0002578121797814925
+          }
+        ],
+        "mean_period_s": 524.8797162799252,
+        "last_cycle_start_s": 3063.4668875844627,
+        "last_cycle_end_s": 3588.3465982491825,
+        "iodide_pI_min": 5.078420127660799,
+        "iodide_pI_max": 10.026746148886868,
+        "iodide_min_M": 9.402727523599568e-11,
+        "iodide_max_M": 8.347950637058267e-06,
+        "iodine_peak_M": 0.0002578121797814925
+      }
+    },
+    {
+      "parameter": "k3_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 967.5548464361417,
+            "end_s": 1496.4147982265938,
+            "period_s": 528.8599517904521,
+            "iodide_pI_min": 5.075988365143754,
+            "iodide_pI_max": 10.034180122021706,
+            "iodine_peak_M": 0.0002625068416968213
+          },
+          {
+            "cycle": 2,
+            "start_s": 1496.4147982265938,
+            "end_s": 2025.2747261978284,
+            "period_s": 528.8599279712346,
+            "iodide_pI_min": 5.0759883651539575,
+            "iodide_pI_max": 10.034180122021706,
+            "iodine_peak_M": 0.00026250684157891265
+          },
+          {
+            "cycle": 3,
+            "start_s": 2025.2747261978284,
+            "end_s": 2554.13467203753,
+            "period_s": 528.8599458397016,
+            "iodide_pI_min": 5.075988365414194,
+            "iodide_pI_max": 10.034180110543545,
+            "iodine_peak_M": 0.0002625068412335052
+          },
+          {
+            "cycle": 4,
+            "start_s": 2554.13467203753,
+            "end_s": 3082.994628914645,
+            "period_s": 528.8599568771151,
+            "iodide_pI_min": 5.075988365216072,
+            "iodide_pI_max": 10.034180128797315,
+            "iodine_peak_M": 0.00026250684156183793
+          }
+        ],
+        "mean_period_s": 528.8599456196258,
+        "last_cycle_start_s": 2554.13467203753,
+        "last_cycle_end_s": 3082.994628914645,
+        "iodide_pI_min": 5.075988365216072,
+        "iodide_pI_max": 10.034180128797315,
+        "iodide_min_M": 9.243147239076398e-11,
+        "iodide_max_M": 8.394824760208667e-06,
+        "iodine_peak_M": 0.00026250684156183793
+      }
+    },
+    {
+      "parameter": "k3_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 962.1511018288102,
+            "end_s": 1485.0415834981543,
+            "period_s": 522.8904816693441,
+            "iodide_pI_min": 5.079665954657793,
+            "iodide_pI_max": 10.022980205032583,
+            "iodine_peak_M": 0.00025546320703474925
+          },
+          {
+            "cycle": 2,
+            "start_s": 1485.0415834981543,
+            "end_s": 2007.9320830928216,
+            "period_s": 522.8904995946673,
+            "iodide_pI_min": 5.079665954829635,
+            "iodide_pI_max": 10.022980205032583,
+            "iodine_peak_M": 0.0002554632067605041
+          },
+          {
+            "cycle": 3,
+            "start_s": 2007.9320830928216,
+            "end_s": 2530.8225370048967,
+            "period_s": 522.8904539120751,
+            "iodide_pI_min": 5.079665954741025,
+            "iodide_pI_max": 10.022980201846726,
+            "iodine_peak_M": 0.0002554632067433076
+          },
+          {
+            "cycle": 4,
+            "start_s": 2530.8225370048967,
+            "end_s": 3053.713022662243,
+            "period_s": 522.8904856573463,
+            "iodide_pI_min": 5.079665954844959,
+            "iodide_pI_max": 10.02298019582339,
+            "iodine_peak_M": 0.0002554632067345904
+          },
+          {
+            "cycle": 5,
+            "start_s": 3053.713022662243,
+            "end_s": 3576.603486017459,
+            "period_s": 522.8904633552161,
+            "iodide_pI_min": 5.0796659545444385,
+            "iodide_pI_max": 10.022980200966767,
+            "iodine_peak_M": 0.00025546320736872206
+          }
+        ],
+        "mean_period_s": 522.8904756298261,
+        "last_cycle_start_s": 3053.713022662243,
+        "last_cycle_end_s": 3576.603486017459,
+        "iodide_pI_min": 5.0796659545444385,
+        "iodide_pI_max": 10.022980200966767,
+        "iodide_min_M": 9.484617016967147e-11,
+        "iodide_max_M": 8.324037833577393e-06,
+        "iodine_peak_M": 0.00025546320736872206
+      }
+    },
+    {
+      "parameter": "k3_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 969.3645109634103,
+            "end_s": 1500.2153427831415,
+            "period_s": 530.8508318197312,
+            "iodide_pI_min": 5.074801461637206,
+            "iodide_pI_max": 10.03784927007118,
+            "iodine_peak_M": 0.00026485257345119304
+          },
+          {
+            "cycle": 2,
+            "start_s": 1500.2153427831415,
+            "end_s": 2031.0661998407104,
+            "period_s": 530.8508570575689,
+            "iodide_pI_min": 5.074801461635159,
+            "iodide_pI_max": 10.037849284543396,
+            "iodine_peak_M": 0.00026485257333990945
+          },
+          {
+            "cycle": 3,
+            "start_s": 2031.0661998407104,
+            "end_s": 2561.9170629319738,
+            "period_s": 530.8508630912634,
+            "iodide_pI_min": 5.074801461741724,
+            "iodide_pI_max": 10.037849284543396,
+            "iodine_peak_M": 0.0002648525731389826
+          },
+          {
+            "cycle": 4,
+            "start_s": 2561.9170629319738,
+            "end_s": 3092.767914510374,
+            "period_s": 530.8508515784001,
+            "iodide_pI_min": 5.074801461883179,
+            "iodide_pI_max": 10.037849274842856,
+            "iodine_peak_M": 0.0002648525729635683
+          }
+        ],
+        "mean_period_s": 530.8508508867409,
+        "last_cycle_start_s": 2561.9170629319738,
+        "last_cycle_end_s": 3092.767914510374,
+        "iodide_pI_min": 5.074801461883179,
+        "iodide_pI_max": 10.037849274842856,
+        "iodide_min_M": 9.165385264999939e-11,
+        "iodide_max_M": 8.417798741320422e-06,
+        "iodine_peak_M": 0.0002648525729635683
+      }
+    },
+    {
+      "parameter": "k_minus3_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.6477868483034,
+            "end_s": 1494.5077332404976,
+            "period_s": 527.8599463921942,
+            "iodide_pI_min": 5.076592684919891,
+            "iodide_pI_max": 10.031091515148086,
+            "iodine_peak_M": 0.00026132642159525283
+          },
+          {
+            "cycle": 2,
+            "start_s": 1494.5077332404976,
+            "end_s": 2022.3676689012034,
+            "period_s": 527.8599356607058,
+            "iodide_pI_min": 5.076592684919254,
+            "iodide_pI_max": 10.031091510447789,
+            "iodine_peak_M": 0.0002613264215611426
+          },
+          {
+            "cycle": 3,
+            "start_s": 2022.3676689012034,
+            "end_s": 2550.2276137410836,
+            "period_s": 527.8599448398802,
+            "iodide_pI_min": 5.076592684863387,
+            "iodide_pI_max": 10.031091510447789,
+            "iodine_peak_M": 0.00026132642166757443
+          },
+          {
+            "cycle": 4,
+            "start_s": 2550.2276137410836,
+            "end_s": 3078.0875528897577,
+            "period_s": 527.8599391486741,
+            "iodide_pI_min": 5.07659268496694,
+            "iodide_pI_max": 10.031091510255788,
+            "iodine_peak_M": 0.0002613264214647602
+          }
+        ],
+        "mean_period_s": 527.8599415103636,
+        "last_cycle_start_s": 2550.2276137410836,
+        "last_cycle_end_s": 3078.0875528897577,
+        "iodide_pI_min": 5.07659268496694,
+        "iodide_pI_max": 10.031091510255788,
+        "iodide_min_M": 9.309117022555175e-11,
+        "iodide_max_M": 8.383151504822037e-06,
+        "iodine_peak_M": 0.0002613264214647602
+      }
+    },
+    {
+      "parameter": "k_minus3_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.8608157146987,
+            "end_s": 1490.7499598246745,
+            "period_s": 525.8891441099759,
+            "iodide_pI_min": 5.077794971735307,
+            "iodide_pI_max": 10.02986843175671,
+            "iodine_peak_M": 0.00025900500186613033
+          },
+          {
+            "cycle": 2,
+            "start_s": 1490.7499598246745,
+            "end_s": 2016.639124077097,
+            "period_s": 525.8891642524225,
+            "iodide_pI_min": 5.077794971964697,
+            "iodide_pI_max": 10.029868439866899,
+            "iodine_peak_M": 0.00025900500139463715
+          },
+          {
+            "cycle": 3,
+            "start_s": 2016.639124077097,
+            "end_s": 2542.5282645539114,
+            "period_s": 525.8891404768144,
+            "iodide_pI_min": 5.077794971942451,
+            "iodide_pI_max": 10.029868439866899,
+            "iodine_peak_M": 0.00025900500149268887
+          },
+          {
+            "cycle": 4,
+            "start_s": 2542.5282645539114,
+            "end_s": 3068.4173986335527,
+            "period_s": 525.8891340796413,
+            "iodide_pI_min": 5.0777949717859405,
+            "iodide_pI_max": 10.029868436834647,
+            "iodine_peak_M": 0.00025900500176583523
+          },
+          {
+            "cycle": 5,
+            "start_s": 3068.4173986335527,
+            "end_s": 3594.306538765634,
+            "period_s": 525.8891401320811,
+            "iodide_pI_min": 5.077794971736659,
+            "iodide_pI_max": 10.029868420570292,
+            "iodine_peak_M": 0.00025900500169988256
+          }
+        ],
+        "mean_period_s": 525.8891447352398,
+        "last_cycle_start_s": 3068.4173986335527,
+        "last_cycle_end_s": 3594.306538765634,
+        "iodide_pI_min": 5.077794971736659,
+        "iodide_pI_max": 10.029868420570292,
+        "iodide_min_M": 9.335370943339926e-11,
+        "iodide_max_M": 8.359975953888288e-06,
+        "iodine_peak_M": 0.00025900500169988256
+      }
+    },
+    {
+      "parameter": "k_minus3_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 967.556360949178,
+            "end_s": 1496.4167847822607,
+            "period_s": 528.8604238330827,
+            "iodide_pI_min": 5.075989736568157,
+            "iodide_pI_max": 10.03170517754292,
+            "iodine_peak_M": 0.00026250428357918573
+          },
+          {
+            "cycle": 2,
+            "start_s": 1496.4167847822607,
+            "end_s": 2025.2772147020378,
+            "period_s": 528.8604299197771,
+            "iodide_pI_min": 5.075989736557253,
+            "iodide_pI_max": 10.03170516360656,
+            "iodine_peak_M": 0.000262504283528016
+          },
+          {
+            "cycle": 3,
+            "start_s": 2025.2772147020378,
+            "end_s": 2554.1376484424095,
+            "period_s": 528.8604337403717,
+            "iodide_pI_min": 5.075989736753745,
+            "iodide_pI_max": 10.031705163742535,
+            "iodine_peak_M": 0.00026250428317762625
+          },
+          {
+            "cycle": 4,
+            "start_s": 2554.1376484424095,
+            "end_s": 3082.9980938846375,
+            "period_s": 528.860445442228,
+            "iodide_pI_min": 5.075989736590563,
+            "iodide_pI_max": 10.031705184585991,
+            "iodine_peak_M": 0.00026250428350822947
+          }
+        ],
+        "mean_period_s": 528.8604332338648,
+        "last_cycle_start_s": 2554.1376484424095,
+        "last_cycle_end_s": 3082.9980938846375,
+        "iodide_pI_min": 5.075989736590563,
+        "iodide_pI_max": 10.031705184585991,
+        "iodide_min_M": 9.295972181632983e-11,
+        "iodide_max_M": 8.394798251858156e-06,
+        "iodine_peak_M": 0.00026250428350822947
+      }
+    },
+    {
+      "parameter": "k_minus3_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 963.9820923418331,
+            "end_s": 1488.9006412275828,
+            "period_s": 524.9185488857497,
+            "iodide_pI_min": 5.078394319600095,
+            "iodide_pI_max": 10.029259002345785,
+            "iodine_peak_M": 0.00025786110739843397
+          },
+          {
+            "cycle": 2,
+            "start_s": 1488.9006412275828,
+            "end_s": 2013.8191967653504,
+            "period_s": 524.9185555377676,
+            "iodide_pI_min": 5.078394319766393,
+            "iodide_pI_max": 10.029259003153589,
+            "iodine_peak_M": 0.0002578611070824228
+          },
+          {
+            "cycle": 3,
+            "start_s": 2013.8191967653504,
+            "end_s": 2538.7377676532974,
+            "period_s": 524.918570887947,
+            "iodide_pI_min": 5.078394319672526,
+            "iodide_pI_max": 10.029259025417474,
+            "iodine_peak_M": 0.00025786110702899706
+          },
+          {
+            "cycle": 4,
+            "start_s": 2538.7377676532974,
+            "end_s": 3063.6563340728253,
+            "period_s": 524.9185664195279,
+            "iodide_pI_min": 5.078394319601121,
+            "iodide_pI_max": 10.029259025417474,
+            "iodine_peak_M": 0.0002578611072945217
+          },
+          {
+            "cycle": 5,
+            "start_s": 3063.6563340728253,
+            "end_s": 3588.5748788326227,
+            "period_s": 524.9185447597974,
+            "iodide_pI_min": 5.078394319633605,
+            "iodide_pI_max": 10.029259015973741,
+            "iodine_peak_M": 0.0002578611073012466
+          }
+        ],
+        "mean_period_s": 524.9185594012599,
+        "last_cycle_start_s": 3063.6563340728253,
+        "last_cycle_end_s": 3588.5748788326227,
+        "iodide_pI_min": 5.078394319633605,
+        "iodide_pI_max": 10.029259015973741,
+        "iodide_min_M": 9.348479586208047e-11,
+        "iodide_max_M": 8.348446730256683e-06,
+        "iodine_peak_M": 0.0002578611073012466
+      }
+    },
+    {
+      "parameter": "k_minus3_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 969.4044482296823,
+            "end_s": 1500.2968649611419,
+            "period_s": 530.8924167314595,
+            "iodide_pI_min": 5.074780206008838,
+            "iodide_pI_max": 10.032936826869895,
+            "iodine_peak_M": 0.00026489517955050664
+          },
+          {
+            "cycle": 2,
+            "start_s": 1500.2968649611419,
+            "end_s": 2031.1892909686517,
+            "period_s": 530.8924260075098,
+            "iodide_pI_min": 5.074780206016988,
+            "iodide_pI_max": 10.0329368274187,
+            "iodine_peak_M": 0.0002648951795305863
+          },
+          {
+            "cycle": 3,
+            "start_s": 2031.1892909686517,
+            "end_s": 2562.081698543054,
+            "period_s": 530.8924075744021,
+            "iodide_pI_min": 5.074780206071154,
+            "iodide_pI_max": 10.0329368274187,
+            "iodine_peak_M": 0.00026489517932811824
+          },
+          {
+            "cycle": 4,
+            "start_s": 2562.081698543054,
+            "end_s": 3092.9741232119763,
+            "period_s": 530.8924246689226,
+            "iodide_pI_min": 5.074780205847469,
+            "iodide_pI_max": 10.032936826484592,
+            "iodine_peak_M": 0.0002648951798381473
+          }
+        ],
+        "mean_period_s": 530.8924187455735,
+        "last_cycle_start_s": 2562.081698543054,
+        "last_cycle_end_s": 3092.9741232119763,
+        "iodide_pI_min": 5.074780205847469,
+        "iodide_pI_max": 10.032936826484592,
+        "iodide_min_M": 9.269646520710902e-11,
+        "iodide_max_M": 8.418210750721653e-06,
+        "iodine_peak_M": 0.0002648951798381473
+      }
+    },
+    {
+      "parameter": "k_minus3_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 962.2535872446282,
+            "end_s": 1485.259904945445,
+            "period_s": 523.0063177008168,
+            "iodide_pI_min": 5.079589447493151,
+            "iodide_pI_max": 10.028044386831006,
+            "iodine_peak_M": 0.000255606132029212
+          },
+          {
+            "cycle": 2,
+            "start_s": 1485.259904945445,
+            "end_s": 2008.266214259141,
+            "period_s": 523.006309313696,
+            "iodide_pI_min": 5.079589447601178,
+            "iodide_pI_max": 10.028044393102748,
+            "iodine_peak_M": 0.00025560613191914804
+          },
+          {
+            "cycle": 3,
+            "start_s": 2008.266214259141,
+            "end_s": 2531.272530106753,
+            "period_s": 523.0063158476121,
+            "iodide_pI_min": 5.07958944747324,
+            "iodide_pI_max": 10.028044393102748,
+            "iodine_peak_M": 0.00025560613197797447
+          },
+          {
+            "cycle": 4,
+            "start_s": 2531.272530106753,
+            "end_s": 3054.278845695671,
+            "period_s": 523.0063155889179,
+            "iodide_pI_min": 5.079589447666596,
+            "iodide_pI_max": 10.02804439270718,
+            "iodine_peak_M": 0.00025560613172837817
+          },
+          {
+            "cycle": 5,
+            "start_s": 3054.278845695671,
+            "end_s": 3577.2851442716706,
+            "period_s": 523.0062985759996,
+            "iodide_pI_min": 5.079589447709003,
+            "iodide_pI_max": 10.02804439270718,
+            "iodine_peak_M": 0.0002556061317236245
+          }
+        ],
+        "mean_period_s": 523.0063098315563,
+        "last_cycle_start_s": 3054.278845695671,
+        "last_cycle_end_s": 3577.2851442716706,
+        "iodide_pI_min": 5.079589447709003,
+        "iodide_pI_max": 10.02804439270718,
+        "iodide_min_M": 9.374661761238773e-11,
+        "iodide_max_M": 8.325504354376114e-06,
+        "iodine_peak_M": 0.0002556061317236245
+      }
+    },
+    {
+      "parameter": "k4_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.5168951035224,
+            "end_s": 1489.8250009033113,
+            "period_s": 525.3081057997889,
+            "iodide_pI_min": 5.078624958422479,
+            "iodide_pI_max": 10.030384074023225,
+            "iodine_peak_M": 0.0002574445663656141
+          },
+          {
+            "cycle": 2,
+            "start_s": 1489.8250009033113,
+            "end_s": 2015.1330847488623,
+            "period_s": 525.308083845551,
+            "iodide_pI_min": 5.078624958692662,
+            "iodide_pI_max": 10.030384074023225,
+            "iodine_peak_M": 0.0002574445659133465
+          },
+          {
+            "cycle": 3,
+            "start_s": 2015.1330847488623,
+            "end_s": 2540.4411719017353,
+            "period_s": 525.308087152873,
+            "iodide_pI_min": 5.078624958748891,
+            "iodide_pI_max": 10.030384061082907,
+            "iodine_peak_M": 0.0002574445658833518
+          },
+          {
+            "cycle": 4,
+            "start_s": 2540.4411719017353,
+            "end_s": 3065.7492703111416,
+            "period_s": 525.3080984094063,
+            "iodide_pI_min": 5.078624958533545,
+            "iodide_pI_max": 10.030384059252203,
+            "iodine_peak_M": 0.0002574445662012602
+          },
+          {
+            "cycle": 5,
+            "start_s": 3065.7492703111416,
+            "end_s": 3591.057376148534,
+            "period_s": 525.3081058373923,
+            "iodide_pI_min": 5.0786249586782715,
+            "iodide_pI_max": 10.030384074993995,
+            "iodine_peak_M": 0.00025744456588146583
+          }
+        ],
+        "mean_period_s": 525.3080938113056,
+        "last_cycle_start_s": 3065.7492703111416,
+        "last_cycle_end_s": 3591.057376148534,
+        "iodide_pI_min": 5.0786249586782715,
+        "iodide_pI_max": 10.030384074993995,
+        "iodide_min_M": 9.324293278677565e-11,
+        "iodide_max_M": 8.344014330879982e-06,
+        "iodine_peak_M": 0.00025744456588146583
+      }
+    },
+    {
+      "parameter": "k4_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.9873853497431,
+            "end_s": 1495.4219580948811,
+            "period_s": 528.434572745138,
+            "iodide_pI_min": 5.075783415973016,
+            "iodide_pI_max": 10.03057334797095,
+            "iodine_peak_M": 0.00026288767003233767
+          },
+          {
+            "cycle": 2,
+            "start_s": 1495.4219580948811,
+            "end_s": 2023.856544326605,
+            "period_s": 528.4345862317239,
+            "iodide_pI_min": 5.075783416185793,
+            "iodide_pI_max": 10.030573360110528,
+            "iodine_peak_M": 0.0002628876696036827
+          },
+          {
+            "cycle": 3,
+            "start_s": 2023.856544326605,
+            "end_s": 2552.2911129498502,
+            "period_s": 528.4345686232452,
+            "iodide_pI_min": 5.075783416174058,
+            "iodide_pI_max": 10.030573360110528,
+            "iodine_peak_M": 0.0002628876695571371
+          },
+          {
+            "cycle": 4,
+            "start_s": 2552.2911129498502,
+            "end_s": 3080.725694346057,
+            "period_s": 528.4345813962068,
+            "iodide_pI_min": 5.075783416110686,
+            "iodide_pI_max": 10.030573352391087,
+            "iodine_peak_M": 0.00026288766972568133
+          }
+        ],
+        "mean_period_s": 528.4345772490785,
+        "last_cycle_start_s": 2552.2911129498502,
+        "last_cycle_end_s": 3080.725694346057,
+        "iodide_pI_min": 5.075783416110686,
+        "iodide_pI_max": 10.030573352391087,
+        "iodide_min_M": 9.320230382417283e-11,
+        "iodide_max_M": 8.39878732000575e-06,
+        "iodine_peak_M": 0.00026288766972568133
+      }
+    },
+    {
+      "parameter": "k4_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 963.2903017205633,
+            "end_s": 1487.040515708404,
+            "period_s": 523.7502139878407,
+            "iodide_pI_min": 5.080075340501069,
+            "iodide_pI_max": 10.030287755063007,
+            "iodine_peak_M": 0.00025474126854699406
+          },
+          {
+            "cycle": 2,
+            "start_s": 1487.040515708404,
+            "end_s": 2010.7906995545463,
+            "period_s": 523.7501838461424,
+            "iodide_pI_min": 5.080075340463265,
+            "iodide_pI_max": 10.030287755063007,
+            "iodine_peak_M": 0.0002547412686390808
+          },
+          {
+            "cycle": 3,
+            "start_s": 2010.7906995545463,
+            "end_s": 2534.540893891955,
+            "period_s": 523.7501943374086,
+            "iodide_pI_min": 5.080075340552574,
+            "iodide_pI_max": 10.030287728243904,
+            "iodine_peak_M": 0.0002547412684808515
+          },
+          {
+            "cycle": 4,
+            "start_s": 2534.540893891955,
+            "end_s": 3058.2910971949955,
+            "period_s": 523.7502033030405,
+            "iodide_pI_min": 5.080075340471432,
+            "iodide_pI_max": 10.030287749390327,
+            "iodine_peak_M": 0.0002547412686155439
+          },
+          {
+            "cycle": 5,
+            "start_s": 3058.2910971949955,
+            "end_s": 3582.0412931268597,
+            "period_s": 523.7501959318643,
+            "iodide_pI_min": 5.08007534047705,
+            "iodide_pI_max": 10.030287749390327,
+            "iodine_peak_M": 0.00025474126861140537
+          }
+        ],
+        "mean_period_s": 523.750194354614,
+        "last_cycle_start_s": 3058.2910971949955,
+        "last_cycle_end_s": 3582.0412931268597,
+        "iodide_pI_min": 5.08007534047705,
+        "iodide_pI_max": 10.030287749390327,
+        "iodide_min_M": 9.326361616705192e-11,
+        "iodide_max_M": 8.316194910192334e-06,
+        "iodine_peak_M": 0.00025474126861140537
+      }
+    },
+    {
+      "parameter": "k4_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 968.2311444950659,
+            "end_s": 1498.2342828204312,
+            "period_s": 530.0031383253653,
+            "iodide_pI_min": 5.074391593198467,
+            "iodide_pI_max": 10.03066635323583,
+            "iodine_peak_M": 0.0002656273704554743
+          },
+          {
+            "cycle": 2,
+            "start_s": 1498.2342828204312,
+            "end_s": 2028.237371045121,
+            "period_s": 530.0030882246899,
+            "iodide_pI_min": 5.074391593063748,
+            "iodide_pI_max": 10.030666347668173,
+            "iodine_peak_M": 0.00026562737061323227
+          },
+          {
+            "cycle": 3,
+            "start_s": 2028.237371045121,
+            "end_s": 2558.2404992040842,
+            "period_s": 530.0031281589631,
+            "iodide_pI_min": 5.074391593266163,
+            "iodide_pI_max": 10.030666333931824,
+            "iodine_peak_M": 0.0002656273700694808
+          },
+          {
+            "cycle": 4,
+            "start_s": 2558.2404992040842,
+            "end_s": 3088.2435765007685,
+            "period_s": 530.0030772966843,
+            "iodide_pI_min": 5.074391593417174,
+            "iodide_pI_max": 10.030666333931824,
+            "iodine_peak_M": 0.00026562737005854896
+          }
+        ],
+        "mean_period_s": 530.0031080014256,
+        "last_cycle_start_s": 2558.2404992040842,
+        "last_cycle_end_s": 3088.2435765007685,
+        "iodide_pI_min": 5.074391593417174,
+        "iodide_pI_max": 10.030666333931824,
+        "iodide_min_M": 9.31823515416991e-11,
+        "iodide_max_M": 8.4257468479255e-06,
+        "iodine_peak_M": 0.00026562737005854896
+      }
+    },
+    {
+      "parameter": "k4_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 970.7354277002953,
+            "end_s": 1503.886203738734,
+            "period_s": 533.1507760384386,
+            "iodide_pI_min": 5.071664235114862,
+            "iodide_pI_max": 10.030849137040734,
+            "iodine_peak_M": 0.0002711428053312528
+          },
+          {
+            "cycle": 2,
+            "start_s": 1503.886203738734,
+            "end_s": 2037.0369597331483,
+            "period_s": 533.1507559944143,
+            "iodide_pI_min": 5.071664235376754,
+            "iodide_pI_max": 10.030849137040734,
+            "iodine_peak_M": 0.0002711428048954134
+          },
+          {
+            "cycle": 3,
+            "start_s": 2037.0369597331483,
+            "end_s": 2570.187743866403,
+            "period_s": 533.1507841332545,
+            "iodide_pI_min": 5.071664235323727,
+            "iodide_pI_max": 10.030849138151634,
+            "iodine_peak_M": 0.0002711428050412519
+          },
+          {
+            "cycle": 4,
+            "start_s": 2570.187743866403,
+            "end_s": 3103.3385262137895,
+            "period_s": 533.1507823473867,
+            "iodide_pI_min": 5.071664235400172,
+            "iodide_pI_max": 10.030849138151634,
+            "iodine_peak_M": 0.00027114280485931146
+          }
+        ],
+        "mean_period_s": 533.1507746283735,
+        "last_cycle_start_s": 2570.187743866403,
+        "last_cycle_end_s": 3103.3385262137895,
+        "iodide_pI_min": 5.071664235400172,
+        "iodide_pI_max": 10.030849138151634,
+        "iodide_min_M": 9.314313726828704e-11,
+        "iodide_max_M": 8.478826814284264e-06,
+        "iodine_peak_M": 0.00027114280485931146
+      }
+    },
+    {
+      "parameter": "k4_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 960.8544678924148,
+            "end_s": 1481.4996562382448,
+            "period_s": 520.64518834583,
+            "iodide_pI_min": 5.083037028104793,
+            "iodide_pI_max": 10.03009166280912,
+            "iodine_peak_M": 0.0002493714479337382
+          },
+          {
+            "cycle": 2,
+            "start_s": 1481.4996562382448,
+            "end_s": 2002.1448454389597,
+            "period_s": 520.6451892007149,
+            "iodide_pI_min": 5.083037027908901,
+            "iodide_pI_max": 10.03009166280912,
+            "iodine_peak_M": 0.0002493714479945153
+          },
+          {
+            "cycle": 3,
+            "start_s": 2002.1448454389597,
+            "end_s": 2522.790010716999,
+            "period_s": 520.6451652780393,
+            "iodide_pI_min": 5.083037028062365,
+            "iodide_pI_max": 10.030091654789283,
+            "iodine_peak_M": 0.0002493714478791601
+          },
+          {
+            "cycle": 4,
+            "start_s": 2522.790010716999,
+            "end_s": 3043.4351845765564,
+            "period_s": 520.6451738595574,
+            "iodide_pI_min": 5.083037027963416,
+            "iodide_pI_max": 10.030091654789283,
+            "iodine_peak_M": 0.0002493714480574965
+          },
+          {
+            "cycle": 5,
+            "start_s": 3043.4351845765564,
+            "end_s": 3564.080369695911,
+            "period_s": 520.6451851193547,
+            "iodide_pI_min": 5.083037028264442,
+            "iodide_pI_max": 10.03009165641243,
+            "iodine_peak_M": 0.0002493714476451348
+          }
+        ],
+        "mean_period_s": 520.6451783644166,
+        "last_cycle_start_s": 3043.4351845765564,
+        "last_cycle_end_s": 3564.080369695911,
+        "iodide_pI_min": 5.083037028264442,
+        "iodide_pI_max": 10.03009165641243,
+        "iodide_min_M": 9.330573613493083e-11,
+        "iodide_max_M": 8.259675239811292e-06,
+        "iodine_peak_M": 0.0002493714476451348
+      }
+    },
+    {
+      "parameter": "k_minus4_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.1981638674107,
+            "end_s": 1493.5167319644122,
+            "period_s": 527.3185680970015,
+            "iodide_pI_min": 5.076795714928817,
+            "iodide_pI_max": 10.030591937337798,
+            "iodine_peak_M": 0.0002609249340897053
+          },
+          {
+            "cycle": 2,
+            "start_s": 1493.5167319644122,
+            "end_s": 2020.8352732280416,
+            "period_s": 527.3185412636294,
+            "iodide_pI_min": 5.076795715143158,
+            "iodide_pI_max": 10.03059193444303,
+            "iodine_peak_M": 0.0002609249336444915
+          },
+          {
+            "cycle": 3,
+            "start_s": 2020.8352732280416,
+            "end_s": 2548.1538220733087,
+            "period_s": 527.3185488452671,
+            "iodide_pI_min": 5.076795715095815,
+            "iodide_pI_max": 10.030591937065466,
+            "iodine_peak_M": 0.000260924933751439
+          },
+          {
+            "cycle": 4,
+            "start_s": 2548.1538220733087,
+            "end_s": 3075.4723959322796,
+            "period_s": 527.3185738589709,
+            "iodide_pI_min": 5.076795715147999,
+            "iodide_pI_max": 10.030591953339638,
+            "iodine_peak_M": 0.0002609249336245287
+          }
+        ],
+        "mean_period_s": 527.3185580162171,
+        "last_cycle_start_s": 2548.1538220733087,
+        "last_cycle_end_s": 3075.4723959322796,
+        "iodide_pI_min": 5.076795715147999,
+        "iodide_pI_max": 10.030591953339638,
+        "iodide_min_M": 9.319831203011482e-11,
+        "iodide_max_M": 8.379233345472826e-06,
+        "iodine_peak_M": 0.0002609249336245287
+      }
+    },
+    {
+      "parameter": "k_minus4_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.6495593143412,
+            "end_s": 1494.4196889123168,
+            "period_s": 527.7701295979756,
+            "iodide_pI_min": 5.076396373828688,
+            "iodide_pI_max": 10.030704900619291,
+            "iodine_peak_M": 0.0002616949529217878
+          },
+          {
+            "cycle": 2,
+            "start_s": 1494.4196889123168,
+            "end_s": 2022.1898152002007,
+            "period_s": 527.7701262878838,
+            "iodide_pI_min": 5.076396373837994,
+            "iodide_pI_max": 10.030704903467967,
+            "iodine_peak_M": 0.00026169495284258113
+          },
+          {
+            "cycle": 3,
+            "start_s": 2022.1898152002007,
+            "end_s": 2549.9599489625484,
+            "period_s": 527.7701337623478,
+            "iodide_pI_min": 5.0763963740156814,
+            "iodide_pI_max": 10.030704903467967,
+            "iodine_peak_M": 0.0002616949525832424
+          },
+          {
+            "cycle": 4,
+            "start_s": 2549.9599489625484,
+            "end_s": 3077.7300703524006,
+            "period_s": 527.7701213898522,
+            "iodide_pI_min": 5.076396374071359,
+            "iodide_pI_max": 10.03070490280947,
+            "iodine_peak_M": 0.00026169495247012033
+          }
+        ],
+        "mean_period_s": 527.7701277595149,
+        "last_cycle_start_s": 2549.9599489625484,
+        "last_cycle_end_s": 3077.7300703524006,
+        "iodide_pI_min": 5.076396374071359,
+        "iodide_pI_max": 10.03070490280947,
+        "iodide_min_M": 9.317407655943634e-11,
+        "iodide_max_M": 8.386941734843352e-06,
+        "iodine_peak_M": 0.00026169495247012033
+      }
+    },
+    {
+      "parameter": "k_minus4_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.3030060108237,
+            "end_s": 1491.7260932002218,
+            "period_s": 526.4230871893982,
+            "iodide_pI_min": 5.077592517421472,
+            "iodide_pI_max": 10.030366831706992,
+            "iodine_peak_M": 0.00025940024937907746
+          },
+          {
+            "cycle": 2,
+            "start_s": 1491.7260932002218,
+            "end_s": 2018.1491625421195,
+            "period_s": 526.4230693418976,
+            "iodide_pI_min": 5.077592517480468,
+            "iodide_pI_max": 10.030366840543724,
+            "iodine_peak_M": 0.00025940024927282375
+          },
+          {
+            "cycle": 3,
+            "start_s": 2018.1491625421195,
+            "end_s": 2544.572260654028,
+            "period_s": 526.4230981119085,
+            "iodide_pI_min": 5.077592517469891,
+            "iodide_pI_max": 10.030366840543724,
+            "iodine_peak_M": 0.00025940024924871354
+          },
+          {
+            "cycle": 4,
+            "start_s": 2544.572260654028,
+            "end_s": 3070.995338427912,
+            "period_s": 526.423077773884,
+            "iodide_pI_min": 5.077592517475991,
+            "iodide_pI_max": 10.030366836156587,
+            "iodine_peak_M": 0.00025940024923989843
+          },
+          {
+            "cycle": 5,
+            "start_s": 3070.995338427912,
+            "end_s": 3597.418417635005,
+            "period_s": 526.423079207093,
+            "iodide_pI_min": 5.077592517476769,
+            "iodide_pI_max": 10.030366836224205,
+            "iodine_peak_M": 0.0002594002492365131
+          }
+        ],
+        "mean_period_s": 526.4230811086958,
+        "last_cycle_start_s": 3070.995338427912,
+        "last_cycle_end_s": 3597.418417635005,
+        "iodide_pI_min": 5.077592517476769,
+        "iodide_pI_max": 10.030366836224205,
+        "iodide_min_M": 9.324663402043596e-11,
+        "iodide_max_M": 8.36387401700921e-06,
+        "iodine_peak_M": 0.0002594002492365131
+      }
+    },
+    {
+      "parameter": "k_minus4_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.8592062438937,
+            "end_s": 1490.8382904688694,
+            "period_s": 525.9790842249757,
+            "iodide_pI_min": 5.077989984973022,
+            "iodide_pI_max": 10.03025465272129,
+            "iodine_peak_M": 0.00025864547560302783
+          },
+          {
+            "cycle": 2,
+            "start_s": 1490.8382904688694,
+            "end_s": 2016.817374040502,
+            "period_s": 525.9790835716326,
+            "iodide_pI_min": 5.077989985025416,
+            "iodide_pI_max": 10.030254657634686,
+            "iodine_peak_M": 0.000258645475559495
+          },
+          {
+            "cycle": 3,
+            "start_s": 2016.817374040502,
+            "end_s": 2542.7964554691357,
+            "period_s": 525.9790814286337,
+            "iodide_pI_min": 5.077989984671179,
+            "iodide_pI_max": 10.030254657634686,
+            "iodine_peak_M": 0.000258645476217996
+          },
+          {
+            "cycle": 4,
+            "start_s": 2542.7964554691357,
+            "end_s": 3068.7755515852305,
+            "period_s": 525.9790961160948,
+            "iodide_pI_min": 5.077989985008825,
+            "iodide_pI_max": 10.030254665095299,
+            "iodine_peak_M": 0.0002586454755365383
+          },
+          {
+            "cycle": 5,
+            "start_s": 3068.7755515852305,
+            "end_s": 3594.7546397930155,
+            "period_s": 525.979088207785,
+            "iodide_pI_min": 5.077989985116569,
+            "iodide_pI_max": 10.030254665095299,
+            "iodine_peak_M": 0.00025864547531706804
+          }
+        ],
+        "mean_period_s": 525.9790873310365,
+        "last_cycle_start_s": 3068.7755515852305,
+        "last_cycle_end_s": 3594.7546397930155,
+        "iodide_pI_min": 5.077989985116569,
+        "iodide_pI_max": 10.030254665095299,
+        "iodide_min_M": 9.327072120442252e-11,
+        "iodide_max_M": 8.35622287560379e-06,
+        "iodine_peak_M": 0.00025864547531706804
+      }
+    },
+    {
+      "parameter": "k_minus4_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 967.5601006184324,
+            "end_s": 1496.2410880827995,
+            "period_s": 528.680987464367,
+            "iodide_pI_min": 5.075595796366257,
+            "iodide_pI_max": 10.030931577912595,
+            "iodine_peak_M": 0.0002632506191658103
+          },
+          {
+            "cycle": 2,
+            "start_s": 1496.2410880827995,
+            "end_s": 2024.9220812661904,
+            "period_s": 528.6809931833909,
+            "iodide_pI_min": 5.075595796301697,
+            "iodide_pI_max": 10.030931563485899,
+            "iodine_peak_M": 0.0002632506191459755
+          },
+          {
+            "cycle": 3,
+            "start_s": 2024.9220812661904,
+            "end_s": 2553.6030839804343,
+            "period_s": 528.681002714244,
+            "iodide_pI_min": 5.075595796517586,
+            "iodide_pI_max": 10.030931568713918,
+            "iodine_peak_M": 0.00026325061871491955
+          },
+          {
+            "cycle": 4,
+            "start_s": 2553.6030839804343,
+            "end_s": 3082.2840721380635,
+            "period_s": 528.6809881576291,
+            "iodide_pI_min": 5.075595796331289,
+            "iodide_pI_max": 10.030931568713918,
+            "iodine_peak_M": 0.00026325061903560785
+          }
+        ],
+        "mean_period_s": 528.6809928799078,
+        "last_cycle_start_s": 2553.6030839804343,
+        "last_cycle_end_s": 3082.2840721380635,
+        "iodide_pI_min": 5.075595796331289,
+        "iodide_pI_max": 10.030931568713918,
+        "iodide_min_M": 9.312546006329402e-11,
+        "iodide_max_M": 8.402416468234292e-06,
+        "iodine_peak_M": 0.00026325061903560785
+      }
+    },
+    {
+      "parameter": "k_minus4_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 963.9789738981474,
+            "end_s": 1489.0774989584286,
+            "period_s": 525.0985250602812,
+            "iodide_pI_min": 5.078783067835729,
+            "iodide_pI_max": 10.030031049711399,
+            "iodine_peak_M": 0.0002571508019721212
+          },
+          {
+            "cycle": 2,
+            "start_s": 1489.0774989584286,
+            "end_s": 2014.176027556866,
+            "period_s": 525.0985285984375,
+            "iodide_pI_min": 5.078783067873373,
+            "iodide_pI_max": 10.030031059741127,
+            "iodine_peak_M": 0.0002571508018235019
+          },
+          {
+            "cycle": 3,
+            "start_s": 2014.176027556866,
+            "end_s": 2539.2745564319102,
+            "period_s": 525.0985288750442,
+            "iodide_pI_min": 5.078783067929103,
+            "iodide_pI_max": 10.030031059741127,
+            "iodine_peak_M": 0.00025715080171028544
+          },
+          {
+            "cycle": 4,
+            "start_s": 2539.2745564319102,
+            "end_s": 3064.3730858005706,
+            "period_s": 525.0985293686604,
+            "iodide_pI_min": 5.078783068008404,
+            "iodide_pI_max": 10.030031072508745,
+            "iodine_peak_M": 0.0002571508017039768
+          },
+          {
+            "cycle": 5,
+            "start_s": 3064.3730858005706,
+            "end_s": 3589.471610171751,
+            "period_s": 525.0985243711802,
+            "iodide_pI_min": 5.078783067971224,
+            "iodide_pI_max": 10.030031072508745,
+            "iodine_peak_M": 0.00025715080170030574
+          }
+        ],
+        "mean_period_s": 525.0985278033306,
+        "last_cycle_start_s": 3064.3730858005706,
+        "last_cycle_end_s": 3589.471610171751,
+        "iodide_pI_min": 5.078783067971224,
+        "iodide_pI_max": 10.030031072508745,
+        "iodide_min_M": 9.331875315510649e-11,
+        "iodide_max_M": 8.340977161069523e-06,
+        "iodine_peak_M": 0.00025715080170030574
+      }
+    },
+    {
+      "parameter": "k5_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.1707603868704,
+            "end_s": 1493.4614318075141,
+            "period_s": 527.2906714206438,
+            "iodide_pI_min": 5.076781468737,
+            "iodide_pI_max": 10.030651571800902,
+            "iodine_peak_M": 0.00026095229105346177
+          },
+          {
+            "cycle": 2,
+            "start_s": 1493.4614318075141,
+            "end_s": 2020.7520954734703,
+            "period_s": 527.2906636659561,
+            "iodide_pI_min": 5.076781468614168,
+            "iodide_pI_max": 10.030651571388523,
+            "iodine_peak_M": 0.00026095229129191605
+          },
+          {
+            "cycle": 3,
+            "start_s": 2020.7520954734703,
+            "end_s": 2548.042769988795,
+            "period_s": 527.2906745153248,
+            "iodide_pI_min": 5.076781468929779,
+            "iodide_pI_max": 10.030651571388523,
+            "iodine_peak_M": 0.00026095229071572515
+          },
+          {
+            "cycle": 4,
+            "start_s": 2548.042769988795,
+            "end_s": 3075.333447685619,
+            "period_s": 527.2906776968239,
+            "iodide_pI_min": 5.076781468981865,
+            "iodide_pI_max": 10.030651587635893,
+            "iodine_peak_M": 0.00026095229058838544
+          }
+        ],
+        "mean_period_s": 527.2906718246871,
+        "last_cycle_start_s": 2548.042769988795,
+        "last_cycle_end_s": 3075.333447685619,
+        "iodide_pI_min": 5.076781468981865,
+        "iodide_pI_max": 10.030651587635893,
+        "iodide_min_M": 9.318551556500011e-11,
+        "iodide_max_M": 8.379508214054376e-06,
+        "iodine_peak_M": 0.00026095229058838544
+      }
+    },
+    {
+      "parameter": "k5_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.5946485406679,
+            "end_s": 1494.3088741984695,
+            "period_s": 527.7142256578016,
+            "iodide_pI_min": 5.0763679553033,
+            "iodide_pI_max": 10.030824660181576,
+            "iodine_peak_M": 0.00026174981126951096
+          },
+          {
+            "cycle": 2,
+            "start_s": 1494.3088741984695,
+            "end_s": 2022.023122519297,
+            "period_s": 527.7142483208274,
+            "iodide_pI_min": 5.076367955397913,
+            "iodide_pI_max": 10.030824668401824,
+            "iodine_peak_M": 0.0002617498111516343
+          },
+          {
+            "cycle": 3,
+            "start_s": 2022.023122519297,
+            "end_s": 2549.737356774706,
+            "period_s": 527.7142342554089,
+            "iodide_pI_min": 5.076367955340773,
+            "iodide_pI_max": 10.030824668401824,
+            "iodine_peak_M": 0.00026174981119621467
+          },
+          {
+            "cycle": 4,
+            "start_s": 2549.737356774706,
+            "end_s": 3077.4515974884584,
+            "period_s": 527.7142407137526,
+            "iodide_pI_min": 5.0763679554171475,
+            "iodide_pI_max": 10.030824660732373,
+            "iodine_peak_M": 0.0002617498111293227
+          }
+        ],
+        "mean_period_s": 527.7142372369476,
+        "last_cycle_start_s": 2549.737356774706,
+        "last_cycle_end_s": 3077.4515974884584,
+        "iodide_pI_min": 5.0763679554171475,
+        "iodide_pI_max": 10.030824660732373,
+        "iodide_min_M": 9.314838708832291e-11,
+        "iodide_max_M": 8.387490563818598e-06,
+        "iodine_peak_M": 0.0002617498111293227
+      }
+    },
+    {
+      "parameter": "k5_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.3303126539105,
+            "end_s": 1491.7811901612397,
+            "period_s": 526.4508775073292,
+            "iodide_pI_min": 5.077606837882208,
+            "iodide_pI_max": 10.030307685292971,
+            "iodine_peak_M": 0.00025937303412908717
+          },
+          {
+            "cycle": 2,
+            "start_s": 1491.7811901612397,
+            "end_s": 2018.2320250576508,
+            "period_s": 526.4508348964112,
+            "iodide_pI_min": 5.07760683796487,
+            "iodide_pI_max": 10.030307685715389,
+            "iodine_peak_M": 0.0002593730340120571
+          },
+          {
+            "cycle": 3,
+            "start_s": 2018.2320250576508,
+            "end_s": 2544.6828737202195,
+            "period_s": 526.4508486625687,
+            "iodide_pI_min": 5.07760683812177,
+            "iodide_pI_max": 10.030307685715389,
+            "iodine_peak_M": 0.00025937303377389825
+          },
+          {
+            "cycle": 4,
+            "start_s": 2544.6828737202195,
+            "end_s": 3071.1337299157285,
+            "period_s": 526.450856195509,
+            "iodide_pI_min": 5.077606838131978,
+            "iodide_pI_max": 10.030307687533561,
+            "iodine_peak_M": 0.00025937303365369243
+          },
+          {
+            "cycle": 5,
+            "start_s": 3071.1337299157285,
+            "end_s": 3597.58456890283,
+            "period_s": 526.4508389871016,
+            "iodide_pI_min": 5.077606838106429,
+            "iodide_pI_max": 10.030307687533561,
+            "iodine_peak_M": 0.00025937303380371013
+          }
+        ],
+        "mean_period_s": 526.4508446853977,
+        "last_cycle_start_s": 3071.1337299157285,
+        "last_cycle_end_s": 3597.58456890283,
+        "iodide_pI_min": 5.077606838106429,
+        "iodide_pI_max": 10.030307687533561,
+        "iodide_min_M": 9.325933460066886e-11,
+        "iodide_max_M": 8.36359822725696e-06,
+        "iodine_peak_M": 0.00025937303380371013
+      }
+    },
+    {
+      "parameter": "k5_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.9136873723988,
+            "end_s": 1490.9482101341398,
+            "period_s": 526.034522761741,
+            "iodide_pI_min": 5.0780187008143605,
+            "iodide_pI_max": 10.030136833870028,
+            "iodine_peak_M": 0.0002585911842440365
+          },
+          {
+            "cycle": 2,
+            "start_s": 1490.9482101341398,
+            "end_s": 2016.9827558877678,
+            "period_s": 526.034545753628,
+            "iodide_pI_min": 5.078018700802517,
+            "iodide_pI_max": 10.030136834957437,
+            "iodine_peak_M": 0.00025859118431101737
+          },
+          {
+            "cycle": 3,
+            "start_s": 2016.9827558877678,
+            "end_s": 2543.0172855917845,
+            "period_s": 526.0345297040167,
+            "iodide_pI_min": 5.0780187007819375,
+            "iodide_pI_max": 10.030136834957437,
+            "iodine_peak_M": 0.00025859118419120956
+          },
+          {
+            "cycle": 4,
+            "start_s": 2543.0172855917845,
+            "end_s": 3069.0518255636794,
+            "period_s": 526.0345399718949,
+            "iodide_pI_min": 5.078018700764221,
+            "iodide_pI_max": 10.030136838633211,
+            "iodine_peak_M": 0.00025859118429478545
+          },
+          {
+            "cycle": 5,
+            "start_s": 3069.0518255636794,
+            "end_s": 3595.086366366788,
+            "period_s": 526.0345408031085,
+            "iodide_pI_min": 5.07801870085314,
+            "iodide_pI_max": 10.030136838633211,
+            "iodine_peak_M": 0.00025859118408717147
+          }
+        ],
+        "mean_period_s": 526.034539058162,
+        "last_cycle_start_s": 3069.0518255636794,
+        "last_cycle_end_s": 3595.086366366788,
+        "iodide_pI_min": 5.07801870085314,
+        "iodide_pI_max": 10.030136838633211,
+        "iodide_min_M": 9.329602949287543e-11,
+        "iodide_max_M": 8.355670376845392e-06,
+        "iodine_peak_M": 0.00025859118408717147
+      }
+    },
+    {
+      "parameter": "k5_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 967.4498315462307,
+            "end_s": 1496.018589144154,
+            "period_s": 528.5687575979233,
+            "iodide_pI_min": 5.07553925255336,
+            "iodide_pI_max": 10.031173085887339,
+            "iodine_peak_M": 0.0002633609247483981
+          },
+          {
+            "cycle": 2,
+            "start_s": 1496.018589144154,
+            "end_s": 2024.5873730959977,
+            "period_s": 528.5687839518437,
+            "iodide_pI_min": 5.075539252597556,
+            "iodide_pI_max": 10.03117308603706,
+            "iodine_peak_M": 0.0002633609246167204
+          },
+          {
+            "cycle": 3,
+            "start_s": 2024.5873730959977,
+            "end_s": 2553.1561309497065,
+            "period_s": 528.5687578537088,
+            "iodide_pI_min": 5.075539252741318,
+            "iodide_pI_max": 10.03117308603706,
+            "iodine_peak_M": 0.00026336092439442074
+          },
+          {
+            "cycle": 4,
+            "start_s": 2553.1561309497065,
+            "end_s": 3081.724898632174,
+            "period_s": 528.5687676824673,
+            "iodide_pI_min": 5.075539252439026,
+            "iodide_pI_max": 10.031173072257657,
+            "iodine_peak_M": 0.0002633609249857402
+          }
+        ],
+        "mean_period_s": 528.5687667714858,
+        "last_cycle_start_s": 2553.1561309497065,
+        "last_cycle_end_s": 3081.724898632174,
+        "iodide_pI_min": 5.075539252439026,
+        "iodide_pI_max": 10.031173072257657,
+        "iodide_min_M": 9.307368902421715e-11,
+        "iodide_max_M": 8.403510509907259e-06,
+        "iodine_peak_M": 0.0002633609249857402
+      }
+    },
+    {
+      "parameter": "k5_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.0874930956171,
+            "end_s": 1489.2964596372863,
+            "period_s": 525.2089665416692,
+            "iodide_pI_min": 5.078840800802879,
+            "iodide_pI_max": 10.029797291219404,
+            "iodine_peak_M": 0.0002570427651417362
+          },
+          {
+            "cycle": 2,
+            "start_s": 1489.2964596372863,
+            "end_s": 2014.5054287429564,
+            "period_s": 525.2089691056701,
+            "iodide_pI_min": 5.078840800773797,
+            "iodide_pI_max": 10.029797291219404,
+            "iodine_peak_M": 0.0002570427650247647
+          },
+          {
+            "cycle": 3,
+            "start_s": 2014.5054287429564,
+            "end_s": 2539.714402763458,
+            "period_s": 525.2089740205017,
+            "iodide_pI_min": 5.078840800729802,
+            "iodide_pI_max": 10.029797292162526,
+            "iodine_peak_M": 0.00025704276520689993
+          },
+          {
+            "cycle": 4,
+            "start_s": 2539.714402763458,
+            "end_s": 3064.923409805334,
+            "period_s": 525.2090070418758,
+            "iodide_pI_min": 5.078840800808841,
+            "iodide_pI_max": 10.029797305581326,
+            "iodine_peak_M": 0.0002570427650110854
+          },
+          {
+            "cycle": 5,
+            "start_s": 3064.923409805334,
+            "end_s": 3590.1323800245696,
+            "period_s": 525.2089702192357,
+            "iodide_pI_min": 5.078840801038517,
+            "iodide_pI_max": 10.029797305581326,
+            "iodine_peak_M": 0.00025704276469186926
+          }
+        ],
+        "mean_period_s": 525.2089800968208,
+        "last_cycle_start_s": 3064.923409805334,
+        "last_cycle_end_s": 3590.1323800245696,
+        "iodide_pI_min": 5.078840801038517,
+        "iodide_pI_max": 10.029797305581326,
+        "iodide_min_M": 9.336899719751493e-11,
+        "iodide_max_M": 8.339868424464057e-06,
+        "iodine_peak_M": 0.00025704276469186926
+      }
+    },
+    {
+      "parameter": "k6_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.8693044229224,
+            "end_s": 1490.854061758083,
+            "period_s": 525.9847573351606,
+            "iodide_pI_min": 5.077992683432509,
+            "iodide_pI_max": 10.030182305024933,
+            "iodine_peak_M": 0.0002586407102051822
+          },
+          {
+            "cycle": 2,
+            "start_s": 1490.854061758083,
+            "end_s": 2016.838823766355,
+            "period_s": 525.9847620082721,
+            "iodide_pI_min": 5.077992683614439,
+            "iodide_pI_max": 10.030182289664367,
+            "iodine_peak_M": 0.00025864070987260366
+          },
+          {
+            "cycle": 3,
+            "start_s": 2016.838823766355,
+            "end_s": 2542.823599989352,
+            "period_s": 525.9847762229967,
+            "iodide_pI_min": 5.0779926836765625,
+            "iodide_pI_max": 10.030182304205594,
+            "iodine_peak_M": 0.00025864070989338017
+          },
+          {
+            "cycle": 4,
+            "start_s": 2542.823599989352,
+            "end_s": 3068.808369501247,
+            "period_s": 525.9847695118951,
+            "iodide_pI_min": 5.0779926836084694,
+            "iodide_pI_max": 10.03018231305485,
+            "iodine_peak_M": 0.0002586407099012635
+          },
+          {
+            "cycle": 5,
+            "start_s": 3068.808369501247,
+            "end_s": 3594.793132491634,
+            "period_s": 525.984762990387,
+            "iodide_pI_min": 5.077992683683883,
+            "iodide_pI_max": 10.03018231305485,
+            "iodine_peak_M": 0.0002586407098425571
+          }
+        ],
+        "mean_period_s": 525.9847676833878,
+        "last_cycle_start_s": 3068.808369501247,
+        "last_cycle_end_s": 3594.793132491634,
+        "iodide_pI_min": 5.077992683683883,
+        "iodide_pI_max": 10.03018231305485,
+        "iodide_min_M": 9.32862610959716e-11,
+        "iodide_max_M": 8.35617095286289e-06,
+        "iodine_peak_M": 0.0002586407098425571
+      }
+    },
+    {
+      "parameter": "k6_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.6261099611999,
+            "end_s": 1494.3771718697888,
+            "period_s": 527.7510619085889,
+            "iodide_pI_min": 5.076405595489655,
+            "iodide_pI_max": 10.030773531469006,
+            "iodine_peak_M": 0.0002616767861108569
+          },
+          {
+            "cycle": 2,
+            "start_s": 1494.3771718697888,
+            "end_s": 2022.128219128511,
+            "period_s": 527.7510472587223,
+            "iodide_pI_min": 5.076405595670618,
+            "iodide_pI_max": 10.030773531469006,
+            "iodine_peak_M": 0.0002616767857292343
+          },
+          {
+            "cycle": 3,
+            "start_s": 2022.128219128511,
+            "end_s": 2549.8792666444433,
+            "period_s": 527.7510475159322,
+            "iodide_pI_min": 5.076405595680677,
+            "iodide_pI_max": 10.030773509351416,
+            "iodine_peak_M": 0.0002616767857109071
+          },
+          {
+            "cycle": 4,
+            "start_s": 2549.8792666444433,
+            "end_s": 3077.6303055656767,
+            "period_s": 527.7510389212334,
+            "iodide_pI_min": 5.076405595312402,
+            "iodide_pI_max": 10.030773509351416,
+            "iodine_peak_M": 0.0002616767864228989
+          }
+        ],
+        "mean_period_s": 527.7510489011192,
+        "last_cycle_start_s": 2549.8792666444433,
+        "last_cycle_end_s": 3077.6303055656767,
+        "iodide_pI_min": 5.076405595312402,
+        "iodide_pI_max": 10.030773509351416,
+        "iodide_min_M": 9.315935878940433e-11,
+        "iodide_max_M": 8.3867636593818e-06,
+        "iodine_peak_M": 0.0002616767864228989
+      }
+    },
+    {
+      "parameter": "k6_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 963.9860324796244,
+            "end_s": 1489.0827150484288,
+            "period_s": 525.0966825688043,
+            "iodide_pI_min": 5.078800513072411,
+            "iodide_pI_max": 10.029882619010884,
+            "iodine_peak_M": 0.0002571187894306948
+          },
+          {
+            "cycle": 2,
+            "start_s": 1489.0827150484288,
+            "end_s": 2014.1793959944384,
+            "period_s": 525.0966809460097,
+            "iodide_pI_min": 5.078800513372045,
+            "iodide_pI_max": 10.029882617736838,
+            "iodine_peak_M": 0.0002571187889906876
+          },
+          {
+            "cycle": 3,
+            "start_s": 2014.1793959944384,
+            "end_s": 2539.2760865624277,
+            "period_s": 525.0966905679893,
+            "iodide_pI_min": 5.078800513255851,
+            "iodide_pI_max": 10.02988261866283,
+            "iodine_peak_M": 0.00025711878907159867
+          },
+          {
+            "cycle": 4,
+            "start_s": 2539.2760865624277,
+            "end_s": 3064.3727671478346,
+            "period_s": 525.0966805854068,
+            "iodide_pI_min": 5.078800513226944,
+            "iodide_pI_max": 10.02988261866283,
+            "iodine_peak_M": 0.00025711878927825606
+          },
+          {
+            "cycle": 5,
+            "start_s": 3064.3727671478346,
+            "end_s": 3589.469437916984,
+            "period_s": 525.0966707691496,
+            "iodide_pI_min": 5.078800513298633,
+            "iodide_pI_max": 10.029882607643374,
+            "iodine_peak_M": 0.0002571187890729036
+          }
+        ],
+        "mean_period_s": 525.0966807171388,
+        "last_cycle_start_s": 3064.3727671478346,
+        "last_cycle_end_s": 3589.469437916984,
+        "iodide_pI_min": 5.078800513298633,
+        "iodide_pI_max": 10.029882607643374,
+        "iodide_min_M": 9.33506599029047e-11,
+        "iodide_max_M": 8.340642116160946e-06,
+        "iodine_peak_M": 0.0002571187890729036
+      }
+    },
+    {
+      "parameter": "k6_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 967.4996489297741,
+            "end_s": 1496.1289185425364,
+            "period_s": 528.6292696127623,
+            "iodide_pI_min": 5.0756260350787885,
+            "iodide_pI_max": 10.03106511781113,
+            "iodine_peak_M": 0.00026319089046999527
+          },
+          {
+            "cycle": 2,
+            "start_s": 1496.1289185425364,
+            "end_s": 2024.7582160543914,
+            "period_s": 528.6292975118549,
+            "iodide_pI_min": 5.0756260353526415,
+            "iodide_pI_max": 10.031065125417255,
+            "iodine_peak_M": 0.00026319089010462136
+          },
+          {
+            "cycle": 3,
+            "start_s": 2024.7582160543914,
+            "end_s": 2553.387489433449,
+            "period_s": 528.6292733790576,
+            "iodide_pI_min": 5.075626035102941,
+            "iodide_pI_max": 10.031065125417255,
+            "iodine_peak_M": 0.0002631908904216291
+          },
+          {
+            "cycle": 4,
+            "start_s": 2553.387489433449,
+            "end_s": 3082.0167589411644,
+            "period_s": 528.6292695077154,
+            "iodide_pI_min": 5.075626035244462,
+            "iodide_pI_max": 10.03106510487836,
+            "iodine_peak_M": 0.00026319089024692295
+          }
+        ],
+        "mean_period_s": 528.6292775028476,
+        "last_cycle_start_s": 2553.387489433449,
+        "last_cycle_end_s": 3082.0167589411644,
+        "iodide_pI_min": 5.075626035244462,
+        "iodide_pI_max": 10.03106510487836,
+        "iodide_min_M": 9.309683039927306e-11,
+        "iodide_max_M": 8.401831447914381e-06,
+        "iodine_peak_M": 0.00026319089024692295
+      }
+    },
+    {
+      "parameter": "k6_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 962.2096530759419,
+            "end_s": 1485.5201667650683,
+            "period_s": 523.3105136891264,
+            "iodide_pI_min": 5.080445521323811,
+            "iodide_pI_max": 10.02927487639277,
+            "iodine_peak_M": 0.0002540673136819894
+          },
+          {
+            "cycle": 2,
+            "start_s": 1485.5201667650683,
+            "end_s": 2008.8306904187602,
+            "period_s": 523.3105236536919,
+            "iodide_pI_min": 5.080445521461047,
+            "iodide_pI_max": 10.02927487405267,
+            "iodine_peak_M": 0.0002540673135520007
+          },
+          {
+            "cycle": 3,
+            "start_s": 2008.8306904187602,
+            "end_s": 2532.141206386046,
+            "period_s": 523.3105159672859,
+            "iodide_pI_min": 5.080445521498965,
+            "iodide_pI_max": 10.02927487405267,
+            "iodine_peak_M": 0.0002540673133596999
+          },
+          {
+            "cycle": 4,
+            "start_s": 2532.141206386046,
+            "end_s": 3055.4517311208374,
+            "period_s": 523.3105247347912,
+            "iodide_pI_min": 5.080445521448348,
+            "iodide_pI_max": 10.029274872952586,
+            "iodine_peak_M": 0.0002540673135302246
+          },
+          {
+            "cycle": 5,
+            "start_s": 3055.4517311208374,
+            "end_s": 3578.7622554511768,
+            "period_s": 523.3105243303394,
+            "iodide_pI_min": 5.080445521540992,
+            "iodide_pI_max": 10.029274876431854,
+            "iodine_peak_M": 0.00025406731333211635
+          }
+        ],
+        "mean_period_s": 523.310522171527,
+        "last_cycle_start_s": 3055.4517311208374,
+        "last_cycle_end_s": 3578.7622554511768,
+        "iodide_pI_min": 5.080445521540992,
+        "iodide_pI_max": 10.029274876431854,
+        "iodide_min_M": 9.348138185458862e-11,
+        "iodide_max_M": 8.309109427033162e-06,
+        "iodine_peak_M": 0.00025406731333211635
+      }
+    },
+    {
+      "parameter": "k6_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 969.2371406007343,
+            "end_s": 1499.6130546487134,
+            "period_s": 530.3759140479791,
+            "iodide_pI_min": 5.074094148935696,
+            "iodide_pI_max": 10.031640441882152,
+            "iodine_peak_M": 0.00026621110921789295
+          },
+          {
+            "cycle": 2,
+            "start_s": 1499.6130546487134,
+            "end_s": 2029.9890343403165,
+            "period_s": 530.3759796916031,
+            "iodide_pI_min": 5.074094148961173,
+            "iodide_pI_max": 10.031640441597979,
+            "iodine_peak_M": 0.0002662111091642119
+          },
+          {
+            "cycle": 3,
+            "start_s": 2029.9890343403165,
+            "end_s": 2560.3649909742076,
+            "period_s": 530.3759566338911,
+            "iodide_pI_min": 5.074094149100274,
+            "iodide_pI_max": 10.03164044607107,
+            "iodine_peak_M": 0.00026621110897348527
+          },
+          {
+            "cycle": 4,
+            "start_s": 2560.3649909742076,
+            "end_s": 3090.7409552323297,
+            "period_s": 530.3759642581222,
+            "iodide_pI_min": 5.074094149182977,
+            "iodide_pI_max": 10.031640461986445,
+            "iodine_peak_M": 0.00026621110881416295
+          }
+        ],
+        "mean_period_s": 530.3759536578989,
+        "last_cycle_start_s": 2560.3649909742076,
+        "last_cycle_end_s": 3090.7409552323297,
+        "iodide_pI_min": 5.074094149182977,
+        "iodide_pI_max": 10.031640461986445,
+        "iodide_min_M": 9.297357657029634e-11,
+        "iodide_max_M": 8.431519539848045e-06,
+        "iodine_peak_M": 0.00026621110881416295
+      }
+    },
+    {
+      "parameter": "k7_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.7493404682605,
+            "end_s": 1492.618909499149,
+            "period_s": 526.8695690308884,
+            "iodide_pI_min": 5.077194428461991,
+            "iodide_pI_max": 10.03047926743149,
+            "iodine_peak_M": 0.00026016005101327894
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.618909499149,
+            "end_s": 2019.488409753858,
+            "period_s": 526.869500254709,
+            "iodide_pI_min": 5.077194428650411,
+            "iodide_pI_max": 10.03047926743149,
+            "iodine_peak_M": 0.0002601600505799102
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.488409753858,
+            "end_s": 2546.35793493109,
+            "period_s": 526.8695251772319,
+            "iodide_pI_min": 5.0771944284861465,
+            "iodide_pI_max": 10.030479229439916,
+            "iodine_peak_M": 0.0002601600508928121
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.35793493109,
+            "end_s": 3073.2275118395655,
+            "period_s": 526.8695769084757,
+            "iodide_pI_min": 5.077194428414429,
+            "iodide_pI_max": 10.030479270278205,
+            "iodine_peak_M": 0.00026016005094284733
+          }
+        ],
+        "mean_period_s": 526.8695428428263,
+        "last_cycle_start_s": 2546.35793493109,
+        "last_cycle_end_s": 3073.2275118395655,
+        "iodide_pI_min": 5.077194428414429,
+        "iodide_pI_max": 10.030479270278205,
+        "iodide_min_M": 9.322249661936354e-11,
+        "iodide_max_M": 8.371544142620026e-06,
+        "iodine_peak_M": 0.00026016005094284733
+      }
+    },
+    {
+      "parameter": "k7_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.7493404680667,
+            "end_s": 1492.6189094903577,
+            "period_s": 526.869569022291,
+            "iodide_pI_min": 5.077194428461992,
+            "iodide_pI_max": 10.030479267434405,
+            "iodine_peak_M": 0.00026016005101328176
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.6189094903577,
+            "end_s": 2019.4884097556528,
+            "period_s": 526.8695002652951,
+            "iodide_pI_min": 5.077194428650398,
+            "iodide_pI_max": 10.030479267434405,
+            "iodine_peak_M": 0.0002601600505799155
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.4884097556528,
+            "end_s": 2546.3579349465617,
+            "period_s": 526.8695251909089,
+            "iodide_pI_min": 5.077194428486137,
+            "iodide_pI_max": 10.030479229440703,
+            "iodine_peak_M": 0.0002601600508928146
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.3579349465617,
+            "end_s": 3073.2275118481266,
+            "period_s": 526.8695769015649,
+            "iodide_pI_min": 5.077194428414416,
+            "iodide_pI_max": 10.03047927027934,
+            "iodine_peak_M": 0.00026016005094285145
+          }
+        ],
+        "mean_period_s": 526.869542845015,
+        "last_cycle_start_s": 2546.3579349465617,
+        "last_cycle_end_s": 3073.2275118481266,
+        "iodide_pI_min": 5.077194428414416,
+        "iodide_pI_max": 10.03047927027934,
+        "iodide_min_M": 9.322249661911979e-11,
+        "iodide_max_M": 8.371544142620267e-06,
+        "iodine_peak_M": 0.00026016005094285145
+      }
+    },
+    {
+      "parameter": "k7_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.7493404689613,
+            "end_s": 1492.618909505053,
+            "period_s": 526.8695690360915,
+            "iodide_pI_min": 5.077194428461983,
+            "iodide_pI_max": 10.03047926743,
+            "iodine_peak_M": 0.0002601600510132764
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.618909505053,
+            "end_s": 2019.4884097533734,
+            "period_s": 526.8695002483205,
+            "iodide_pI_min": 5.07719442865041,
+            "iodide_pI_max": 10.03047926743,
+            "iodine_peak_M": 0.000260160050579908
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.4884097533734,
+            "end_s": 2546.3579349351926,
+            "period_s": 526.8695251818192,
+            "iodide_pI_min": 5.0771944284861545,
+            "iodide_pI_max": 10.030479229439603,
+            "iodine_peak_M": 0.0002601600508928105
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.3579349351926,
+            "end_s": 3073.2275118411803,
+            "period_s": 526.8695769059877,
+            "iodide_pI_min": 5.077194428414429,
+            "iodide_pI_max": 10.030479270278153,
+            "iodine_peak_M": 0.0002601600509428453
+          }
+        ],
+        "mean_period_s": 526.8695428430547,
+        "last_cycle_start_s": 2546.3579349351926,
+        "last_cycle_end_s": 3073.2275118411803,
+        "iodide_pI_min": 5.077194428414429,
+        "iodide_pI_max": 10.030479270278153,
+        "iodide_min_M": 9.32224966193745e-11,
+        "iodide_max_M": 8.371544142620026e-06,
+        "iodine_peak_M": 0.0002601600509428453
+      }
+    },
+    {
+      "parameter": "k7_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.749340467339,
+            "end_s": 1492.6189094987706,
+            "period_s": 526.8695690314315,
+            "iodide_pI_min": 5.077194428461989,
+            "iodide_pI_max": 10.030479267434693,
+            "iodine_peak_M": 0.00026016005101328247
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.6189094987706,
+            "end_s": 2019.488409755259,
+            "period_s": 526.8695002564884,
+            "iodide_pI_min": 5.077194428650405,
+            "iodide_pI_max": 10.030479267434693,
+            "iodine_peak_M": 0.00026016005057991895
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.488409755259,
+            "end_s": 2546.357934942099,
+            "period_s": 526.8695251868398,
+            "iodide_pI_min": 5.077194428486139,
+            "iodide_pI_max": 10.030479229442742,
+            "iodine_peak_M": 0.0002601600508928155
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.357934942099,
+            "end_s": 3073.227511853577,
+            "period_s": 526.8695769114784,
+            "iodide_pI_min": 5.077194428414409,
+            "iodide_pI_max": 10.030479270280136,
+            "iodine_peak_M": 0.00026016005094285226
+          }
+        ],
+        "mean_period_s": 526.8695428465595,
+        "last_cycle_start_s": 2546.357934942099,
+        "last_cycle_end_s": 3073.227511853577,
+        "iodide_pI_min": 5.077194428414409,
+        "iodide_pI_max": 10.030479270280136,
+        "iodide_min_M": 9.322249661894894e-11,
+        "iodide_max_M": 8.371544142620404e-06,
+        "iodine_peak_M": 0.00026016005094285226
+      }
+    },
+    {
+      "parameter": "k7_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.749340470675,
+            "end_s": 1492.618909495689,
+            "period_s": 526.869569025014,
+            "iodide_pI_min": 5.077194428461979,
+            "iodide_pI_max": 10.030479267429111,
+            "iodine_peak_M": 0.0002601600510132738
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.618909495689,
+            "end_s": 2019.4884097485096,
+            "period_s": 526.8695002528207,
+            "iodide_pI_min": 5.077194428650405,
+            "iodide_pI_max": 10.030479267429111,
+            "iodine_peak_M": 0.00026016005057990154
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.4884097485096,
+            "end_s": 2546.357934929938,
+            "period_s": 526.8695251814283,
+            "iodide_pI_min": 5.0771944284861545,
+            "iodide_pI_max": 10.030479229438262,
+            "iodine_peak_M": 0.0002601600508928076
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.357934929938,
+            "end_s": 3073.22751183456,
+            "period_s": 526.8695769046221,
+            "iodide_pI_min": 5.077194428414428,
+            "iodide_pI_max": 10.030479270277262,
+            "iodine_peak_M": 0.00026016005094284153
+          }
+        ],
+        "mean_period_s": 526.8695428409712,
+        "last_cycle_start_s": 2546.357934929938,
+        "last_cycle_end_s": 3073.22751183456,
+        "iodide_pI_min": 5.077194428414428,
+        "iodide_pI_max": 10.030479270277262,
+        "iodide_min_M": 9.322249661956587e-11,
+        "iodide_max_M": 8.371544142620045e-06,
+        "iodine_peak_M": 0.00026016005094284153
+      }
+    },
+    {
+      "parameter": "k7_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.7493404667373,
+            "end_s": 1492.6189094971162,
+            "period_s": 526.8695690303789,
+            "iodide_pI_min": 5.077194428462002,
+            "iodide_pI_max": 10.030479267437006,
+            "iodine_peak_M": 0.0002601600510132861
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.6189094971162,
+            "end_s": 2019.4884097522677,
+            "period_s": 526.8695002551515,
+            "iodide_pI_min": 5.077194428650404,
+            "iodide_pI_max": 10.030479267437006,
+            "iodine_peak_M": 0.0002601600505799249
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.4884097522677,
+            "end_s": 2546.3579349446745,
+            "period_s": 526.8695251924069,
+            "iodide_pI_min": 5.077194428486136,
+            "iodide_pI_max": 10.03047922944331,
+            "iodine_peak_M": 0.00026016005089281845
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.3579349446745,
+            "end_s": 3073.2275118536627,
+            "period_s": 526.8695769089882,
+            "iodide_pI_min": 5.0771944284144,
+            "iodide_pI_max": 10.030479270280306,
+            "iodine_peak_M": 0.00026016005094285606
+          }
+        ],
+        "mean_period_s": 526.8695428467313,
+        "last_cycle_start_s": 2546.3579349446745,
+        "last_cycle_end_s": 3073.2275118536627,
+        "iodide_pI_min": 5.0771944284144,
+        "iodide_pI_max": 10.030479270280306,
+        "iodide_min_M": 9.32224966189125e-11,
+        "iodide_max_M": 8.371544142620575e-06,
+        "iodine_peak_M": 0.00026016005094285606
+      }
+    },
+    {
+      "parameter": "k8_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.7493286641077,
+            "end_s": 1492.6189042024375,
+            "period_s": 526.8695755383299,
+            "iodide_pI_min": 5.077194428253531,
+            "iodide_pI_max": 10.030479267584546,
+            "iodine_peak_M": 0.0002601600512407745
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.6189042024375,
+            "end_s": 2019.4884481029735,
+            "period_s": 526.869543900536,
+            "iodide_pI_min": 5.077194428654506,
+            "iodide_pI_max": 10.030479267584546,
+            "iodine_peak_M": 0.0002601600505752937
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.4884481029735,
+            "end_s": 2546.3579887588708,
+            "period_s": 526.8695406558973,
+            "iodide_pI_min": 5.077194428438948,
+            "iodide_pI_max": 10.030479261613761,
+            "iodine_peak_M": 0.00026016005089678104
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.3579887588708,
+            "end_s": 3073.2275672015526,
+            "period_s": 526.8695784426818,
+            "iodide_pI_min": 5.07719442862728,
+            "iodide_pI_max": 10.03047926745539,
+            "iodine_peak_M": 0.0002601600505612291
+          }
+        ],
+        "mean_period_s": 526.8695596343612,
+        "last_cycle_start_s": 2546.3579887588708,
+        "last_cycle_end_s": 3073.2275672015526,
+        "iodide_pI_min": 5.07719442862728,
+        "iodide_pI_max": 10.03047926745539,
+        "iodide_min_M": 9.322249722528832e-11,
+        "iodide_max_M": 8.371544138517068e-06,
+        "iodine_peak_M": 0.0002601600505612291
+      }
+    },
+    {
+      "parameter": "k8_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.7493346658193,
+            "end_s": 1492.6188980505067,
+            "period_s": 526.8695633846874,
+            "iodide_pI_min": 5.077194428418033,
+            "iodide_pI_max": 10.030479263725185,
+            "iodine_peak_M": 0.0002601600510194263
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.6188980505067,
+            "end_s": 2019.4884683178857,
+            "period_s": 526.869570267379,
+            "iodide_pI_min": 5.077194428512927,
+            "iodide_pI_max": 10.030479267575167,
+            "iodine_peak_M": 0.00026016005090098655
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.4884683178857,
+            "end_s": 2546.358003301195,
+            "period_s": 526.8695349833092,
+            "iodide_pI_min": 5.077194428603217,
+            "iodide_pI_max": 10.030479267575167,
+            "iodine_peak_M": 0.0002601600506626007
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.358003301195,
+            "end_s": 3073.227558079346,
+            "period_s": 526.8695547781513,
+            "iodide_pI_min": 5.077194428667107,
+            "iodide_pI_max": 10.030479264149568,
+            "iodine_peak_M": 0.0002601600505486939
+          }
+        ],
+        "mean_period_s": 526.8695558533817,
+        "last_cycle_start_s": 2546.358003301195,
+        "last_cycle_end_s": 3073.227558079346,
+        "iodide_pI_min": 5.077194428667107,
+        "iodide_pI_max": 10.030479264149568,
+        "iodide_min_M": 9.322249793489231e-11,
+        "iodide_max_M": 8.37154413774936e-06,
+        "iodine_peak_M": 0.0002601600505486939
+      }
+    },
+    {
+      "parameter": "k8_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.7493073054417,
+            "end_s": 1492.6188714505047,
+            "period_s": 526.869564145063,
+            "iodide_pI_min": 5.077194428405334,
+            "iodide_pI_max": 10.030479264618123,
+            "iodine_peak_M": 0.000260160051022804
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.6188714505047,
+            "end_s": 2019.48840904867,
+            "period_s": 526.8695375981654,
+            "iodide_pI_min": 5.077194428424481,
+            "iodide_pI_max": 10.030479264618123,
+            "iodine_peak_M": 0.00026016005100863227
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.48840904867,
+            "end_s": 2546.3579768617565,
+            "period_s": 526.8695678130864,
+            "iodide_pI_min": 5.077194428683917,
+            "iodide_pI_max": 10.03047926451484,
+            "iodine_peak_M": 0.00026016005057249135
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.3579768617565,
+            "end_s": 3073.227536203084,
+            "period_s": 526.8695593413277,
+            "iodide_pI_min": 5.07719442861709,
+            "iodide_pI_max": 10.03047926562865,
+            "iodine_peak_M": 0.0002601600505776038
+          }
+        ],
+        "mean_period_s": 526.8695572244105,
+        "last_cycle_start_s": 2546.3579768617565,
+        "last_cycle_end_s": 3073.227536203084,
+        "iodide_pI_min": 5.07719442861709,
+        "iodide_pI_max": 10.03047926562865,
+        "iodide_min_M": 9.322249761740339e-11,
+        "iodide_max_M": 8.371544138713495e-06,
+        "iodine_peak_M": 0.0002601600505776038
+      }
+    },
+    {
+      "parameter": "k8_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.7493346515324,
+            "end_s": 1492.6188787681644,
+            "period_s": 526.869544116632,
+            "iodide_pI_min": 5.0771944284174015,
+            "iodide_pI_max": 10.030479263906015,
+            "iodine_peak_M": 0.0002601600510220351
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.6188787681644,
+            "end_s": 2019.4884421976212,
+            "period_s": 526.8695634294568,
+            "iodide_pI_min": 5.07719442847369,
+            "iodide_pI_max": 10.030479264472143,
+            "iodine_peak_M": 0.0002601600508876981
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.4884421976212,
+            "end_s": 2546.3580177019257,
+            "period_s": 526.8695755043045,
+            "iodide_pI_min": 5.0771944284597685,
+            "iodide_pI_max": 10.030479267752158,
+            "iodine_peak_M": 0.000260160050881654
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.3580177019257,
+            "end_s": 3073.227564408933,
+            "period_s": 526.8695467070074,
+            "iodide_pI_min": 5.077194428485456,
+            "iodide_pI_max": 10.030479267752158,
+            "iodine_peak_M": 0.00026016005086401743
+          }
+        ],
+        "mean_period_s": 526.8695574393502,
+        "last_cycle_start_s": 2546.3580177019257,
+        "last_cycle_end_s": 3073.227564408933,
+        "iodide_pI_min": 5.077194428485456,
+        "iodide_pI_max": 10.030479267752158,
+        "iodide_min_M": 9.32224971615862e-11,
+        "iodide_max_M": 8.371544141250884e-06,
+        "iodine_peak_M": 0.00026016005086401743
+      }
+    },
+    {
+      "parameter": "k8_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.7493475777002,
+            "end_s": 1492.6188513393151,
+            "period_s": 526.869503761615,
+            "iodide_pI_min": 5.077194428412313,
+            "iodide_pI_max": 10.030479261608772,
+            "iodine_peak_M": 0.0002601600510332204
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.6188513393151,
+            "end_s": 2019.4884015288221,
+            "period_s": 526.869550189507,
+            "iodide_pI_min": 5.077194428665469,
+            "iodide_pI_max": 10.030479250701642,
+            "iodine_peak_M": 0.000260160050612351
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.4884015288221,
+            "end_s": 2546.3579666027076,
+            "period_s": 526.8695650738855,
+            "iodide_pI_min": 5.077194428397208,
+            "iodide_pI_max": 10.03047926579991,
+            "iodine_peak_M": 0.00026016005100756623
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.3579666027076,
+            "end_s": 3073.227528418847,
+            "period_s": 526.8695618161396,
+            "iodide_pI_min": 5.077194428471134,
+            "iodide_pI_max": 10.03047926579991,
+            "iodine_peak_M": 0.0002601600509046854
+          }
+        ],
+        "mean_period_s": 526.8695452102868,
+        "last_cycle_start_s": 2546.3579666027076,
+        "last_cycle_end_s": 3073.227528418847,
+        "iodide_pI_min": 5.077194428471134,
+        "iodide_pI_max": 10.03047926579991,
+        "iodide_min_M": 9.322249758064172e-11,
+        "iodide_max_M": 8.371544141526972e-06,
+        "iodine_peak_M": 0.0002601600509046854
+      }
+    },
+    {
+      "parameter": "k8_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 965.7493250122142,
+            "end_s": 1492.6188663127737,
+            "period_s": 526.8695413005595,
+            "iodide_pI_min": 5.077194428433759,
+            "iodide_pI_max": 10.03047924748392,
+            "iodine_peak_M": 0.00026016005099340964
+          },
+          {
+            "cycle": 2,
+            "start_s": 1492.6188663127737,
+            "end_s": 2019.4883950878766,
+            "period_s": 526.8695287751029,
+            "iodide_pI_min": 5.077194428646567,
+            "iodide_pI_max": 10.030479248380622,
+            "iodine_peak_M": 0.00026016005066396993
+          },
+          {
+            "cycle": 3,
+            "start_s": 2019.4883950878766,
+            "end_s": 2546.357954644928,
+            "period_s": 526.8695595570516,
+            "iodide_pI_min": 5.077194428605252,
+            "iodide_pI_max": 10.03047927187323,
+            "iodine_peak_M": 0.0002601600506900854
+          },
+          {
+            "cycle": 4,
+            "start_s": 2546.357954644928,
+            "end_s": 3073.227521654646,
+            "period_s": 526.8695670097177,
+            "iodide_pI_min": 5.077194428558358,
+            "iodide_pI_max": 10.03047927187323,
+            "iodine_peak_M": 0.0002601600506565523
+          }
+        ],
+        "mean_period_s": 526.8695491606079,
+        "last_cycle_start_s": 2546.357954644928,
+        "last_cycle_end_s": 3073.227521654646,
+        "iodide_pI_min": 5.077194428558358,
+        "iodide_pI_max": 10.03047927187323,
+        "iodide_min_M": 9.322249627698719e-11,
+        "iodide_max_M": 8.371544139845617e-06,
+        "iodine_peak_M": 0.0002601600506565523
+      }
+    },
+    {
+      "parameter": "k9_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 969.8305215233744,
+            "end_s": 1498.8352205684057,
+            "period_s": 529.0046990450313,
+            "iodide_pI_min": 5.079125684646764,
+            "iodide_pI_max": 10.0302618588036,
+            "iodine_peak_M": 0.00026051104522207755
+          },
+          {
+            "cycle": 2,
+            "start_s": 1498.8352205684057,
+            "end_s": 2027.8399386800272,
+            "period_s": 529.0047181116215,
+            "iodide_pI_min": 5.079125684733497,
+            "iodide_pI_max": 10.030261860182334,
+            "iodine_peak_M": 0.00026051104510080525
+          },
+          {
+            "cycle": 3,
+            "start_s": 2027.8399386800272,
+            "end_s": 2556.8446606421194,
+            "period_s": 529.0047219620922,
+            "iodide_pI_min": 5.079125684591632,
+            "iodide_pI_max": 10.030261860182334,
+            "iodine_peak_M": 0.00026051104529103617
+          },
+          {
+            "cycle": 4,
+            "start_s": 2556.8446606421194,
+            "end_s": 3085.8493845361545,
+            "period_s": 529.0047238940351,
+            "iodide_pI_min": 5.079125684918619,
+            "iodide_pI_max": 10.030261857977296,
+            "iodine_peak_M": 0.00026051104478624074
+          }
+        ],
+        "mean_period_s": 529.0047157531951,
+        "last_cycle_start_s": 2556.8446606421194,
+        "last_cycle_end_s": 3085.8493845361545,
+        "iodide_pI_min": 5.079125684918619,
+        "iodide_pI_max": 10.030261857977296,
+        "iodide_min_M": 9.326917644674385e-11,
+        "iodide_max_M": 8.334399520094425e-06,
+        "iodine_peak_M": 0.00026051104478624074
+      }
+    },
+    {
+      "parameter": "k9_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 961.709774117267,
+            "end_s": 1486.4665856097167,
+            "period_s": 524.7568114924497,
+            "iodide_pI_min": 5.075274312833751,
+            "iodide_pI_max": 10.030695629438748,
+            "iodine_peak_M": 0.00025980939908379683
+          },
+          {
+            "cycle": 2,
+            "start_s": 1486.4665856097167,
+            "end_s": 2011.2233777271904,
+            "period_s": 524.7567921174737,
+            "iodide_pI_min": 5.0752743128575455,
+            "iodide_pI_max": 10.030695629438748,
+            "iodine_peak_M": 0.0002598093990377524
+          },
+          {
+            "cycle": 3,
+            "start_s": 2011.2233777271904,
+            "end_s": 2535.980184445187,
+            "period_s": 524.7568067179968,
+            "iodide_pI_min": 5.07527431285871,
+            "iodide_pI_max": 10.030695620012692,
+            "iodine_peak_M": 0.00025980939901425437
+          },
+          {
+            "cycle": 4,
+            "start_s": 2535.980184445187,
+            "end_s": 3060.736989454574,
+            "period_s": 524.7568050093869,
+            "iodide_pI_min": 5.0752743128594675,
+            "iodide_pI_max": 10.030695620059657,
+            "iodine_peak_M": 0.00025980939901477
+          },
+          {
+            "cycle": 5,
+            "start_s": 3060.736989454574,
+            "end_s": 3585.4937947362787,
+            "period_s": 524.7568052817046,
+            "iodide_pI_min": 5.075274312860485,
+            "iodide_pI_max": 10.0306956202822,
+            "iodine_peak_M": 0.00025980939901117
+          }
+        ],
+        "mean_period_s": 524.7568022816405,
+        "last_cycle_start_s": 3060.736989454574,
+        "last_cycle_end_s": 3585.4937947362787,
+        "iodide_pI_min": 5.075274312860485,
+        "iodide_pI_max": 10.0306956202822,
+        "iodide_min_M": 9.31760680656277e-11,
+        "iodide_max_M": 8.408638601268472e-06,
+        "iodine_peak_M": 0.00025980939901117
+      }
+    },
+    {
+      "parameter": "k9_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 973.9539467157838,
+            "end_s": 1505.116561590512,
+            "period_s": 531.1626148747282,
+            "iodide_pI_min": 5.081068186999865,
+            "iodide_pI_max": 10.030043366501065,
+            "iodine_peak_M": 0.0002608623818540744
+          },
+          {
+            "cycle": 2,
+            "start_s": 1505.116561590512,
+            "end_s": 2036.2791786529415,
+            "period_s": 531.1626170624295,
+            "iodide_pI_min": 5.081068187046534,
+            "iodide_pI_max": 10.030043385306671,
+            "iodine_peak_M": 0.0002608623818212286
+          },
+          {
+            "cycle": 3,
+            "start_s": 2036.2791786529415,
+            "end_s": 2567.4417825842656,
+            "period_s": 531.1626039313242,
+            "iodide_pI_min": 5.081068187101961,
+            "iodide_pI_max": 10.030043385306671,
+            "iodine_peak_M": 0.00026086238181018183
+          },
+          {
+            "cycle": 4,
+            "start_s": 2567.4417825842656,
+            "end_s": 3098.604402729765,
+            "period_s": 531.1626201454992,
+            "iodide_pI_min": 5.081068187068996,
+            "iodide_pI_max": 10.030043385658228,
+            "iodine_peak_M": 0.00026086238170716696
+          }
+        ],
+        "mean_period_s": 531.1626140034953,
+        "last_cycle_start_s": 2567.4417825842656,
+        "last_cycle_end_s": 3098.604402729765,
+        "iodide_pI_min": 5.081068187068996,
+        "iodide_pI_max": 10.030043385658228,
+        "iodide_min_M": 9.331610741237587e-11,
+        "iodide_max_M": 8.29720485753966e-06,
+        "iodine_peak_M": 0.00026086238170716696
+      }
+    },
+    {
+      "parameter": "k9_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 957.7112509681782,
+            "end_s": 1480.3773833362634,
+            "period_s": 522.6661323680852,
+            "iodide_pI_min": 5.073365233854078,
+            "iodide_pI_max": 10.030910934531107,
+            "iodine_peak_M": 0.0002594590894301305
+          },
+          {
+            "cycle": 2,
+            "start_s": 1480.3773833362634,
+            "end_s": 2003.0435122501806,
+            "period_s": 522.6661289139172,
+            "iodide_pI_min": 5.073365233844262,
+            "iodide_pI_max": 10.030910934762003,
+            "iodine_peak_M": 0.0002594590894604488
+          },
+          {
+            "cycle": 3,
+            "start_s": 2003.0435122501806,
+            "end_s": 2525.7096308070318,
+            "period_s": 522.6661185568512,
+            "iodide_pI_min": 5.0733652339284045,
+            "iodide_pI_max": 10.030910934762003,
+            "iodine_peak_M": 0.0002594590893759837
+          },
+          {
+            "cycle": 4,
+            "start_s": 2525.7096308070318,
+            "end_s": 3048.3757609370728,
+            "period_s": 522.666130130041,
+            "iodide_pI_min": 5.073365233562996,
+            "iodide_pI_max": 10.030910930216985,
+            "iodine_peak_M": 0.00025945909003316714
+          },
+          {
+            "cycle": 5,
+            "start_s": 3048.3757609370728,
+            "end_s": 3571.0418916206568,
+            "period_s": 522.666130683584,
+            "iodide_pI_min": 5.073365234102346,
+            "iodide_pI_max": 10.030910931156152,
+            "iodine_peak_M": 0.00025945908902734596
+          }
+        ],
+        "mean_period_s": 522.6661270710983,
+        "last_cycle_start_s": 3048.3757609370728,
+        "last_cycle_end_s": 3571.0418916206568,
+        "iodide_pI_min": 5.073365234102346,
+        "iodide_pI_max": 10.030910931156152,
+        "iodide_min_M": 9.312988546542568e-11,
+        "iodide_max_M": 8.445682791884596e-06,
+        "iodine_peak_M": 0.00025945908902734596
+      }
+    },
+    {
+      "parameter": "k9_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 982.3303105018032,
+            "end_s": 1517.8782998687634,
+            "period_s": 535.5479893669602,
+            "iodide_pI_min": 5.084987360179579,
+            "iodide_pI_max": 10.02960320910424,
+            "iodine_peak_M": 0.000261566082731578
+          },
+          {
+            "cycle": 2,
+            "start_s": 1517.8782998687634,
+            "end_s": 2053.4262895419956,
+            "period_s": 535.5479896732322,
+            "iodide_pI_min": 5.084987360184901,
+            "iodide_pI_max": 10.029603210872146,
+            "iodine_peak_M": 0.00026156608269232155
+          },
+          {
+            "cycle": 3,
+            "start_s": 2053.4262895419956,
+            "end_s": 2588.974284267661,
+            "period_s": 535.5479947256654,
+            "iodide_pI_min": 5.084987360277838,
+            "iodide_pI_max": 10.029603212705656,
+            "iodine_peak_M": 0.00026156608268021285
+          },
+          {
+            "cycle": 4,
+            "start_s": 2588.974284267661,
+            "end_s": 3124.5222757311426,
+            "period_s": 535.5479914634816,
+            "iodide_pI_min": 5.0849873603038755,
+            "iodide_pI_max": 10.029603212947446,
+            "iodine_peak_M": 0.0002615660824609525
+          }
+        ],
+        "mean_period_s": 535.5479913073349,
+        "last_cycle_start_s": 2588.974284267661,
+        "last_cycle_end_s": 3124.5222757311426,
+        "iodide_pI_min": 5.0849873603038755,
+        "iodide_pI_max": 10.029603212947446,
+        "iodide_min_M": 9.341073451054755e-11,
+        "iodide_max_M": 8.222665808255597e-06,
+        "iodine_peak_M": 0.0002615660824609525
+      }
+    },
+    {
+      "parameter": "k9_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 949.8349438164595,
+            "end_s": 1468.384698252381,
+            "period_s": 518.5497544359215,
+            "iodide_pI_min": 5.069579777885005,
+            "iodide_pI_max": 10.031338445000346,
+            "iodine_peak_M": 0.00025875949643885276
+          },
+          {
+            "cycle": 2,
+            "start_s": 1468.384698252381,
+            "end_s": 1986.934454308161,
+            "period_s": 518.5497560557801,
+            "iodide_pI_min": 5.069579777927993,
+            "iodide_pI_max": 10.03133845595115,
+            "iodine_peak_M": 0.0002587594963568894
+          },
+          {
+            "cycle": 3,
+            "start_s": 1986.934454308161,
+            "end_s": 2505.4842084557467,
+            "period_s": 518.5497541475856,
+            "iodide_pI_min": 5.069579778105162,
+            "iodide_pI_max": 10.03133845595115,
+            "iodine_peak_M": 0.0002587594959945857
+          },
+          {
+            "cycle": 4,
+            "start_s": 2505.4842084557467,
+            "end_s": 3024.033956312419,
+            "period_s": 518.5497478566722,
+            "iodide_pI_min": 5.06957977785269,
+            "iodide_pI_max": 10.031338455946893,
+            "iodine_peak_M": 0.00025875949649477385
+          },
+          {
+            "cycle": 5,
+            "start_s": 3024.033956312419,
+            "end_s": 3542.5836981123607,
+            "period_s": 518.5497417999418,
+            "iodide_pI_min": 5.069579777738065,
+            "iodide_pI_max": 10.031338454067548,
+            "iodine_peak_M": 0.00025875949669303724
+          }
+        ],
+        "mean_period_s": 518.5497499649949,
+        "last_cycle_start_s": 3024.033956312419,
+        "last_cycle_end_s": 3542.5836981123607,
+        "iodide_pI_min": 5.069579777738065,
+        "iodide_pI_max": 10.031338454067548,
+        "iodide_min_M": 9.303825278142704e-11,
+        "iodide_max_M": 8.519619958193647e-06,
+        "iodine_peak_M": 0.00025875949669303724
+      }
+    },
+    {
+      "parameter": "k10_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.6599515957594,
+            "end_s": 1494.5331468797172,
+            "period_s": 527.8731952839578,
+            "iodide_pI_min": 5.076584447978152,
+            "iodide_pI_max": 10.032366259898911,
+            "iodine_peak_M": 0.0002613419749383482
+          },
+          {
+            "cycle": 2,
+            "start_s": 1494.5331468797172,
+            "end_s": 2022.406352263047,
+            "period_s": 527.8732053833298,
+            "iodide_pI_min": 5.076584447946773,
+            "iodide_pI_max": 10.032366259297595,
+            "iodine_peak_M": 0.00026134197500360336
+          },
+          {
+            "cycle": 3,
+            "start_s": 2022.406352263047,
+            "end_s": 2550.2795566630384,
+            "period_s": 527.8732043999914,
+            "iodide_pI_min": 5.0765844482580755,
+            "iodide_pI_max": 10.032366264587536,
+            "iodine_peak_M": 0.000261341974472961
+          },
+          {
+            "cycle": 4,
+            "start_s": 2550.2795566630384,
+            "end_s": 3078.1527753173505,
+            "period_s": 527.873218654312,
+            "iodide_pI_min": 5.07658444812805,
+            "iodide_pI_max": 10.032366265745447,
+            "iodine_peak_M": 0.0002613419747849858
+          }
+        ],
+        "mean_period_s": 527.8732059303977,
+        "last_cycle_start_s": 2550.2795566630384,
+        "last_cycle_end_s": 3078.1527753173505,
+        "iodide_pI_min": 5.07658444812805,
+        "iodide_pI_max": 10.032366265745447,
+        "iodide_min_M": 9.28183265775727e-11,
+        "iodide_max_M": 8.383310501369371e-06,
+        "iodine_peak_M": 0.0002613419747849858
+      }
+    },
+    {
+      "parameter": "k10_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.8488364250428,
+            "end_s": 1490.7248900218394,
+            "period_s": 525.8760535967966,
+            "iodide_pI_min": 5.077803246778842,
+            "iodide_pI_max": 10.0286026055332,
+            "iodine_peak_M": 0.0002589896183169394
+          },
+          {
+            "cycle": 2,
+            "start_s": 1490.7248900218394,
+            "end_s": 2016.6009035896502,
+            "period_s": 525.8760135678108,
+            "iodide_pI_min": 5.077803246921395,
+            "iodide_pI_max": 10.0286026055332,
+            "iodine_peak_M": 0.0002589896181896222
+          },
+          {
+            "cycle": 3,
+            "start_s": 2016.6009035896502,
+            "end_s": 2542.4769155450517,
+            "period_s": 525.8760119554015,
+            "iodide_pI_min": 5.077803246796419,
+            "iodide_pI_max": 10.028602602613331,
+            "iodine_peak_M": 0.00025898961827961104
+          },
+          {
+            "cycle": 4,
+            "start_s": 2542.4769155450517,
+            "end_s": 3068.352985360097,
+            "period_s": 525.8760698150454,
+            "iodide_pI_min": 5.0778032468309116,
+            "iodide_pI_max": 10.028602605443313,
+            "iodine_peak_M": 0.00025898961824661877
+          },
+          {
+            "cycle": 5,
+            "start_s": 3068.352985360097,
+            "end_s": 3594.2289903432247,
+            "period_s": 525.8760049831276,
+            "iodide_pI_min": 5.077803246935904,
+            "iodide_pI_max": 10.028602605443313,
+            "iodine_peak_M": 0.0002589896179674496
+          }
+        ],
+        "mean_period_s": 525.8760250803464,
+        "last_cycle_start_s": 3068.352985360097,
+        "last_cycle_end_s": 3594.2289903432247,
+        "iodide_pI_min": 5.077803246935904,
+        "iodide_pI_max": 10.028602605443313,
+        "iodide_min_M": 9.362619945966724e-11,
+        "iodide_max_M": 8.359816661494545e-06,
+        "iodine_peak_M": 0.0002589896179674496
+      }
+    },
+    {
+      "parameter": "k10_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 967.5808058134581,
+            "end_s": 1496.4679314069822,
+            "period_s": 528.887125593524,
+            "iodide_pI_min": 5.075973301236526,
+            "iodide_pI_max": 10.034263683305596,
+            "iodine_peak_M": 0.0002625355626859009
+          },
+          {
+            "cycle": 2,
+            "start_s": 1496.4679314069822,
+            "end_s": 2025.355062880988,
+            "period_s": 528.8871314740059,
+            "iodide_pI_min": 5.075973301216764,
+            "iodide_pI_max": 10.034263686618631,
+            "iodine_peak_M": 0.00026253556274193285
+          },
+          {
+            "cycle": 3,
+            "start_s": 2025.355062880988,
+            "end_s": 2554.2421848462172,
+            "period_s": 528.8871219652292,
+            "iodide_pI_min": 5.075973301290589,
+            "iodide_pI_max": 10.034263689275031,
+            "iodine_peak_M": 0.00026253556263846923
+          },
+          {
+            "cycle": 4,
+            "start_s": 2554.2421848462172,
+            "end_s": 3083.1293227190736,
+            "period_s": 528.8871378728563,
+            "iodide_pI_min": 5.0759733014989825,
+            "iodide_pI_max": 10.034263693503792,
+            "iodine_peak_M": 0.00026253556229355524
+          }
+        ],
+        "mean_period_s": 528.8871292264039,
+        "last_cycle_start_s": 2554.2421848462172,
+        "last_cycle_end_s": 3083.1293227190736,
+        "iodide_pI_min": 5.0759733014989825,
+        "iodide_pI_max": 10.034263693503792,
+        "iodide_min_M": 9.241368891406332e-11,
+        "iodide_max_M": 8.395115943872325e-06,
+        "iodine_peak_M": 0.00026253556229355524
+      }
+    },
+    {
+      "parameter": "k10_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 963.9582992992812,
+            "end_s": 1488.8507867880378,
+            "period_s": 524.8924874887566,
+            "iodide_pI_min": 5.0784109075775,
+            "iodide_pI_max": 10.026736166237134,
+            "iodine_peak_M": 0.00025783050746425857
+          },
+          {
+            "cycle": 2,
+            "start_s": 1488.8507867880378,
+            "end_s": 2013.7432492414875,
+            "period_s": 524.8924624534498,
+            "iodide_pI_min": 5.07841090759901,
+            "iodide_pI_max": 10.026736160794561,
+            "iodine_peak_M": 0.00025783050741827967
+          },
+          {
+            "cycle": 3,
+            "start_s": 2013.7432492414875,
+            "end_s": 2538.635740598121,
+            "period_s": 524.8924913566336,
+            "iodide_pI_min": 5.07841090780419,
+            "iodide_pI_max": 10.026736168911064,
+            "iodine_peak_M": 0.00025783050711687233
+          },
+          {
+            "cycle": 4,
+            "start_s": 2538.635740598121,
+            "end_s": 3063.528207341906,
+            "period_s": 524.892466743785,
+            "iodide_pI_min": 5.078410907719067,
+            "iodide_pI_max": 10.026736168911064,
+            "iodine_peak_M": 0.00025783050715032316
+          },
+          {
+            "cycle": 5,
+            "start_s": 3063.528207341906,
+            "end_s": 3588.4206807443206,
+            "period_s": 524.8924734024145,
+            "iodide_pI_min": 5.078410907657247,
+            "iodide_pI_max": 10.026736149495667,
+            "iodine_peak_M": 0.00025783050731794727
+          }
+        ],
+        "mean_period_s": 524.8924734890707,
+        "last_cycle_start_s": 3063.528207341906,
+        "last_cycle_end_s": 3588.4206807443206,
+        "iodide_pI_min": 5.078410907657247,
+        "iodide_pI_max": 10.026736149495667,
+        "iodide_min_M": 9.402944018713367e-11,
+        "iodide_max_M": 8.348127864618708e-06,
+        "iodine_peak_M": 0.00025783050731794727
+      }
+    },
+    {
+      "parameter": "k10_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 969.45396791013,
+            "end_s": 1500.4003767678726,
+            "period_s": 530.9464088577425,
+            "iodide_pI_min": 5.074747490709737,
+            "iodide_pI_max": 10.038090283431528,
+            "iodine_peak_M": 0.0002649584388102347
+          },
+          {
+            "cycle": 2,
+            "start_s": 1500.4003767678726,
+            "end_s": 2031.3467961865063,
+            "period_s": 530.9464194186337,
+            "iodide_pI_min": 5.0747474909208465,
+            "iodide_pI_max": 10.038090283431528,
+            "iodine_peak_M": 0.000264958438792437
+          },
+          {
+            "cycle": 3,
+            "start_s": 2031.3467961865063,
+            "end_s": 2562.293213667987,
+            "period_s": 530.9464174814807,
+            "iodide_pI_min": 5.074747490777129,
+            "iodide_pI_max": 10.038090278905988,
+            "iodine_peak_M": 0.000264958439070744
+          },
+          {
+            "cycle": 4,
+            "start_s": 2562.293213667987,
+            "end_s": 3093.2396199502455,
+            "period_s": 530.9464062822585,
+            "iodide_pI_min": 5.074747491085679,
+            "iodide_pI_max": 10.038090278905988,
+            "iodine_peak_M": 0.00026495843841923693
+          }
+        ],
+        "mean_period_s": 530.9464130100289,
+        "last_cycle_start_s": 2562.293213667987,
+        "last_cycle_end_s": 3093.2396199502455,
+        "iodide_pI_min": 5.074747491085679,
+        "iodide_pI_max": 10.038090278905988,
+        "iodide_min_M": 9.160300507074768e-11,
+        "iodide_max_M": 8.418844905986974e-06,
+        "iodine_peak_M": 0.00026495843841923693
+      }
+    },
+    {
+      "parameter": "k10_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 962.2065580096895,
+            "end_s": 1485.1612677899502,
+            "period_s": 522.9547097802607,
+            "iodide_pI_min": 5.079622773754657,
+            "iodide_pI_max": 10.023033573805298,
+            "iodine_peak_M": 0.00025554559013064897
+          },
+          {
+            "cycle": 2,
+            "start_s": 1485.1612677899502,
+            "end_s": 2008.1160207352607,
+            "period_s": 522.9547529453105,
+            "iodide_pI_min": 5.079622773723775,
+            "iodide_pI_max": 10.02303356817041,
+            "iodine_peak_M": 0.00025554559024735835
+          },
+          {
+            "cycle": 3,
+            "start_s": 2008.1160207352607,
+            "end_s": 2531.070737902618,
+            "period_s": 522.9547171673573,
+            "iodide_pI_min": 5.079622773717242,
+            "iodide_pI_max": 10.02303356817041,
+            "iodine_peak_M": 0.00025554559021429436
+          },
+          {
+            "cycle": 4,
+            "start_s": 2531.070737902618,
+            "end_s": 3054.0254613699335,
+            "period_s": 522.9547234673155,
+            "iodide_pI_min": 5.079622773591282,
+            "iodide_pI_max": 10.023033546109014,
+            "iodine_peak_M": 0.0002555455904287459
+          },
+          {
+            "cycle": 5,
+            "start_s": 3054.0254613699335,
+            "end_s": 3576.9801954919803,
+            "period_s": 522.9547341220468,
+            "iodide_pI_min": 5.079622773680853,
+            "iodide_pI_max": 10.02303356200549,
+            "iodine_peak_M": 0.0002555455902020347
+          }
+        ],
+        "mean_period_s": 522.9547319255075,
+        "last_cycle_start_s": 3054.0254613699335,
+        "last_cycle_end_s": 3576.9801954919803,
+        "iodide_pI_min": 5.079622773680853,
+        "iodide_pI_max": 10.02303356200549,
+        "iodide_min_M": 9.4834517294816e-11,
+        "iodide_max_M": 8.324865513934452e-06,
+        "iodine_peak_M": 0.0002555455902020347
+      }
+    },
+    {
+      "parameter": "C9_DKE",
+      "factor": 0.995,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 964.6184509363454,
+            "end_s": 1490.844587155096,
+            "period_s": 526.2261362187505,
+            "iodide_pI_min": 5.075836157792142,
+            "iodide_pI_max": 10.030479547617166,
+            "iodine_peak_M": 0.00025990791580397565
+          },
+          {
+            "cycle": 2,
+            "start_s": 1490.844587155096,
+            "end_s": 2017.0707783159946,
+            "period_s": 526.2261911608987,
+            "iodide_pI_min": 5.075836157769826,
+            "iodide_pI_max": 10.030479544135622,
+            "iodine_peak_M": 0.0002599079158390154
+          },
+          {
+            "cycle": 3,
+            "start_s": 2017.0707783159946,
+            "end_s": 2543.296991980258,
+            "period_s": 526.2262136642635,
+            "iodide_pI_min": 5.075836157957876,
+            "iodide_pI_max": 10.030479552841435,
+            "iodine_peak_M": 0.00025990791541982423
+          },
+          {
+            "cycle": 4,
+            "start_s": 2543.296991980258,
+            "end_s": 3069.523164538671,
+            "period_s": 526.226172558413,
+            "iodide_pI_min": 5.075836157865225,
+            "iodide_pI_max": 10.030479552841435,
+            "iodine_peak_M": 0.0002599079157348596
+          },
+          {
+            "cycle": 5,
+            "start_s": 3069.523164538671,
+            "end_s": 3595.7493489730746,
+            "period_s": 526.2261844344034,
+            "iodide_pI_min": 5.075836157790076,
+            "iodide_pI_max": 10.030479548160422,
+            "iodine_peak_M": 0.0002599079157993219
+          }
+        ],
+        "mean_period_s": 526.2261904544946,
+        "last_cycle_start_s": 3069.523164538671,
+        "last_cycle_end_s": 3595.7493489730746,
+        "iodide_pI_min": 5.075836157790076,
+        "iodide_pI_max": 10.030479548160422,
+        "iodide_min_M": 9.322243697120594e-11,
+        "iodide_max_M": 8.39776741468747e-06,
+        "iodine_peak_M": 0.0002599079157993219
+      }
+    },
+    {
+      "parameter": "C9_DKE",
+      "factor": 1.005,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 966.8807558848521,
+            "end_s": 1494.3941600165613,
+            "period_s": 527.5134041317092,
+            "iodide_pI_min": 5.078549707120663,
+            "iodide_pI_max": 10.030478979414228,
+            "iodine_peak_M": 0.0002604106888341787
+          },
+          {
+            "cycle": 2,
+            "start_s": 1494.3941600165613,
+            "end_s": 2021.9075637768094,
+            "period_s": 527.5134037602481,
+            "iodide_pI_min": 5.078549707363112,
+            "iodide_pI_max": 10.030478979414228,
+            "iodine_peak_M": 0.00026041068841741637
+          },
+          {
+            "cycle": 3,
+            "start_s": 2021.9075637768094,
+            "end_s": 2549.42096743729,
+            "period_s": 527.5134036604807,
+            "iodide_pI_min": 5.078549707182858,
+            "iodide_pI_max": 10.030478982333442,
+            "iodine_peak_M": 0.0002604106887131004
+          },
+          {
+            "cycle": 4,
+            "start_s": 2549.42096743729,
+            "end_s": 3076.9343634494894,
+            "period_s": 527.5133960121993,
+            "iodide_pI_min": 5.078549707359125,
+            "iodide_pI_max": 10.030478982333442,
+            "iodine_peak_M": 0.0002604106884813736
+          }
+        ],
+        "mean_period_s": 527.5134018911593,
+        "last_cycle_start_s": 2549.42096743729,
+        "last_cycle_end_s": 3076.9343634494894,
+        "iodide_pI_min": 5.078549707359125,
+        "iodide_pI_max": 10.030478982333442,
+        "iodide_min_M": 9.322255842751382e-11,
+        "iodide_max_M": 8.34546024491629e-06,
+        "iodine_peak_M": 0.0002604106884813736
+      }
+    },
+    {
+      "parameter": "C9_DKE",
+      "factor": 0.99,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 963.4881030256653,
+            "end_s": 1489.0713829918063,
+            "period_s": 525.583279966141,
+            "iodide_pI_min": 5.074474895667899,
+            "iodide_pI_max": 10.030479839987597,
+            "iodine_peak_M": 0.0002596542716240059
+          },
+          {
+            "cycle": 2,
+            "start_s": 1489.0713829918063,
+            "end_s": 2014.6546768695612,
+            "period_s": 525.5832938777548,
+            "iodide_pI_min": 5.074474895752539,
+            "iodide_pI_max": 10.030479839987597,
+            "iodine_peak_M": 0.00025965427151906673
+          },
+          {
+            "cycle": 3,
+            "start_s": 2014.6546768695612,
+            "end_s": 2540.237969069135,
+            "period_s": 525.5832921995739,
+            "iodide_pI_min": 5.074474895902009,
+            "iodide_pI_max": 10.030479828800347,
+            "iodine_peak_M": 0.00025965427116868105
+          },
+          {
+            "cycle": 4,
+            "start_s": 2540.237969069135,
+            "end_s": 3065.8212533387846,
+            "period_s": 525.5832842696495,
+            "iodide_pI_min": 5.074474895907261,
+            "iodide_pI_max": 10.030479829400708,
+            "iodine_peak_M": 0.0002596542711611742
+          },
+          {
+            "cycle": 5,
+            "start_s": 3065.8212533387846,
+            "end_s": 3591.404560780263,
+            "period_s": 525.5833074414786,
+            "iodide_pI_min": 5.074474895932056,
+            "iodide_pI_max": 10.03047983750958,
+            "iodine_peak_M": 0.0002596542711535673
+          }
+        ],
+        "mean_period_s": 525.5832944471142,
+        "last_cycle_start_s": 3065.8212533387846,
+        "last_cycle_end_s": 3591.404560780263,
+        "iodide_pI_min": 5.074474895932056,
+        "iodide_pI_max": 10.03047983750958,
+        "iodide_min_M": 9.322237486167916e-11,
+        "iodide_max_M": 8.4241308508982e-06,
+        "iodine_peak_M": 0.0002596542711535673
+      }
+    },
+    {
+      "parameter": "C9_DKE",
+      "factor": 1.01,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 968.0126985451134,
+            "end_s": 1496.1704069372308,
+            "period_s": 528.1577083921175,
+            "iodide_pI_min": 5.0799019936251,
+            "iodide_pI_max": 10.030478694914297,
+            "iodine_peak_M": 0.00026065984104388216
+          },
+          {
+            "cycle": 2,
+            "start_s": 1496.1704069372308,
+            "end_s": 2024.3281243328147,
+            "period_s": 528.1577173955839,
+            "iodide_pI_min": 5.079901993586327,
+            "iodide_pI_max": 10.030478694914297,
+            "iodine_peak_M": 0.000260659841267468
+          },
+          {
+            "cycle": 3,
+            "start_s": 2024.3281243328147,
+            "end_s": 2552.485832423651,
+            "period_s": 528.1577080908364,
+            "iodide_pI_min": 5.079901993870317,
+            "iodide_pI_max": 10.03047869303562,
+            "iodine_peak_M": 0.00026065984068809065
+          },
+          {
+            "cycle": 4,
+            "start_s": 2552.485832423651,
+            "end_s": 3080.643544030494,
+            "period_s": 528.1577116068429,
+            "iodide_pI_min": 5.0799019936831655,
+            "iodide_pI_max": 10.030478694863852,
+            "iodine_peak_M": 0.00026065984096134293
+          }
+        ],
+        "mean_period_s": 528.1577113713452,
+        "last_cycle_start_s": 2552.485832423651,
+        "last_cycle_end_s": 3080.643544030494,
+        "iodide_pI_min": 5.0799019936831655,
+        "iodide_pI_max": 10.030478694863852,
+        "iodide_min_M": 9.322262013370753e-11,
+        "iodide_max_M": 8.319514946538103e-06,
+        "iodine_peak_M": 0.00026065984096134293
+      }
+    },
+    {
+      "parameter": "C9_DKE",
+      "factor": 0.98,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 5,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 961.2289273544211,
+            "end_s": 1485.5279348987278,
+            "period_s": 524.2990075443067,
+            "iodide_pI_min": 5.071743401082779,
+            "iodide_pI_max": 10.030480408083095,
+            "iodine_peak_M": 0.0002591424081262208
+          },
+          {
+            "cycle": 2,
+            "start_s": 1485.5279348987278,
+            "end_s": 2009.8268984866504,
+            "period_s": 524.2989635879226,
+            "iodide_pI_min": 5.071743401041061,
+            "iodide_pI_max": 10.03048040925337,
+            "iodine_peak_M": 0.00025914240820873805
+          },
+          {
+            "cycle": 3,
+            "start_s": 2009.8268984866504,
+            "end_s": 2534.1259073562496,
+            "period_s": 524.2990088695992,
+            "iodide_pI_min": 5.071743401171189,
+            "iodide_pI_max": 10.03048040925337,
+            "iodine_peak_M": 0.00025914240800655695
+          },
+          {
+            "cycle": 4,
+            "start_s": 2534.1259073562496,
+            "end_s": 3058.4248752526714,
+            "period_s": 524.2989678964218,
+            "iodide_pI_min": 5.071743401332222,
+            "iodide_pI_max": 10.030480409687016,
+            "iodine_peak_M": 0.00025914240766342577
+          },
+          {
+            "cycle": 5,
+            "start_s": 3058.4248752526714,
+            "end_s": 3582.7238663892776,
+            "period_s": 524.2989911366062,
+            "iodide_pI_min": 5.07174340107499,
+            "iodide_pI_max": 10.030480409687016,
+            "iodine_peak_M": 0.00025914240818716773
+          }
+        ],
+        "mean_period_s": 524.2989828726375,
+        "last_cycle_start_s": 3058.4248752526714,
+        "last_cycle_end_s": 3582.7238663892776,
+        "iodide_pI_min": 5.07174340107499,
+        "iodide_pI_max": 10.030480409687016,
+        "iodide_min_M": 9.322225204247111e-11,
+        "iodide_max_M": 8.477281386239252e-06,
+        "iodine_peak_M": 0.00025914240818716773
+      }
+    },
+    {
+      "parameter": "C9_DKE",
+      "factor": 1.02,
+      "status": "OK",
+      "metrics": {
+        "complete_period_count": 4,
+        "cycles": [
+          {
+            "cycle": 1,
+            "start_s": 970.2781180745295,
+            "end_s": 1499.7258215630432,
+            "period_s": 529.4477034885136,
+            "iodide_pI_min": 5.082597590331796,
+            "iodide_pI_max": 10.030478103864489,
+            "iodine_peak_M": 0.00026115373487162343
+          },
+          {
+            "cycle": 2,
+            "start_s": 1499.7258215630432,
+            "end_s": 2029.173533254536,
+            "period_s": 529.4477116914929,
+            "iodide_pI_min": 5.08259759038077,
+            "iodide_pI_max": 10.030478119059877,
+            "iodine_peak_M": 0.00026115373477716644
+          },
+          {
+            "cycle": 3,
+            "start_s": 2029.173533254536,
+            "end_s": 2558.6212400402055,
+            "period_s": 529.4477067856694,
+            "iodide_pI_min": 5.082597590411583,
+            "iodide_pI_max": 10.030478124000645,
+            "iodine_peak_M": 0.0002611537347367775
+          },
+          {
+            "cycle": 4,
+            "start_s": 2558.6212400402055,
+            "end_s": 3088.0689529526376,
+            "period_s": 529.447712912432,
+            "iodide_pI_min": 5.082597590225851,
+            "iodide_pI_max": 10.030478124000645,
+            "iodine_peak_M": 0.00026115373511202575
+          }
+        ],
+        "mean_period_s": 529.4477087195271,
+        "last_cycle_start_s": 2558.6212400402055,
+        "last_cycle_end_s": 3088.0689529526376,
+        "iodide_pI_min": 5.082597590225851,
+        "iodide_pI_max": 10.030478124000645,
+        "iodide_min_M": 9.322274267129694e-11,
+        "iodide_max_M": 8.268036967991103e-06,
+        "iodine_peak_M": 0.00026115373511202575
+      }
+    }
+  ],
+  "failures": []
+}

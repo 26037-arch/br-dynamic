@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 import numpy as np
-from scipy.optimize import brentq
+from scipy.optimize import brentq, minimize_scalar
 
 from .network import Mechanism
 from .solver import SimulationResult
@@ -55,39 +55,36 @@ def cycle_metrics(result: SimulationResult, mechanism: Mechanism,
                   start_s: float = 0.0) -> dict[str, object]:
     iodide_extrema = extrema(result, mechanism, "I_minus", start_s)
     minima = [point for point in iodide_extrema if point.kind == "minimum" and point.concentration_M > 0]
-    maxima = [point for point in iodide_extrema if point.kind == "maximum" and point.concentration_M > 0]
-    iodine_extrema = extrema(result, mechanism, "I2", start_s)
-    iodine_maxima = [point for point in iodine_extrema if point.kind == "maximum"]
     if len(minima) < 2:
         raise ValueError("Fewer than two iodide minima; no complete period is measurable")
     periods = np.diff([point.time_s for point in minima])
     period = float(np.mean(periods[-min(4, len(periods)):]))
     cycles = []
+    iodide_index = mechanism.dynamic_index["I_minus"]
+    iodine_index = mechanism.dynamic_index["I2"]
     for cycle_number, (cycle_start, cycle_end) in enumerate(zip(minima[:-1], minima[1:]), start=1):
-        cycle_iodide_maxima = [
-            point for point in maxima if cycle_start.time_s <= point.time_s <= cycle_end.time_s
-        ]
-        cycle_iodine_maxima = [
-            point for point in iodine_maxima if cycle_start.time_s <= point.time_s <= cycle_end.time_s
-        ]
-        if cycle_iodide_maxima and cycle_iodine_maxima:
-            cycles.append({
-                "cycle": cycle_number,
-                "start_s": cycle_start.time_s,
-                "end_s": cycle_end.time_s,
-                "period_s": cycle_end.time_s - cycle_start.time_s,
-                "iodide_pI_min": -np.log10(max(point.concentration_M for point in cycle_iodide_maxima)),
-                "iodide_pI_max": -np.log10(min(cycle_start.concentration_M, cycle_end.concentration_M)),
-                "iodine_peak_M": max(point.concentration_M for point in cycle_iodine_maxima),
-            })
+        bounds = (cycle_start.time_s, cycle_end.time_s)
+        iodide_maximum = -float(minimize_scalar(
+            lambda time: -float(result.dense_solution(time)[iodide_index]),
+            bounds=bounds, method="bounded", options={"xatol": 1e-8},
+        ).fun)
+        iodine_peak = -float(minimize_scalar(
+            lambda time: -float(result.dense_solution(time)[iodine_index]),
+            bounds=bounds, method="bounded", options={"xatol": 1e-8},
+        ).fun)
+        cycles.append({
+            "cycle": cycle_number,
+            "start_s": cycle_start.time_s,
+            "end_s": cycle_end.time_s,
+            "period_s": cycle_end.time_s - cycle_start.time_s,
+            "iodide_pI_min": -np.log10(iodide_maximum),
+            "iodide_pI_max": -np.log10(min(cycle_start.concentration_M, cycle_end.concentration_M)),
+            "iodine_peak_M": iodine_peak,
+        })
     last_cycle_start, last_cycle_end = minima[-2].time_s, minima[-1].time_s
-    selected_maxima = [point for point in maxima if last_cycle_start <= point.time_s <= last_cycle_end]
-    selected_i2 = [point for point in iodine_maxima if last_cycle_start <= point.time_s <= last_cycle_end]
-    if not selected_maxima or not selected_i2:
-        raise ValueError("Last complete cycle lacks an iodide or iodine maximum")
     iodide_minimum = min(minima[-2].concentration_M, minima[-1].concentration_M)
-    iodide_maximum = max(point.concentration_M for point in selected_maxima)
-    iodine_peak = max(point.concentration_M for point in selected_i2)
+    iodide_maximum = 10 ** (-cycles[-1]["iodide_pI_min"])
+    iodine_peak = cycles[-1]["iodine_peak_M"]
     return {
         "complete_period_count": len(minima) - 1,
         "cycles": cycles,
@@ -96,5 +93,7 @@ def cycle_metrics(result: SimulationResult, mechanism: Mechanism,
         "last_cycle_end_s": last_cycle_end,
         "iodide_pI_min": -np.log10(iodide_maximum),
         "iodide_pI_max": -np.log10(iodide_minimum),
+        "iodide_min_M": iodide_minimum,
+        "iodide_max_M": iodide_maximum,
         "iodine_peak_M": iodine_peak,
     }

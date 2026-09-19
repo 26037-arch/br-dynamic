@@ -1,0 +1,15 @@
+{
+  "status": "PREDECLARED_PHASE_2A_LOCAL_SENSITIVITY",
+  "method": "symmetric multiplicative finite difference",
+  "fractional_perturbations": [0.005, 0.01, 0.02],
+  "t_span_s": [0.0, 3600.0],
+  "analysis_start_s": 800.0,
+  "output_points": 3601,
+  "rtol": 1e-10,
+  "atol_M": 1e-14,
+  "fixed_species": ["IO3_minus", "H2O2", "H_plus", "Mn2_plus", "malonic_acid"],
+  "initial_conditions_from": "experiments/baseline/dke_pooled_gate1.json",
+  "observables": ["mean_period_s", "iodine_peak_M", "iodide_min_M", "iodide_max_M"],
+  "derivative_definition": "(ln(Y_plus)-ln(Y_minus))/(ln(1+delta)-ln(1-delta))",
+  "policy": "No parameter optimization and no use of experimental targets. Failed oscillations remain failed derivatives."
+}
