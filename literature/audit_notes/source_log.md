@@ -22,6 +22,7 @@ primary bibliographic data; they are not the sole provenance for numerical const
 | [Bielski et al. 1985](https://doi.org/10.1063/1.555739) | Evaluated aqueous HO2/O2- kinetics for R8 | NIST Solution Kinetics entry and evaluated compilation inspected. |
 | [Shin et al. 2020](https://doi.org/10.1016/j.watres.2020.115852) | Modern species-specific R10 kinetics and buffer/Ag+ limitations | Full PDF text, Table 2, and Eq. 14 inspected. |
 | [Dimsey, Forbes, and Bassom 2025](https://doi.org/10.1007/s10910-025-01743-8) | BROCODE reduced model and disclosed parameter adjustments | Open full text inspected. Used only as comparison/reduction evidence. |
+| [Dimsey et al. public digitization repository](https://github.com/hdimsey/Briggs-Rauscher-Data) | Reconstructed historical iodide time series and iodide/iodine limit cycle used for the Gate 1 comparison | Both CSVs retrieved with SHA-256 hashes recorded locally. The repository and 2025 paper state that the original raw data are unavailable and WebPlotDigitizer was used. |
 
 ## Open retrieval tasks
 
@@ -35,4 +36,3 @@ primary bibliographic data; they are not the sole provenance for numerical const
   authorizing quantum calculations.
 - Extract independent malonic-acid enolization and I2/I3- iodination data across the BR
   acid and ionic-strength range.
-

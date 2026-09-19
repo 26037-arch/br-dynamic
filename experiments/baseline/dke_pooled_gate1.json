@@ -1,0 +1,44 @@
+{
+  "status": "PREDECLARED_GATE_1_HISTORICAL_REPRODUCTION",
+  "declared_before_model_evaluation": true,
+  "temperature_K": 298.15,
+  "t_span_s": [0.0, 3600.0],
+  "analysis_start_s": 900.0,
+  "output_points": 7201,
+  "rtol": 1e-9,
+  "atol_M": 1e-13,
+  "fixed_species": ["IO3_minus", "H2O2", "H_plus", "Mn2_plus", "malonic_acid"],
+  "initial_concentrations_M": {
+    "H_plus": 0.056,
+    "I_minus": 0.0004,
+    "IO3_minus": 0.0225,
+    "HOI": 0.0,
+    "HIO2": 0.0,
+    "I2": 0.0,
+    "IO2_radical": 0.0,
+    "Mn2_plus": 0.004,
+    "MnOH2_plus": 0.0,
+    "H2O2": 0.33,
+    "HO2_radical": 0.0,
+    "O2": 0.0,
+    "malonic_acid": 0.0015,
+    "iodomalonic_acid": 0.0
+  },
+  "experimental_targets": {
+    "mean_period_s": 714.13,
+    "iodine_peak_M": 0.0005811,
+    "iodide_pI_min": 5.50,
+    "iodide_pI_max": 10.01
+  },
+  "acceptance_thresholds": {
+    "minimum_complete_periods": 2,
+    "period_relative_error_max": 0.10,
+    "iodine_peak_relative_error_max": 0.20,
+    "iodide_pI_min_absolute_error_max": 0.50,
+    "iodide_pI_max_absolute_error_max": 0.50,
+    "bdf_radau_period_relative_difference_max": 0.01,
+    "bdf_radau_scalar_metric_relative_difference_max": 0.02,
+    "minimum_concentration_M": -1e-12
+  },
+  "interpretation": "The reference CSVs are WebPlotDigitizer reconstructions of a historical figure, not raw instrumental data. Tolerances are pragmatic validation gates, not statistical confidence intervals. Passing establishes historical-model reproduction only."
+}

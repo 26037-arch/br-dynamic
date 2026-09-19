@@ -1,0 +1,161 @@
+{
+  "gate": 1,
+  "status": "FAIL",
+  "model_scope": "historical DKE pooled-reactor reproduction",
+  "bdf": {
+    "complete_period_count": 4,
+    "cycles": [
+      {
+        "cycle": 1,
+        "start_s": 965.7468978514859,
+        "end_s": 1492.6158023448843,
+        "period_s": 526.8689044933984,
+        "iodide_pI_min": 5.0771944727692,
+        "iodide_pI_max": 10.030478342125932,
+        "iodine_peak_M": 0.0002601600147185299
+      },
+      {
+        "cycle": 2,
+        "start_s": 1492.6158023448843,
+        "end_s": 2019.483807751541,
+        "period_s": 526.8680054066567,
+        "iodide_pI_min": 5.077194471397797,
+        "iodide_pI_max": 10.030478341528134,
+        "iodine_peak_M": 0.00026016001610086137
+      },
+      {
+        "cycle": 3,
+        "start_s": 2019.483807751541,
+        "end_s": 2546.3516832406463,
+        "period_s": 526.8678754891052,
+        "iodide_pI_min": 5.077194476078043,
+        "iodide_pI_max": 10.030477781112081,
+        "iodine_peak_M": 0.0002601600106668378
+      },
+      {
+        "cycle": 4,
+        "start_s": 2546.3516832406463,
+        "end_s": 3073.2197901354616,
+        "period_s": 526.8681068948154,
+        "iodide_pI_min": 5.077194474321092,
+        "iodide_pI_max": 10.03047780716421,
+        "iodine_peak_M": 0.00026016001050007585
+      }
+    ],
+    "mean_period_s": 526.868223070994,
+    "last_cycle_start_s": 2546.3516832406463,
+    "last_cycle_end_s": 3073.2197901354616,
+    "iodide_pI_min": 5.077194474321092,
+    "iodide_pI_max": 10.03047780716421,
+    "iodine_peak_M": 0.00026016001050007585
+  },
+  "radau": {
+    "complete_period_count": 4,
+    "cycles": [
+      {
+        "cycle": 1,
+        "start_s": 965.7499352082267,
+        "end_s": 1492.6198371345647,
+        "period_s": 526.869901926338,
+        "iodide_pI_min": 5.077194422665557,
+        "iodide_pI_max": 10.030479542482107,
+        "iodine_peak_M": 0.00026016005628224634
+      },
+      {
+        "cycle": 2,
+        "start_s": 1492.6198371345647,
+        "end_s": 2019.4896727077905,
+        "period_s": 526.8698355732258,
+        "iodide_pI_min": 5.077194420474804,
+        "iodide_pI_max": 10.030479529300738,
+        "iodine_peak_M": 0.0002601600562740137
+      },
+      {
+        "cycle": 3,
+        "start_s": 2019.4896727077905,
+        "end_s": 2546.359457335742,
+        "period_s": 526.8697846279513,
+        "iodide_pI_min": 5.077194419564005,
+        "iodide_pI_max": 10.030479541381464,
+        "iodine_peak_M": 0.00026016005628141454
+      },
+      {
+        "cycle": 4,
+        "start_s": 2546.359457335742,
+        "end_s": 3073.2291980131504,
+        "period_s": 526.8697406774086,
+        "iodide_pI_min": 5.077194422464969,
+        "iodide_pI_max": 10.030479548494418,
+        "iodine_peak_M": 0.0002601600562886031
+      }
+    ],
+    "mean_period_s": 526.8698157012309,
+    "last_cycle_start_s": 2546.359457335742,
+    "last_cycle_end_s": 3073.2291980131504,
+    "iodide_pI_min": 5.077194422464969,
+    "iodide_pI_max": 10.030479548494418,
+    "iodine_peak_M": 0.0002601600562886031
+  },
+  "solver_relative_differences": {
+    "mean_period_s": 3.0228154839508597e-06,
+    "iodine_peak_M": 1.7600137361539238e-07,
+    "iodide_pI_min": 1.0213538837933838e-08,
+    "iodide_pI_max": 1.736038839140381e-07
+  },
+  "minimum_concentration_M": 0.0,
+  "effective_stoichiometric_invariant_max_drift_M": {
+    "BDF": 2.7755575615628914e-17,
+    "Radau": 2.0816681711721685e-17
+  },
+  "numerical_checks": {
+    "minimum_concentration": true,
+    "minimum_complete_periods": true,
+    "period": true,
+    "scalar_metrics": true
+  },
+  "experimental_checks": {
+    "mean_period_s": false,
+    "iodine_peak_M": false,
+    "iodide_pI_min": true,
+    "iodide_pI_max": true
+  },
+  "comparison": [
+    {
+      "metric": "mean_period_s",
+      "experimental_target": 714.13,
+      "model_value": 526.868223070994,
+      "error_type": "relative",
+      "error": 0.26222365245684404,
+      "threshold": 0.1,
+      "pass": false
+    },
+    {
+      "metric": "iodine_peak_M",
+      "experimental_target": 0.0005811,
+      "model_value": 0.00026016001050007585,
+      "error_type": "relative",
+      "error": 0.5522973489931581,
+      "threshold": 0.2,
+      "pass": false
+    },
+    {
+      "metric": "iodide_pI_min",
+      "experimental_target": 5.5,
+      "model_value": 5.077194474321092,
+      "error_type": "absolute",
+      "error": 0.42280552567890783,
+      "threshold": 0.5,
+      "pass": true
+    },
+    {
+      "metric": "iodide_pI_max",
+      "experimental_target": 10.01,
+      "model_value": 10.03047780716421,
+      "error_type": "absolute",
+      "error": 0.02047780716421066,
+      "threshold": 0.5,
+      "pass": true
+    }
+  ],
+  "advance_to_gate_2": false
+}

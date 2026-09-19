@@ -5,7 +5,7 @@
 | Gate | Status | Evidence |
 |---|---|---|
 | Gate 0 - provenance | SUBSTANTIALLY_COMPLETE_WITH_OPEN_PRIMARY_SOURCE_CHECKS | Every historical active parameter has an explicit source and confidence label. Several page-level origins and experimental conditions remain unresolved and visible in the CSV. |
-| Gate 1 - historical reproduction | PARTIAL | Network compilation and exact element/charge checks are implemented. BDF/Radau smoke testing is included. Published trajectory regression is not complete because the historical experiment/initial conditions are not unambiguous. |
+| Gate 1 - historical reproduction | NUMERICAL_PASS_EXPERIMENTAL_FAIL | The pooled historical DKE model is numerically converged, but period error is 26.22% and iodine-peak error is 55.23% against the predeclared digitized-data thresholds. Gate 2 was not started. |
 | Gate 2 - subsystem validation | NOT_STARTED | No published time-series datasets have yet been digitized and reproduced. |
 | Gate 3 - mechanism refinement | BLOCKED_BY_GATE_2 | Candidate replacements are registered but disabled. |
 | Gate 4 - quantum chemistry | NOT_STARTED_BY_DESIGN | No calculation is justified until a microscopic target is selected. |
@@ -27,6 +27,12 @@ was `0.017316`. Repeating at `rtol=1e-10`, `atol=1e-14 M` reduced that measure t
 convergence evidence for the short smoke test, not chemical validation or an
 oscillation-period result.
 
+The 0-3600 s pooled-reactor Gate 1 run produced four complete post-transient cycles.
+BDF and Radau agree to 3.03e-6 in mean period and better than 1.8e-7 in the scalar
+extremum metrics. The DKE prediction is 526.868 s versus the 714.13 s digitized
+experimental period, and its iodine peak is 2.6016e-4 M versus 5.811e-4 M. Both fail
+the predeclared 10% and 20% thresholds. See `gate1_report.md` for the gate decision.
+
 ## Implemented correctness controls
 
 - Stoichiometric matrix generated from reaction data.
@@ -41,8 +47,8 @@ oscillation-period result.
 
 ## Known limitations
 
-The current historical experiment file is a numerical smoke test. It is not derived
-from stock-solution volumes and therefore does not satisfy the experimental-recipe
-requirement. The 2025 BROCODE paper states that its chosen initial iodate and iodide
-could not be unambiguously recovered from the older literature. No oscillation periods,
-amplitudes, or mechanistic agreement claims should be made from this file.
+Neither historical experiment file is derived from stock-solution volumes and neither
+satisfies the experimental-recipe requirement. The 2025 BROCODE paper states that its
+chosen initial iodate and iodide could not be unambiguously recovered from the older
+literature. The long run is suitable for exposing a Level 0 disagreement, not for
+claiming a predictive full-batch model.

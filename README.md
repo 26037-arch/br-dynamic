@@ -15,6 +15,8 @@ Current scope:
   charge-balance construction.
 - BDF/Radau integration with no concentration clipping and explicit negative-state
   failure detection.
+- Historical pool/chemostat mode, dense-output extremum finding, and cycle-resolved
+  validation metrics.
 
 Run checks from this directory:
 
@@ -22,8 +24,10 @@ Run checks from this directory:
 python -m pytest
 python -m brdyn.cli validate mechanisms/dke10.yaml
 python -m brdyn.cli simulate mechanisms/dke10.yaml experiments/baseline/dke_reference.json
+python -m tools.run_gate1
 ```
 
-The historical simulation is a regression baseline. It is not a validated full-batch
-prediction. See `reports/validation_report.md` for the gates that remain open.
-
+The long historical simulation is a regression baseline. Its numerical checks pass,
+but its period and iodine amplitude fail the predeclared experimental thresholds.
+It is not a validated full-batch prediction. See `reports/gate1_report.md` and
+`reports/validation_report.md`.

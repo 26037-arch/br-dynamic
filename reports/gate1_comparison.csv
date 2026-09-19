@@ -1,0 +1,5 @@
+metric,experimental_target,model_value,error_type,error,threshold,pass
+mean_period_s,714.13,526.868223070994,relative,0.26222365245684404,0.1,False
+iodine_peak_M,0.0005811,0.00026016001050007585,relative,0.5522973489931581,0.2,False
+iodide_pI_min,5.5,5.077194474321092,absolute,0.42280552567890783,0.5,True
+iodide_pI_max,10.01,10.03047780716421,absolute,0.02047780716421066,0.5,True
