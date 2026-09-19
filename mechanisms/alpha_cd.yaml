@@ -1,0 +1,7 @@
+{
+  "schema_version":1,
+  "scientific_status":"DEFERRED_BY_PROJECT_GATE",
+  "prerequisites":["validated baseline BR model","validated iodine speciation","audited R9 microkinetics"],
+  "note":"Alpha-CD binding is intentionally absent from the active network."
+}
+

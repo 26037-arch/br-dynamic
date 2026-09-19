@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "name": "Refined microkinetic candidate-step registry",
+  "level": 2,
+  "scientific_status": "NOT_RUNNABLE_UNRESOLVED_PARAMETERS_DISABLED",
+  "candidate_replacements": {
+    "R1":[
+      {"id":"R1a","equation":"IO3- + H+ <-> HIO3","status":"candidate acid-base/speciation step; parameter audit pending"},
+      {"id":"R1b","equation":"activated iodate + I- -> I2O2 intermediate","status":"candidate; exact protonation and stoichiometry unresolved"},
+      {"id":"R1c","equation":"I2O2 intermediate -> HIO2 + HOI","status":"candidate; rate constant unresolved"}
+    ],
+    "R3":[
+      {"id":"R3a","equation":"I2 + H2O <-> I2OH- + H+","status":"literature-supported intermediate topology; constants and notation require source reconciliation"},
+      {"id":"R3b","equation":"I2OH- <-> HOI + I-","status":"candidate kinetic hydrolysis step"}
+    ],
+    "R6_R7":[
+      {"id":"Mn_spec","equation":"Mn(II/III) aqua-hydroxo speciation","status":"coordination-state model required"},
+      {"id":"Mn_ET","equation":"IO2 radical + Mn(II) complex -> I(+3) + Mn(III) complex","status":"electron-transfer/PCET model required"},
+      {"id":"Mn_peroxide","equation":"Mn(III) complex + H2O2 -> Mn(II) complex + HO2 radical + H+","status":"acid and coordination dependence unresolved"}
+    ],
+    "R9":[
+      {"id":"R9a","equation":"malonic acid keto <-> malonic acid enol","status":"acid/base-catalyzed enolization constants required"},
+      {"id":"R9b","equation":"malonic acid enol + I2 -> iodomalonic acid + I- + H+","status":"fast iodination candidate"},
+      {"id":"R9c","equation":"I2 + I- <-> I3-","status":"must precede alpha-CD extension"}
+    ]
+  }
+}
+

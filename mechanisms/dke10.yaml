@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "name": "Historical De Kepper-Epstein 10-step baseline",
+  "level": 0,
+  "scientific_status": "HISTORICAL_REGRESSION_BASELINE_NOT_MICROSCOPIC_TRUTH",
+  "temperature_K": 298.15,
+  "activity_model": "concentration; historical convention",
+  "reservoirs": {"H2O": 55.5},
+  "species": [
+    {"id":"H_plus","charge":1,"composition":{"H":1}},
+    {"id":"I_minus","charge":-1,"composition":{"I":1}},
+    {"id":"IO3_minus","charge":-1,"composition":{"I":1,"O":3}},
+    {"id":"HOI","charge":0,"composition":{"H":1,"O":1,"I":1}},
+    {"id":"HIO2","charge":0,"composition":{"H":1,"I":1,"O":2}},
+    {"id":"I2","charge":0,"composition":{"I":2}},
+    {"id":"IO2_radical","charge":0,"composition":{"I":1,"O":2}},
+    {"id":"Mn2_plus","charge":2,"composition":{"Mn":1}},
+    {"id":"MnOH2_plus","charge":2,"composition":{"Mn":1,"O":1,"H":1}},
+    {"id":"H2O2","charge":0,"composition":{"H":2,"O":2}},
+    {"id":"HO2_radical","charge":0,"composition":{"H":1,"O":2}},
+    {"id":"O2","charge":0,"composition":{"O":2}},
+    {"id":"malonic_acid","charge":0,"composition":{"C":3,"H":4,"O":4}},
+    {"id":"iodomalonic_acid","charge":0,"composition":{"C":3,"H":3,"I":1,"O":4}},
+    {"id":"H2O","charge":0,"composition":{"H":2,"O":1},"dynamic":false}
+  ],
+  "reactions": [
+    {
+      "id":"R1","classification":"PSEUDOELEMENTARY",
+      "equation":"IO3- + I- + 2 H+ -> HIO2 + HOI",
+      "stoichiometry":{"IO3_minus":-1,"I_minus":-1,"H_plus":-2,"HIO2":1,"HOI":1},
+      "forward":{"rate_law":{"type":"mass_action","orders":{"IO3_minus":1,"I_minus":1,"H_plus":2}},
+        "parameter":{"name":"k1_DKE","value":1430.0,"units":"M^-3 s^-1","confidence":"MEASURED_DERIVED","temperature_K":298.15,"ionic_strength_M":null,"source":"Furuichi and Liebhafsky 1975 low-iodide Dushman kinetics, adopted by De Kepper and Epstein 1982 p.50","doi":"10.1246/bcsj.48.745","note":"Low-iodide limiting term measured with AgI/AgNO3; not an elementary four-body event."}}
+    },
+    {
+      "id":"R2","classification":"PSEUDOELEMENTARY",
+      "equation":"HIO2 + I- + H+ -> 2 HOI",
+      "stoichiometry":{"HIO2":-1,"I_minus":-1,"H_plus":-1,"HOI":2},
+      "forward":{"rate_law":{"type":"mass_action","orders":{"HIO2":1,"I_minus":1,"H_plus":1}},
+        "parameter":{"name":"k2_DKE","value":2.0e10,"units":"M^-2 s^-1","confidence":"LITERATURE_ESTIMATE","temperature_K":298.15,"ionic_strength_M":null,"source":"De Kepper and Epstein 1982, p.50; estimated by bromine-chemistry analogy","doi":"10.1021/ja00365a012","note":"No direct measurement reported by DKE."}}
+    },
+    {
+      "id":"R3","classification":"EQUILIBRIUM_REPRESENTATION",
+      "equation":"HOI + I- + H+ <-> I2 + H2O",
+      "stoichiometry":{"HOI":-1,"I_minus":-1,"H_plus":-1,"I2":1,"H2O":1},
+      "forward":{"rate_law":{"type":"mass_action","orders":{"HOI":1,"I_minus":1,"H_plus":1}},
+        "parameter":{"name":"k3_DKE","value":3.1e12,"units":"M^-2 s^-1","confidence":"MEASURED_DERIVED","temperature_K":293.15,"ionic_strength_M":null,"source":"Eigen and Kustin 1962 temperature-jump analysis as adopted by DKE","doi":"10.1021/ja00867a014","note":"Overall hydrolysis/speciation relaxation, not established as one elementary event."}},
+      "reverse":{"rate_law":{"type":"mass_action","orders":{"I2":1}},
+        "parameter":{"name":"k_minus3_DKE","value":2.2,"units":"s^-1","confidence":"MEASURED_DERIVED","temperature_K":293.15,"ionic_strength_M":null,"source":"Eigen and Kustin 1962 temperature-jump analysis as adopted by DKE","doi":"10.1021/ja00867a014","note":"Water absorbed into the historical first-order reverse constant."}}
+    },
+    {
+      "id":"R4","classification":"UNKNOWN",
+      "equation":"IO3- + HIO2 + H+ <-> 2 IO2 radical + H2O",
+      "stoichiometry":{"IO3_minus":-1,"HIO2":-1,"H_plus":-1,"IO2_radical":2,"H2O":1},
+      "forward":{"rate_law":{"type":"mass_action","orders":{"IO3_minus":1,"HIO2":1,"H_plus":1}},
+        "parameter":{"name":"k4_DKE","value":7.3e3,"units":"M^-2 s^-1","confidence":"GLOBAL_FIT","temperature_K":298.15,"ionic_strength_M":null,"source":"De Kepper and Epstein 1982, p.51; optimized from an analogy-based starting value","doi":"10.1021/ja00365a012","note":"DKE explicitly reports no experimental data and selected the value for improved model agreement."}},
+      "reverse":{"rate_law":{"type":"mass_action","orders":{"IO2_radical":2}},
+        "parameter":{"name":"k_minus4_DKE","value":1.7e7,"units":"M^-1 s^-1","confidence":"LITERATURE_ESTIMATE","temperature_K":298.15,"ionic_strength_M":null,"source":"De Kepper and Epstein 1982, p.51; bromine/FKN analogue","doi":"10.1021/ja00365a012","note":"Historical choice; not an iodine-specific direct measurement."}}
+    },
+    {
+      "id":"R5","classification":"PSEUDOELEMENTARY",
+      "equation":"2 HIO2 -> IO3- + HOI + H+",
+      "stoichiometry":{"HIO2":-2,"IO3_minus":1,"HOI":1,"H_plus":1},
+      "forward":{"rate_law":{"type":"mass_action","orders":{"HIO2":2}},
+        "parameter":{"name":"k5_DKE","value":6.0e5,"units":"M^-1 s^-1","confidence":"GLOBAL_FIT","temperature_K":298.15,"ionic_strength_M":null,"source":"De Kepper and Epstein 1982, p.51, optimized from an initial estimate","doi":"10.1021/ja00365a012","note":"Later direct subsystem measurements are orders of magnitude smaller and acid-dependent."}}
+    },
+    {
+      "id":"R6","classification":"PSEUDOELEMENTARY",
+      "equation":"IO2 radical + Mn2+ + H2O -> HIO2 + MnOH2+",
+      "stoichiometry":{"IO2_radical":-1,"Mn2_plus":-1,"H2O":-1,"HIO2":1,"MnOH2_plus":1},
+      "forward":{"rate_law":{"type":"mass_action","orders":{"IO2_radical":1,"Mn2_plus":1}},
+        "parameter":{"name":"k6_DKE","value":1.0e4,"units":"M^-1 s^-1","confidence":"GLOBAL_FIT","temperature_K":298.15,"ionic_strength_M":null,"source":"De Kepper and Epstein 1982, p.51; radical-cation estimates followed by selection for best model results","doi":"10.1021/ja00365a012","note":"Water is absorbed; Mn aqua/hydroxo coordination is unresolved."}}
+    },
+    {
+      "id":"R7","classification":"PSEUDOELEMENTARY",
+      "equation":"MnOH2+ + H2O2 -> Mn2+ + H2O + HO2 radical",
+      "stoichiometry":{"MnOH2_plus":-1,"H2O2":-1,"Mn2_plus":1,"H2O":1,"HO2_radical":1},
+      "forward":{"rate_law":{"type":"mass_action","orders":{"MnOH2_plus":1,"H2O2":1}},
+        "parameter":{"name":"k7_DKE","value":3.2e4,"units":"M^-1 s^-1","confidence":"MEASURED_DERIVED","temperature_K":298.15,"ionic_strength_M":null,"source":"De Kepper and Epstein 1982, based on Davies, Kirschenbaum, and Kustin 1968 Mn(III)-peroxide kinetics","doi":"10.1021/ic50059a031","note":"Source used 1.00-3.70 M HClO4 and high ionic strength; MnOH2+ is a historical effective species."}}
+    },
+    {
+      "id":"R8","classification":"PROBABLY_ELEMENTARY",
+      "equation":"2 HO2 radical -> H2O2 + O2",
+      "stoichiometry":{"HO2_radical":-2,"H2O2":1,"O2":1},
+      "forward":{"rate_law":{"type":"mass_action","orders":{"HO2_radical":2}},
+        "parameter":{"name":"k8_DKE","value":7.5e5,"units":"M^-1 s^-1","confidence":"MEASURED_DERIVED","temperature_K":298.15,"ionic_strength_M":null,"source":"De Kepper and Epstein 1982 historical value","doi":"10.1021/ja00365a012","note":"Modern evaluated aqueous value is 8.3e5 M^-1 s^-1; HO2/O2- speciation is pH-dependent."}}
+    },
+    {
+      "id":"R9","classification":"EMPIRICAL_RATE_LAW",
+      "equation":"I2 + malonic acid -> iodomalonic acid + I- + H+",
+      "stoichiometry":{"I2":-1,"malonic_acid":-1,"iodomalonic_acid":1,"I_minus":1,"H_plus":1},
+      "forward":{"rate_law":{"type":"saturating_mass_action","orders":{"I2":1,"malonic_acid":1},"denominator":[{"species":"I2","coefficient":1.0e4,"order":1}]},
+        "parameter":{"name":"k9_DKE","value":40.0,"units":"M^-1 s^-1","confidence":"SUBSYSTEM_FIT","temperature_K":298.15,"ionic_strength_M":0.3,"source":"De Kepper and Epstein 1982 using malonic-acid iodination evidence and an empirical saturation term","doi":"10.1021/ja00365a012","note":"C9=1e4 M^-1. Lumps enolization and iodination; must not be treated as elementary."}}
+    },
+    {
+      "id":"R10","classification":"EMPIRICAL_RATE_LAW",
+      "equation":"HOI + H2O2 -> I- + O2 + H+ + H2O",
+      "stoichiometry":{"HOI":-1,"H2O2":-1,"I_minus":1,"O2":1,"H_plus":1,"H2O":1},
+      "forward":{"rate_law":{"type":"mass_action","orders":{"HOI":1,"H2O2":1}},
+        "parameter":{"name":"k10_DKE","value":37.0,"units":"M^-1 s^-1","confidence":"MEASURED_DERIVED","temperature_K":298.15,"ionic_strength_M":null,"source":"Liebhafsky 1932 iodine-peroxide kinetics, adopted by De Kepper and Epstein 1982 p.52","doi":"10.1021/ja01348a003","note":"Modern species-specific HOI+H2O2 value is 29+/-5.2 M^-1 s^-1, but buffered/Ag+ conditions limit direct BR transfer."}}
+    }
+  ]
+}

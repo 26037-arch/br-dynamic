@@ -1,0 +1,7 @@
+{
+  "schema_version":1,
+  "scientific_status":"DEFERRED_UNTIL_BASELINE_SUBSYSTEM_VALIDATION",
+  "required_steps":["I2 + I- <-> I3-","kinetic iodine hydrolysis through supported intermediates"],
+  "note":"No constants are activated here because ionic-strength and activity-convention reconciliation is incomplete."
+}
+

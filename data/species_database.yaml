@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "note": "Formal compositions and charges used for exact balance checks. MnOH2_plus denotes historical MnOH^2+, not a bare gas-phase entity.",
+  "species": {
+    "H_plus":{"formula":"H+","charge":1,"phase":"aq"},
+    "I_minus":{"formula":"I-","charge":-1,"phase":"aq"},
+    "IO3_minus":{"formula":"IO3-","charge":-1,"phase":"aq"},
+    "HOI":{"formula":"HOI","charge":0,"phase":"aq"},
+    "HIO2":{"formula":"HIO2","charge":0,"phase":"aq"},
+    "I2":{"formula":"I2","charge":0,"phase":"aq"},
+    "IO2_radical":{"formula":"IO2 radical","charge":0,"phase":"aq"},
+    "Mn2_plus":{"formula":"Mn2+","charge":2,"phase":"aq","speciation":"historical total-like label"},
+    "MnOH2_plus":{"formula":"MnOH2+","charge":2,"phase":"aq","speciation":"historical Mn(III) hydroxo label"},
+    "H2O2":{"formula":"H2O2","charge":0,"phase":"aq"},
+    "HO2_radical":{"formula":"HO2 radical","charge":0,"phase":"aq","pKa":4.8},
+    "O2":{"formula":"O2","charge":0,"phase":"aq"},
+    "malonic_acid":{"formula":"C3H4O4","charge":0,"phase":"aq"},
+    "iodomalonic_acid":{"formula":"C3H3IO4","charge":0,"phase":"aq"},
+    "H2O":{"formula":"H2O","charge":0,"phase":"solvent"}
+  }
+}
+
