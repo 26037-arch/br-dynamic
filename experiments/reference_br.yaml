@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "name": "Raman-resolved Briggs-Rauscher experiment at 22 C",
+  "purpose": "Phase 2 reference condition for species and condition compatibility; not a fitting target",
+  "source": {
+    "citation": "Time-resolved Raman spectroscopic investigation of the Briggs-Rauscher oscillating reaction (2026)",
+    "doi": "10.1039/D6AY00742B",
+    "url": "https://doi.org/10.1039/D6AY00742B",
+    "access": "open access article HTML",
+    "raw_numeric_time_series_available": false,
+    "note": "The article reports FFT-derived periods graphically; no machine-readable numerical period table was located."
+  },
+  "selected_condition": {
+    "temperature_C": 22,
+    "temperature_K": 295.15,
+    "total_volume_L": 0.600,
+    "mixing": "200 mL each of stocks A, B, and C; stock C added rapidly",
+    "time_origin_note": "The article assigns addition of solution C a 30 s reference time.",
+    "sampling": {
+      "raman_interval_s": 0.5,
+      "video_frame_rate_fps": 30,
+      "laser_wavelength_nm": 785
+    }
+  },
+  "stock_solutions": {
+    "A": {"KIO3_M": 0.200, "H2SO4_M": 0.045, "reported_pH": "1.3 +/- 0.1"},
+    "B": {"malonic_acid_M": 0.150, "MnSO4_M": 0.020, "starch_g_per_L": 0.400},
+    "C": {"H2O2_M": 3.080, "reported_pH": "2.5 +/- 0.1"}
+  },
+  "nominal_final_analytical_concentrations": {
+    "IO3_minus_M": 0.0666666667,
+    "formal_H2SO4_M": 0.015,
+    "malonic_acid_total_M": 0.050,
+    "Mn_total_M": 0.0066666667,
+    "H2O2_M": 1.0266666667,
+    "starch_g_per_L": 0.1333333333
+  },
+  "unresolved_initial_state": {
+    "H_plus_activity": null,
+    "I_minus_M": null,
+    "HOI_M": null,
+    "I2_M": null,
+    "I3_minus_M": null,
+    "Mn_aqua_and_sulfato_distribution": null,
+    "reason": "Stock pH and analytical totals do not define mixed-solution activities or post-mixing fast speciation."
+  },
+  "direct_observables": [
+    "IO3_minus Raman band",
+    "H2O2 Raman band",
+    "MnSO4-related Raman signal",
+    "I3_minus Raman band",
+    "I5_minus Raman band",
+    "synchronized color video"
+  ],
+  "reported_behavior": {
+    "temperatures_C": [5, 13, 17, 22, 29, 43],
+    "period_changes_during_run": true,
+    "starch_effect": "approximately doubled the oscillation period relative to starch-free mixtures",
+    "selected_temperature_numeric_period_s": null
+  },
+  "model_use": {
+    "status": "REFERENCE_ONLY_NOT_SIMULATION_READY",
+    "reasons": [
+      "no machine-readable species time series or exact selected-condition period was located",
+      "starch-bound polyiodide chemistry is absent from the DKE species set",
+      "mixed-solution proton activity and manganese coordination distribution are unresolved"
+    ]
+  }
+}

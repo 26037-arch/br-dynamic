@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "reaction_id": "R5",
+  "scientific_status": "CANDIDATES_NOT_YET_RUNNABLE",
+  "net_equation": "2 HIO2 -> IO3- + HOI + H+",
+  "models": [
+    {
+      "id": "R5_DKE_CONTROL",
+      "rate_law": "v = k[HIO2]^2",
+      "k_M-1_s-1": 600000.0,
+      "evidence": "global DKE fit",
+      "decision": "HISTORICAL_CONTROL_ONLY"
+    },
+    {
+      "id": "R5_SCHMITZ_FURROW_ACID_SERIES",
+      "rate_law": "v = k([H2SO4])[HIO2]^2",
+      "k_range_M-1_s-1": [0.2, 5.0],
+      "H2SO4_range_M": [0.60, 0.08],
+      "temperature_K": 298.15,
+      "source_doi": "10.1002/kin.20791",
+      "decision": "PREFERRED_EVIDENCE_FAMILY",
+      "blocker": "numerical acid-dependence function and activity convention must be transcribed from the full source"
+    },
+    {
+      "id": "R5_C_EXPLICIT_ACID_SPECIATION",
+      "candidate_species": ["HIO2", "protonated iodous-acid state", "HOI", "H2OI_plus"],
+      "steps": null,
+      "parameters": null,
+      "decision": "NOT_INSTANTIATED",
+      "blocker": "The located literature establishes strong acid dependence but does not yet support a unique elementary acid/speciation sequence with complete constants."
+    }
+  ]
+}

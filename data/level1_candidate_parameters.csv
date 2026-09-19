@@ -1,0 +1,11 @@
+parent_reaction,candidate_parameter_or_model,value,units,temperature_K,evidence,status,activation_requirement
+R1,two-term low/high-iodide Dushman law,"k'=1200+/-150; k''=(4.2+/-0.8)e8",M^-3 s^-1; M^-4 s^-1,298.15,Schmitz 2000 DOI 10.1039/B003606O,CONDITION_DEPENDENT_RATE_LAW,Transcribe full law and correct activities and MnSO4 ion pairing for the reference condition
+R2,iodine-specific proton-assisted microsteps,NA,NA,NA,DKE bromine analogy only,QUANTUM_CALCULATION_REQUIRED,Define protonation and explicit-water pathway then obtain experimental or calculated kinetics
+R3,I2 plus I- equilibrium to I3-,768,M^-1,297.15,Morrison et al. 1971 DOI 10.1016/0003-2697(71)90026-1,ACCEPT_WITH_CORRECTION,Correct ionic-strength convention and add I5- hydrolysis and starch-observable mapping
+R4,protonated iodous-acid plus iodate radical-pair candidates,NA,NA,NA,DKE global fit and analogy only,QUANTUM_CALCULATION_REQUIRED,Discriminate encounter-complex ET O-I adduct homolysis and water-assisted PCET families
+R5,acid-dependent HIO2 disproportionation,0.2 to 5,M^-1 s^-1,298.15,Schmitz and Furrow 2013 DOI 10.1002/kin.20791,CONDITION_DEPENDENT_RATE_LAW,Transcribe acid function and reconcile 0.015 M formal sulfate reference condition
+R6,Mn(II)-IO2 radical ET or PCET,NA,NA,NA,DKE integrated fit only,UNRESOLVED,Measure or calculate sulfate-conditioned Mn coordination distribution before defining a molecular step
+R7,Mn(III)-peroxide reaction network,NA,NA,298.15,Davies et al. 1968 DOI 10.1021/ic50059a031,REPLACE_WITH_MICROMECHANISM,Build multiple MnIII/peroxide channels at matched acid ionic strength and sulfate speciation
+R8,HO2 self-reaction,8.3e5,M^-1 s^-1,298.15,Bielski et al. 1985 DOI 10.1063/1.555739,ACCEPT_WITH_CORRECTION,Add HO2/O2- equilibrium and cross reactions outside the strongly acidic limit
+R9,explicit keto-enol plus I2 and I3- capture model,see mechanisms/candidates/r9_models.yaml,mixed,298.15,Leopold and Haim 1977 plus Eberlin and Williams 1996,REPLACE_WITH_MICROMECHANISM,Map constants to source equations and validate independently before integrated use
+R10,HOI plus H2O2,29 +/- 5.2,M^-1 s^-1,up to 296.35,Shin et al. 2020 DOI 10.1016/j.watres.2020.115852,UNRESOLVED,Obtain acidic unbuffered kinetics with iodine feedback active; retain DKE value only as Level 0 control

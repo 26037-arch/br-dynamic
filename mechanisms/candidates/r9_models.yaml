@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "reaction_id": "R9",
+  "scientific_status": "CANDIDATES_NOT_YET_RUNNABLE",
+  "purpose": "Replace the empirical DKE saturation law with explicit substrate and iodine speciation",
+  "models": [
+    {
+      "id": "R9_A_DKE_EMPIRICAL_CONTROL",
+      "law": "v = 40[I2][MA]/(1 + 1.0e4[I2])",
+      "temperature_K": 298.15,
+      "ionic_strength_M": 0.3,
+      "source_doi": "10.1021/ja00365a012",
+      "decision": "HISTORICAL_CONTROL_ONLY"
+    },
+    {
+      "id": "R9_B_KETO_ENOL_I2",
+      "steps": [
+        {"equation": "MA_keto -> MA_enol", "k_forward_s-1": 0.0040},
+        {"equation": "MA_enol -> MA_keto", "k_reverse_s-1": 540540.5405},
+        {"equation": "MA_enol + I2 -> iodomalonic_acid + I- + H+", "k_M-1_s-1": null}
+      ],
+      "K_enol": 7.4e-9,
+      "source_doi": "10.1039/P29960000883",
+      "decision": "TOPOLOGY_SUPPORTED_PARAMETER_INCOMPLETE",
+      "note": "The reverse rate is k_forward/K under the stated two-state convention; the capture rate was described as diffusion limited but is not assigned here."
+    },
+    {
+      "id": "R9_C_KETO_ENOL_POLYIODIDE",
+      "steps": [
+        "acid/base-resolved keto-enol interconversion",
+        "I2 + I- <-> I3-",
+        "I2 capture by enol and protonated enol",
+        "I3- capture by enol and protonated enol"
+      ],
+      "published_parameter_values": {
+        "k1_M-1_s-1": "121 +/- 31",
+        "k2_M-1_s-1": "24.1 +/- 1.5",
+        "k3_M-1_s-1": "11.6 +/- 3.3",
+        "k4_M-1_s-1": "0.87 +/- 0.45",
+        "k5_M-2_s-1": "32.0 +/- 5.6",
+        "enolization_law_s-1": "0.0020 + 0.010[MA]"
+      },
+      "source_doi": "10.1002/kin.550090108",
+      "decision": "PREFERRED_TOPOLOGY_REQUIRES_EQUATION_LEVEL_TRANSCRIPTION",
+      "blocker": "The five published constants must be mapped to the exact source equations and concentration conventions before code generation."
+    }
+  ]
+}

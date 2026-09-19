@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "name": "Level 1 iodine speciation candidates",
+  "scientific_status": "NON_RUNNABLE_CANDIDATE_SET",
+  "purpose": "Replace DKE R3 and expose polyiodide observables without assigning unsupported rates",
+  "species_to_add": ["I3_minus", "I5_minus", "I2OH_minus"],
+  "candidate_equilibria": [
+    {
+      "id": "I_SPEC_1",
+      "equation": "I2 + I- <-> I3-",
+      "K_concentration_M-1": 768.0,
+      "temperature_K": 297.15,
+      "source_doi": "10.1016/0003-2697(71)90026-1",
+      "status": "MEASURED_BUT_REQUIRES_IONIC_STRENGTH_MATCH"
+    },
+    {
+      "id": "I_SPEC_2",
+      "equation": "I3- + I2 <-> I5-",
+      "K_concentration_M-1": null,
+      "status": "DIRECTLY_OBSERVED_IN_REFERENCE_BUT_PARAMETER_MISSING"
+    },
+    {
+      "id": "I_SPEC_3",
+      "equation": "I2 + H2O <-> HOI + I- + H+",
+      "equilibrium_model": null,
+      "status": "REQUIRES_COUPLED_ACTIVITY_AND_HYDROLYSIS_MODEL"
+    },
+    {
+      "id": "I_SPEC_4",
+      "equation": "I2 + OH- <-> I2OH-",
+      "equilibrium_model": null,
+      "status": "LITERATURE_SPECIES_REQUIRES_SOURCE_CONDITION_RECONCILIATION"
+    }
+  ],
+  "activation_gate": [
+    "select one internally consistent equilibrium convention",
+    "supply temperature and ionic-strength corrections or matched measurements",
+    "define Raman response mapping for I3- and I5-",
+    "pass iodine atom and charge balance"
+  ]
+}
