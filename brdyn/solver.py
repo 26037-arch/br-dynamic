@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Mapping
+from typing import Callable, Mapping, Sequence
 import warnings
 
 import numpy as np
@@ -21,21 +21,45 @@ class SimulationResult:
     y: np.ndarray
     directional_fluxes: np.ndarray
     cumulative_extents: np.ndarray
+    dense_solution: Callable[[float | np.ndarray], np.ndarray]
+    fixed_species: tuple[str, ...]
+
+
+def _fixed_species_system(mechanism: Mechanism, fixed_species: Sequence[str]):
+    fixed = tuple(dict.fromkeys(fixed_species))
+    unknown = set(fixed) - set(mechanism.dynamic_index)
+    if unknown:
+        raise ValueError(f"Unknown fixed species: {sorted(unknown)}")
+    rows = np.array([mechanism.dynamic_index[name] for name in fixed], dtype=int)
+
+    def rhs(t: float, y: np.ndarray) -> np.ndarray:
+        derivative = mechanism.rhs(t, y)
+        derivative[rows] = 0.0
+        return derivative
+
+    def jacobian(t: float, y: np.ndarray) -> np.ndarray:
+        jac = mechanism.jacobian(t, y)
+        jac[rows, :] = 0.0
+        return jac
+
+    return fixed, rhs, jacobian
 
 
 def simulate(mechanism: Mechanism, initial: Mapping[str, float], t_span: tuple[float, float],
              method: str = "BDF", rtol: float = 1e-8,
              atol: Mapping[str, float] | float = 1e-12,
-             output_points: int = 1001) -> SimulationResult:
+             output_points: int = 1001,
+             fixed_species: Sequence[str] = ()) -> SimulationResult:
     y0 = np.array([initial.get(s, 0.0) for s in mechanism.dynamic_ids], dtype=float)
     if np.any(y0 < 0):
         raise ValueError("Initial concentrations must be nonnegative")
     atol_vector = (np.array([atol.get(s, 1e-12) for s in mechanism.dynamic_ids])
                    if isinstance(atol, Mapping) else float(atol))
+    fixed, rhs, jacobian = _fixed_species_system(mechanism, fixed_species)
     t_eval = np.linspace(t_span[0], t_span[1], output_points)
-    solution = solve_ivp(mechanism.rhs, t_span, y0, method=method, rtol=rtol,
+    solution = solve_ivp(rhs, t_span, y0, method=method, rtol=rtol,
                          atol=atol_vector, t_eval=t_eval, dense_output=True,
-                         jac=mechanism.jacobian if method in {"BDF", "Radau"} else None)
+                         jac=jacobian if method in {"BDF", "Radau"} else None)
     if not solution.success:
         raise NumericalFailure(solution.message)
     threshold = -10 * np.max(np.atleast_1d(atol_vector))
@@ -50,13 +74,18 @@ def simulate(mechanism: Mechanism, initial: Mapping[str, float], t_span: tuple[f
     dt = np.diff(solution.t)
     extents = np.zeros_like(fluxes)
     extents[:, 1:] = np.cumsum(0.5 * (fluxes[:, 1:] + fluxes[:, :-1]) * dt, axis=1)
-    return SimulationResult(method, solution.t, solution.y, fluxes, extents)
+    return SimulationResult(method, solution.t, solution.y, fluxes, extents,
+                            solution.sol, fixed)
 
 
 def crosscheck(mechanism: Mechanism, initial: Mapping[str, float], t_span: tuple[float, float],
-               rtol: float = 1e-8, atol: float = 1e-12) -> tuple[SimulationResult, SimulationResult, float]:
-    bdf = simulate(mechanism, initial, t_span, "BDF", rtol, atol)
-    radau = simulate(mechanism, initial, t_span, "Radau", rtol, atol)
+               rtol: float = 1e-8, atol: float = 1e-12,
+               output_points: int = 1001,
+               fixed_species: Sequence[str] = ()) -> tuple[SimulationResult, SimulationResult, float]:
+    bdf = simulate(mechanism, initial, t_span, "BDF", rtol, atol,
+                   output_points, fixed_species)
+    radau = simulate(mechanism, initial, t_span, "Radau", rtol, atol,
+                     output_points, fixed_species)
     scale = np.maximum(np.maximum(np.abs(bdf.y), np.abs(radau.y)), atol)
     relative = float(np.max(np.abs(bdf.y - radau.y) / scale))
     if relative > 0.05:

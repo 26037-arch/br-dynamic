@@ -34,3 +34,16 @@ def test_bdf_and_radau_converge_for_toy_network():
     bdf, radau, discrepancy = crosscheck(Mechanism(raw), {"A":1.0}, (0, 1), 1e-9, 1e-12)
     assert discrepancy < 1e-4
     assert np.allclose(bdf.y, radau.y, atol=2e-9)
+
+
+def test_fixed_species_acts_as_a_chemostat():
+    raw = {
+        "species": [{"id":"A","charge":0,"composition":{"X":1}},
+                    {"id":"B","charge":0,"composition":{"X":1}}],
+        "reactions": [{"id":"toy","stoichiometry":{"A":-1,"B":1},
+                       "forward":{"rate_law":{"type":"mass_action","orders":{"A":1}},
+                                  "parameter":{"name":"k","value":2.0,"units":"s^-1","confidence":"MEASURED_DIRECT","source":"analytic toy"}}}]
+    }
+    result = simulate(Mechanism(raw), {"A": 1.0}, (0, 1), fixed_species=("A",))
+    assert np.all(result.y[0] == 1.0)
+    assert np.isclose(result.y[1, -1], 2.0, rtol=2e-6)

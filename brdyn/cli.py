@@ -32,6 +32,7 @@ def main() -> int:
     bdf, radau, discrepancy = crosscheck(
         mechanism, experiment["initial_concentrations_M"], tuple(experiment["t_span_s"]),
         experiment.get("rtol", 1e-8), experiment.get("atol_M", 1e-12),
+        experiment.get("output_points", 1001), experiment.get("fixed_species", ()),
     )
     print(json.dumps({"status": "HISTORICAL_BASELINE_ONLY", "points": len(bdf.t),
                       "BDF_Radau_max_scaled_difference": discrepancy,
