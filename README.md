@@ -17,6 +17,10 @@ Current scope:
   failure detection.
 - Historical pool/chemostat mode, dense-output extremum finding, and cycle-resolved
   validation metrics.
+- Phase 2 local sensitivity, source-bounded initial-condition propagation, and bounded
+  historical-parameter propagation without fitting.
+- A condition-level compatibility matrix, subsystem candidate files, a non-runnable Level 1
+  manifest, and an evidence-based quantum queue.
 
 Run checks from this directory:
 
@@ -25,9 +29,13 @@ python -m pytest
 python -m brdyn.cli validate mechanisms/dke10.yaml
 python -m brdyn.cli simulate mechanisms/dke10.yaml experiments/baseline/dke_reference.json
 python -m tools.run_gate1
+python -m tools.run_local_sensitivity
+python -m tools.run_initial_condition_uncertainty
+python -m tools.run_historical_parameter_uncertainty
 ```
 
 The long historical simulation is a regression baseline. Its numerical checks pass,
 but its period and iodine amplitude fail the predeclared experimental thresholds.
 It is not a validated full-batch prediction. See `reports/gate1_report.md` and
-`reports/validation_report.md`.
+`reports/validation_report.md`. Phase 2 passes its evidence/triage gate while Level 1 remains
+blocked rather than being made executable with placeholder chemistry; see `reports/phase2_gate.md`.

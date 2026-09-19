@@ -1,21 +1,79 @@
 {
   "schema_version": 1,
-  "name": "Audited effective mechanism manifest",
+  "name": "Audited effective Level 1 candidate manifest",
   "level": 1,
-  "scientific_status": "NOT_RUNNABLE_GATE_2_OPEN",
-  "inherits_stoichiometry_from": "dke10.yaml",
-  "policy": "A DKE step may be activated only after its rate law, parameter conditions, and activity convention pass a subsystem compatibility review.",
-  "decisions": {
-    "R1":"REPLACE_WITH_MICROSTEPS",
-    "R2":"REQUIRES_MORE_DATA",
-    "R3":"REPLACE_WITH_MICROSTEPS",
-    "R4":"REQUIRES_MORE_DATA",
-    "R5":"KEEP_AS_EFFECTIVE_STEP_WITH_ACID_DEPENDENT_SUBSYSTEM_KINETICS",
-    "R6":"REQUIRES_MORE_DATA",
-    "R7":"REQUIRES_MORE_DATA",
-    "R8":"KEEP_AS_EFFECTIVE_STEP_WITH_HO2_O2MINUS_SPECIATION",
-    "R9":"REPLACE_WITH_MICROSTEPS",
-    "R10":"KEEP_AS_EFFECTIVE_STEP_AFTER_ACIDIC_UNBUFFERED_VALIDATION"
+  "scientific_status": "NOT_RUNNABLE_UNRESOLVED_ACTIVE_PATHS",
+  "reference_condition": "experiments/reference_br.yaml",
+  "historical_control": "mechanisms/dke10.yaml",
+  "policy": "No placeholder rate is inserted to obtain an executable network; integrated BR targets are reserved from subsystem selection.",
+  "candidate_files": [
+    "mechanisms/candidates/iodine_speciation_level1.yaml",
+    "mechanisms/candidates/r5_models.yaml",
+    "mechanisms/candidates/r9_models.yaml",
+    "data/level1_candidate_parameters.csv"
+  ],
+  "reactions": {
+    "R1": {
+      "status": "CONDITION_DEPENDENT_RATE_LAW",
+      "candidate": "two-term Dushman law with activities and MnSO4 ion-pair correction",
+      "active": false
+    },
+    "R2": {
+      "status": "QUANTUM_CALCULATION_REQUIRED",
+      "candidate": "protonation-resolved solvent-assisted iodine-specific pathway",
+      "active": false
+    },
+    "R3": {
+      "status": "REPLACE_WITH_MICROMECHANISM",
+      "candidate": "iodine hydrolysis plus I2/I3-/I5- fast-speciation network",
+      "active": false
+    },
+    "R4": {
+      "status": "QUANTUM_CALCULATION_REQUIRED",
+      "candidate": "radical-pair formation through encounter-complex ET, O-I adduct homolysis, or water-assisted PCET",
+      "active": false
+    },
+    "R5": {
+      "status": "CONDITION_DEPENDENT_RATE_LAW",
+      "candidate": "measured sulfuric-acid-dependent HIO2 disproportionation family",
+      "active": false
+    },
+    "R6": {
+      "status": "UNRESOLVED",
+      "candidate": "sulfate-conditioned Mn(II)-IO2 radical ET or PCET",
+      "active": false
+    },
+    "R7": {
+      "status": "REPLACE_WITH_MICROMECHANISM",
+      "candidate": "multi-channel Mn(III)-peroxide network",
+      "active": false
+    },
+    "R8": {
+      "status": "ACCEPT_WITH_CORRECTION",
+      "candidate": "HO2 self-reaction plus explicit HO2/O2- acid-base speciation",
+      "active": false
+    },
+    "R9": {
+      "status": "REPLACE_WITH_MICROMECHANISM",
+      "candidate": "keto-enol interconversion plus I2 and I3- capture",
+      "active": false
+    },
+    "R10": {
+      "status": "UNRESOLVED",
+      "candidate": "HOI/H2O2 law requiring acidic unbuffered validation",
+      "active": false
+    }
+  },
+  "runnable_gate": {
+    "passed": false,
+    "blockers": [
+      "R1 reference-condition activity correction is incomplete",
+      "R2 and R4 microscopic paths lack iodine-specific kinetics",
+      "R3 I5- and hydrolysis parameters are incomplete",
+      "R5 acid-dependent function has not been fully transcribed",
+      "R6/R7 manganese molecular identities and network are unresolved",
+      "R9 source equations and capture parameters are incomplete",
+      "R10 lacks compatible acidic unbuffered validation"
+    ]
   }
 }
-

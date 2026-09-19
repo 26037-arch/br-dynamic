@@ -1,4 +1,7 @@
-# Quantum-chemistry decisions
+# Quantum-chemistry decisions (Phase 0 record)
+
+This file preserves the Phase 0 triage. The evidence-expanded, molecularly specific Phase 2
+queue is `reports/quantum_queue.md` and supersedes this table for future work.
 
 No ORCA jobs have been launched. The Phase 0 evidence does not justify calculating a
 transition state for any DKE net equation.
@@ -19,4 +22,3 @@ Every future calculation proposal must state charge, multiplicity, coordination 
 protonation state, solvent model and explicit waters, iodine relativistic treatment,
 standard-state conversion, diffusion treatment, and expected uncertainty. Raw inputs,
 outputs, geometries, frequencies, and derivations must be retained.
-

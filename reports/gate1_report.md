@@ -2,14 +2,17 @@
 
 ## Decision
 
-**NUMERICAL PASS; EXPERIMENTAL COMPARISON FAIL. Do not advance to Gate 2 under the
-user's conditional instruction.**
+**Gate 1A numerical/historical fidelity: PASS. Gate 1B experimental predictive validation:
+FAIL / NOT VALIDATED under the reconstructed conditions.**
 
 The exact historical DKE encoding generates a stable limit cycle in the documented
 pooled-reactor configuration. Both stiff solvers agree, no significant negative
 concentration occurs, and the effective stoichiometric invariants remain constant.
 The predicted period and iodine peak nevertheless exceed the predeclared error
 limits relative to the digitized historical experiment.
+
+This result is retained unchanged. The subsequent Phase 2 instruction explicitly treats the
+discrepancy as a diagnostic and authorizes subsystem work; it does not convert Gate 1B into a pass.
 
 ## Predeclared comparison
 
@@ -56,9 +59,9 @@ Initial iodate and iodide concentrations are also not recoverable unambiguously 
 the historical experiment. The values used here follow the 2025 comparison and are
 explicitly labeled as choices rather than reconstructed recipe values.
 
-## Next scientific requirement
+## Scientific follow-up
 
-Gate 1 can be revisited only with one of the following independently justified paths:
+The historical comparison can be revisited only with one of the following independently justified paths:
 
 1. locate a primary DKE numerical trajectory and its exact initial-condition/rate-law
    conventions for a true Level 0 regression; or
