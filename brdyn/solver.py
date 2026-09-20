@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import json
+from pathlib import Path
 from typing import Callable, Mapping, Sequence
 import warnings
 
@@ -23,6 +25,25 @@ class SimulationResult:
     cumulative_extents: np.ndarray
     dense_solution: Callable[[float | np.ndarray], np.ndarray]
     fixed_species: tuple[str, ...]
+
+
+def save_trajectory_npz(path: str | Path, result: SimulationResult,
+                        mechanism: Mechanism, metadata: Mapping[str, object] | None = None) -> None:
+    """Save a self-describing, compressed trajectory without relying on pickle."""
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    np.savez_compressed(
+        path,
+        time_s=result.t,
+        concentrations_M=result.y,
+        directional_fluxes_M_per_s=result.directional_fluxes,
+        cumulative_extents_M=result.cumulative_extents,
+        dynamic_species=np.asarray(mechanism.dynamic_ids, dtype="U"),
+        directional_flux_ids=np.asarray([flux.id for flux in mechanism.fluxes], dtype="U"),
+        solver_method=np.asarray(result.method),
+        fixed_species=np.asarray(result.fixed_species, dtype="U"),
+        metadata_json=np.asarray(json.dumps(metadata or {}, sort_keys=True)),
+    )
 
 
 def _fixed_species_system(mechanism: Mechanism, fixed_species: Sequence[str]):

@@ -1,0 +1,59 @@
+{
+  "gate1_classifications": {
+    "BDF": "RESOLVED_LIMIT_CYCLE",
+    "Radau": "RESOLVED_LIMIT_CYCLE"
+  },
+  "counts": {
+    "RESOLVED_LIMIT_CYCLE": 12,
+    "DAMPED_OR_TRANSIENT": 0,
+    "STEADY_STATE": 5,
+    "UNRESOLVED_NUMERICALLY": 3,
+    "INSUFFICIENT_CYCLES": 0
+  },
+  "resolved_period_range_s": [
+    449.95823325767924,
+    561.7753816428061
+  ],
+  "resolved_iodine_peak_range_M": [
+    4.359817995443317e-05,
+    0.00033689322803610525
+  ],
+  "digitized_single_cycle_period_inside_envelope": false,
+  "previous_669_s_interaction_survives": false,
+  "below_numerical_resolution": [
+    [
+      "k7_DKE",
+      "iodide_max_M"
+    ],
+    [
+      "k7_DKE",
+      "iodide_min_M"
+    ],
+    [
+      "k7_DKE",
+      "iodine_peak_M"
+    ],
+    [
+      "k7_DKE",
+      "mean_period_s"
+    ],
+    [
+      "k8_DKE",
+      "iodide_max_M"
+    ],
+    [
+      "k8_DKE",
+      "iodide_min_M"
+    ],
+    [
+      "k8_DKE",
+      "iodine_peak_M"
+    ],
+    [
+      "k8_DKE",
+      "mean_period_s"
+    ]
+  ],
+  "historical_rows_audited": 32,
+  "experimental_single_cycle_period_s": 714.1278722000001
+}

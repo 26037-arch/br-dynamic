@@ -1,0 +1,145 @@
+{
+  "row_count": 32,
+  "correlations": {
+    "mean_period_s": {
+      "k1_DKE": {
+        "pearson_r": -0.06622212688860701,
+        "spearman_rho": -0.05351906158357771
+      },
+      "k8_DKE": {
+        "pearson_r": -0.2853020444382964,
+        "spearman_rho": -0.2664956011730205
+      },
+      "k10_DKE": {
+        "pearson_r": -0.9713878086909467,
+        "spearman_rho": -0.9761730205278591
+      }
+    },
+    "iodine_peak_M": {
+      "k1_DKE": {
+        "pearson_r": 0.13266232081864643,
+        "spearman_rho": 0.14259530791788855
+      },
+      "k8_DKE": {
+        "pearson_r": -0.2686124378907762,
+        "spearman_rho": -0.24193548387096772
+      },
+      "k10_DKE": {
+        "pearson_r": -0.9938030591467334,
+        "spearman_rho": -1.0
+      }
+    },
+    "iodide_min_M": {
+      "k1_DKE": {
+        "pearson_r": -0.03959073729351255,
+        "spearman_rho": -0.07258064516129031
+      },
+      "k8_DKE": {
+        "pearson_r": 0.2586155573550151,
+        "spearman_rho": 0.2529325513196481
+      },
+      "k10_DKE": {
+        "pearson_r": 0.9944901207289868,
+        "spearman_rho": 0.9959677419354838
+      }
+    },
+    "iodide_max_M": {
+      "k1_DKE": {
+        "pearson_r": -0.934631780206236,
+        "spearman_rho": -0.9387829912023459
+      },
+      "k8_DKE": {
+        "pearson_r": -0.14492854546297945,
+        "spearman_rho": -0.1598240469208211
+      },
+      "k10_DKE": {
+        "pearson_r": -0.20965838575310217,
+        "spearman_rho": -0.1851173020527859
+      }
+    }
+  },
+  "standardized_regression_dominance": {
+    "mean_period_s": {
+      "k1_DKE": {
+        "standardized_beta": -0.20565402906722885,
+        "squared_beta_share": 0.04100496789819401
+      },
+      "k8_DKE": {
+        "standardized_beta": -0.026982192742615842,
+        "squared_beta_share": 0.0007058566521743676
+      },
+      "k10_DKE": {
+        "standardized_beta": -0.9941851584332582,
+        "squared_beta_share": 0.9582891754496315
+      }
+    },
+    "iodine_peak_M": {
+      "k1_DKE": {
+        "standardized_beta": -0.005629810566199267,
+        "squared_beta_share": 3.2470141779937744e-05
+      },
+      "k8_DKE": {
+        "standardized_beta": -0.029204368245570055,
+        "squared_beta_share": 0.0008737601891838535
+      },
+      "k10_DKE": {
+        "standardized_beta": -0.9875402707553017,
+        "squared_beta_share": 0.9990937696690362
+      }
+    },
+    "iodide_min_M": {
+      "k1_DKE": {
+        "standardized_beta": 0.10362231470375449,
+        "squared_beta_share": 0.010459852024830857
+      },
+      "k8_DKE": {
+        "standardized_beta": 0.005814183058642107,
+        "squared_beta_share": 3.2930351373731724e-05
+      },
+      "k10_DKE": {
+        "standardized_beta": 1.0078595194097262,
+        "squared_beta_share": 0.9895072176237953
+      }
+    },
+    "iodide_max_M": {
+      "k1_DKE": {
+        "standardized_beta": -0.987871482263411,
+        "squared_beta_share": 0.8838875859812444
+      },
+      "k8_DKE": {
+        "standardized_beta": 0.026911956511565756,
+        "squared_beta_share": 0.0006559740844952292
+      },
+      "k10_DKE": {
+        "standardized_beta": -0.3570351811702949,
+        "squared_beta_share": 0.11545643993426037
+      }
+    }
+  },
+  "coverage": {
+    "k1_DKE": {
+      "sample_min": 1055.9375,
+      "sample_max": 1424.0625,
+      "normalized_min": 0.015625,
+      "normalized_max": 0.984375,
+      "includes_low_boundary": false,
+      "includes_high_boundary": false
+    },
+    "k8_DKE": {
+      "sample_min": 751250.0,
+      "sample_max": 828750.0,
+      "normalized_min": 0.015625,
+      "normalized_max": 0.984375,
+      "includes_low_boundary": false,
+      "includes_high_boundary": false
+    },
+    "k10_DKE": {
+      "sample_min": 24.00625,
+      "sample_max": 36.79375,
+      "normalized_min": 0.015625000000000056,
+      "normalized_max": 0.9843750000000002,
+      "includes_low_boundary": false,
+      "includes_high_boundary": false
+    }
+  }
+}
